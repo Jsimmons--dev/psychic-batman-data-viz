@@ -1,4 +1,16 @@
 extends layout
 
 block content
-	div#code
+    nav
+        a(href="" id="menuToggle" title="show menu")
+            span(class="navClosed")
+                i show menu
+        div#slidersdiv
+            p gravity:
+            div#slider-grav(class="slider")
+            p link distance:
+            div#slider-ld(class="slider")
+            p charge:
+            div#slider-c(class="slider")
+            p charge Distance:
+            div#slider-cd(class="slider")
