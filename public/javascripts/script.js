@@ -1,3 +1,8 @@
+var slidergrav;
+var sliderld;
+var slidercharge;
+var slidercd;
+var codeFlower;
 $(document).ready(function() {	
 	Slider = Backbone.View.extend({
 	initialize:function(options){
@@ -10,6 +15,19 @@ $(document).ready(function() {
 		$(this.el).slider(this.options);
 	},
 });
+	
+	CodeFlower = Backbone.View.extend({
+		initialize:function(options){
+			this.options = options.options;
+			this.render(options.jsonData);
+		},
+
+		render: function(jsonData){
+			codeFlower = new CodeFlower(this.el,800,800);
+			codeFlower.update(jsonData);
+		}
+	});;
+
 	$('#menuToggle').click(function(e) {
 		var $parent = $(this).parent('nav');
 		$parent.toggleClass("open");
@@ -32,8 +50,15 @@ var sliderldOptions = {
 	animate:"fast"
 }
 
-var slidergrav = new Slider({el:"#slider-grav",options:sliderldOptions});
-var sliderld = new Slider({el:"#slider-ld",options:sliderldOptions});
-var slidercharge = new Slider({el:"#slider-c",options:sliderldOptions});
-var slidercd = new Slider({el:"#slider-cd",options:sliderldOptions});
+var codeFlowerOptions = {}
+
+$.getJSON("./graph-sample/1/1.json",function(data){
+	codeFlowerOptions.jsonData = data;
+	console.log(data);
+    codeFlower = new CodeFlower({el:"#code",options:codeFlowerOptions});
+});
+slidergrav = new Slider({el:"#slider-grav",options:sliderldOptions});
+sliderld = new Slider({el:"#slider-ld",options:sliderldOptions});
+slidercharge = new Slider({el:"#slider-c",options:sliderldOptions});
+slidercd = new Slider({el:"#slider-cd",options:sliderldOptions});
 });
