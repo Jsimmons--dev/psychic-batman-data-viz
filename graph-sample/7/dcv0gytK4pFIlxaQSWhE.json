@@ -1,0 +1,2157 @@
+{
+  "routines": [
+  {
+    "tag":"sub_4015A0",
+    "label":"sub_4015A0",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetNumberOfConsoleMouseButtons" },
+      { "tag":"j_PulseEvent" },
+      { "tag":"sub_40184C" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_4015A0",
+        "label":"sub_4015A0",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    0" },
+          { "str":"call    j_PulseEvent" },
+          { "str":"push    ebx" },
+          { "str":"push    edi" },
+          { "str":"push    edi" },
+          { "str":"call    sub_40184C" },
+          { "str":"pop     ebx" },
+          { "str":"mov     esi, 0" },
+          { "str":"push    esi" },
+          { "str":"call    j_GetNumberOfConsoleMouseButtons" },
+          { "str":"pop     ebp" },
+          { "str":"retn    0Ch" }
+        ],
+        "callees":[
+          { "tag":"j_GetNumberOfConsoleMouseButtons" },
+          { "tag":"j_PulseEvent" },
+          { "tag":"sub_40184C" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_0",
+    "label":"rtn_0",
+    "type":"ours",
+    "callees":[
+      { "tag":"j_GetModuleHandleA" },
+      { "tag":"j_GetOEMCP" },
+      { "tag":"sub_401758" }
+    ],
+    "blocks":[
+      {
+        "tag":"loc_4015C4",
+        "label":"loc_4015C4",
+        "out_true":"loc_4015D0_1",
+        "out_false":"label_0",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ebx" },
+          { "str":"push    edi" },
+          { "str":"push    edx" },
+          { "str":"call    sub_401758" },
+          { "str":"pop     ebx" },
+          { "str":"lea     ecx, [ebx-202h]" },
+          { "str":"push    ecx" },
+          { "str":"call    j_GetModuleHandleA" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short near ptr loc_4015D0+1" }
+        ],
+        "callees":[
+          { "tag":"j_GetModuleHandleA" },
+          { "tag":"sub_401758" }
+        ]
+      },
+{
+        "tag":"label_0",
+        "label":"label_0",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"call    j_GetOEMCP" },
+          { "str":"pop     ebp" },
+          { "str":"retn    0Ch" }
+        ],
+        "callees":[
+          { "tag":"j_GetOEMCP" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_4015EC",
+    "label":"sub_4015EC",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetNumberOfConsoleMouseButtons" },
+      { "tag":"j_ReleaseMutex" },
+      { "tag":"sub_401B58" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_4015EC",
+        "label":"sub_4015EC",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ebx" },
+          { "str":"push    eax" },
+          { "str":"push    edx" },
+          { "str":"call    sub_401B58" },
+          { "str":"pop     ebx" },
+          { "str":"mov     esi, 0" },
+          { "str":"push    esi" },
+          { "str":"call    j_ReleaseMutex" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    j_GetNumberOfConsoleMouseButtons" },
+          { "str":"pop     ebp" },
+          { "str":"retn    0Ch" }
+        ],
+        "callees":[
+          { "tag":"j_GetNumberOfConsoleMouseButtons" },
+          { "tag":"j_ReleaseMutex" },
+          { "tag":"sub_401B58" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401614",
+    "label":"sub_401614",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetNumberOfConsoleMouseButtons" },
+      { "tag":"j_SetEvent" },
+      { "tag":"sub_4018F0" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401614",
+        "label":"sub_401614",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ebx" },
+          { "str":"push    edi" },
+          { "str":"push    edx" },
+          { "str":"push    edx" },
+          { "str":"call    sub_4018F0" },
+          { "str":"pop     ebx" },
+          { "str":"mov     esi, 0" },
+          { "str":"push    esi" },
+          { "str":"call    j_GetNumberOfConsoleMouseButtons" },
+          { "str":"push    0" },
+          { "str":"call    j_SetEvent" },
+          { "str":"pop     ebp" },
+          { "str":"retn    0Ch" }
+        ],
+        "callees":[
+          { "tag":"j_GetNumberOfConsoleMouseButtons" },
+          { "tag":"j_SetEvent" },
+          { "tag":"sub_4018F0" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_1",
+    "label":"rtn_1",
+    "type":"ours",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"start",
+        "label":"start",
+        "out_true":"loc_4019F8",
+        "out_false":"sub_401654",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"xor     edx, edx" },
+          { "str":"mov     eax, ds:GetConsoleInputWaitHandle" },
+          { "str":"mov     dl, [eax]" },
+          { "str":"lea     edx, [edx-0A1h]" },
+          { "str":"test    edx, edx" },
+          { "str":"jz      loc_4019F8" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_401654",
+    "label":"sub_401654",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetThreadLocale" },
+      { "tag":"j_PulseEvent" },
+      { "tag":"sub_401B1C" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401654",
+        "label":"sub_401654",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"call    j_GetThreadLocale" },
+          { "str":"push    ebx" },
+          { "str":"push    edx" },
+          { "str":"push    ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    esi" },
+          { "str":"call    sub_401B1C" },
+          { "str":"pop     ebx" },
+          { "str":"push    0" },
+          { "str":"call    j_PulseEvent" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"j_GetThreadLocale" },
+          { "tag":"j_PulseEvent" },
+          { "tag":"sub_401B1C" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401674",
+    "label":"sub_401674",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetOEMCP" },
+      { "tag":"j_PulseEvent" },
+      { "tag":"sub_4018A8" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401674",
+        "label":"sub_401674",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ebx" },
+          { "str":"push    edx" },
+          { "str":"push    eax" },
+          { "str":"push    eax" },
+          { "str":"call    sub_4018A8" },
+          { "str":"pop     ebx" },
+          { "str":"mov     esi, 0" },
+          { "str":"push    esi" },
+          { "str":"call    j_PulseEvent" },
+          { "str":"call    j_GetOEMCP" },
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[
+          { "tag":"j_GetOEMCP" },
+          { "tag":"j_PulseEvent" },
+          { "tag":"sub_4018A8" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_2",
+    "label":"rtn_2",
+    "type":"ours",
+    "callees":[
+      { "tag":"j_GetModuleHandleA" },
+      { "tag":"j_OutputDebugStringA" },
+      { "tag":"sub_401654" },
+      { "tag":"sub_40182C" }
+    ],
+    "blocks":[
+      {
+        "tag":"loc_401698",
+        "label":"loc_401698",
+        "out_true":"loc_40169B_1",
+        "out_false":"label_1",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"lea     eax, [ebx-202h]" },
+          { "str":"push    eax" },
+          { "str":"call    j_GetModuleHandleA" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short near ptr loc_40169B+1" }
+        ],
+        "callees":[
+          { "tag":"j_GetModuleHandleA" }
+        ]
+      },
+{
+        "tag":"label_1",
+        "label":"label_1",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ebx" },
+          { "str":"push    esi" },
+          { "str":"push    esi" },
+          { "str":"call    sub_40182C" },
+          { "str":"pop     ebx" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    j_OutputDebugStringA" },
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[
+          { "tag":"j_OutputDebugStringA" },
+          { "tag":"sub_40182C" }
+        ]
+      },
+{
+        "tag":"loc_4016C4",
+        "label":"loc_4016C4",
+        "out_true":"loc_4016C7_1",
+        "out_false":"label_2",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"lea     edx, [ebx-202h]" },
+          { "str":"push    edx" },
+          { "str":"call    j_GetModuleHandleA" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short near ptr loc_4016C7+1" }
+        ],
+        "callees":[
+          { "tag":"j_GetModuleHandleA" }
+        ]
+      },
+{
+        "tag":"label_2",
+        "label":"label_2",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ebx" },
+          { "str":"push    edi" },
+          { "str":"push    esi" },
+          { "str":"call    sub_401654" },
+          { "str":"pop     ebx" },
+          { "str":"push    0" },
+          { "str":"call    j_OutputDebugStringA" },
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[
+          { "tag":"j_OutputDebugStringA" },
+          { "tag":"sub_401654" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_4016EC",
+    "label":"sub_4016EC",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_ReleaseMutex" },
+      { "tag":"sub_401970" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_4016EC",
+        "label":"sub_4016EC",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ebx" },
+          { "str":"push    esi" },
+          { "str":"push    edx" },
+          { "str":"call    sub_401970" },
+          { "str":"pop     ebx" },
+          { "str":"push    0" },
+          { "str":"call    j_ReleaseMutex" },
+          { "str":"push    0" },
+          { "str":"call    j_ReleaseMutex" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"j_ReleaseMutex" },
+          { "tag":"sub_401970" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_40170C",
+    "label":"sub_40170C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_SetEvent" },
+      { "tag":"sub_401614" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_40170C",
+        "label":"sub_40170C",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ebx" },
+          { "str":"push    eax" },
+          { "str":"push    esi" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401614" },
+          { "str":"pop     ebx" },
+          { "str":"mov     edi, 0" },
+          { "str":"push    edi" },
+          { "str":"call    j_SetEvent" },
+          { "str":"push    0" },
+          { "str":"call    j_SetEvent" },
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[
+          { "tag":"j_SetEvent" },
+          { "tag":"sub_401614" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_3",
+    "label":"rtn_3",
+    "type":"ours",
+    "callees":[
+      { "tag":"j_GetModuleHandleA" },
+      { "tag":"j_GetUserDefaultLangID" },
+      { "tag":"sub_401A24" }
+    ],
+    "blocks":[
+      {
+        "tag":"loc_401730",
+        "label":"loc_401730",
+        "out_true":"loc_401741_1",
+        "out_false":"label_3",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ebx" },
+          { "str":"push    ecx" },
+          { "str":"push    eax" },
+          { "str":"call    sub_401A24" },
+          { "str":"pop     ebx" },
+          { "str":"call    j_GetUserDefaultLangID" },
+          { "str":"lea     esi, [ebx-202h]" },
+          { "str":"push    esi" },
+          { "str":"call    j_GetModuleHandleA" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short near ptr loc_401741+1" }
+        ],
+        "callees":[
+          { "tag":"j_GetModuleHandleA" },
+          { "tag":"j_GetUserDefaultLangID" },
+          { "tag":"sub_401A24" }
+        ]
+      },
+{
+        "tag":"label_3",
+        "label":"label_3",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_401758",
+    "label":"sub_401758",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetNumberOfConsoleMouseButtons" },
+      { "tag":"j_OutputDebugStringA" },
+      { "tag":"loc_4016C4" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401758",
+        "label":"sub_401758",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ebx" },
+          { "str":"push    edi" },
+          { "str":"push    edi" },
+          { "str":"push    edi" },
+          { "str":"push    esi" },
+          { "str":"call    loc_4016C4" },
+          { "str":"pop     ebx" },
+          { "str":"push    0" },
+          { "str":"call    j_OutputDebugStringA" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    j_GetNumberOfConsoleMouseButtons" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"j_GetNumberOfConsoleMouseButtons" },
+          { "tag":"j_OutputDebugStringA" },
+          { "tag":"loc_4016C4" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_40177C",
+    "label":"sub_40177C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetActiveWindow" },
+      { "tag":"j_GetNumberOfConsoleMouseButtons" },
+      { "tag":"sub_4019B4" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_40177C",
+        "label":"sub_40177C",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    0" },
+          { "str":"call    j_GetNumberOfConsoleMouseButtons" },
+          { "str":"push    ebx" },
+          { "str":"push    edx" },
+          { "str":"push    esi" },
+          { "str":"call    sub_4019B4" },
+          { "str":"pop     ebx" },
+          { "str":"call    j_GetActiveWindow" },
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[
+          { "tag":"j_GetActiveWindow" },
+          { "tag":"j_GetNumberOfConsoleMouseButtons" },
+          { "tag":"sub_4019B4" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_4",
+    "label":"rtn_4",
+    "type":"ours",
+    "callees":[
+      { "tag":"j_GetModuleHandleA" },
+      { "tag":"sub_401AA8" }
+    ],
+    "blocks":[
+      {
+        "tag":"loc_401798",
+        "label":"loc_401798",
+        "out_true":"loc_40179B_1",
+        "out_false":"label_4",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"lea     eax, [ebx-202h]" },
+          { "str":"push    eax" },
+          { "str":"call    j_GetModuleHandleA" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short near ptr loc_40179B+1" }
+        ],
+        "callees":[
+          { "tag":"j_GetModuleHandleA" }
+        ]
+      },
+{
+        "tag":"label_4",
+        "label":"label_4",
+        "out_true":"loc_4017B5_1",
+        "out_false":"label_5",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"push    ebx" },
+          { "str":"push    ecx" },
+          { "str":"push    eax" },
+          { "str":"push    edi" },
+          { "str":"call    sub_401AA8" },
+          { "str":"pop     ebx" },
+          { "str":"lea     edi, [ebx-202h]" },
+          { "str":"push    edi" },
+          { "str":"call    j_GetModuleHandleA" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short near ptr loc_4017B5+1" }
+        ],
+        "callees":[
+          { "tag":"j_GetModuleHandleA" },
+          { "tag":"sub_401AA8" }
+        ]
+      },
+{
+        "tag":"label_5",
+        "label":"label_5",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_4017CC",
+    "label":"sub_4017CC",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetConsoleCP" },
+      { "tag":"j_SetEvent" },
+      { "tag":"sub_4018CC" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_4017CC",
+        "label":"sub_4017CC",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ebx" },
+          { "str":"push    eax" },
+          { "str":"push    eax" },
+          { "str":"push    eax" },
+          { "str":"call    sub_4018CC" },
+          { "str":"pop     ebx" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    j_SetEvent" },
+          { "str":"call    j_GetConsoleCP" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"j_GetConsoleCP" },
+          { "tag":"j_SetEvent" },
+          { "tag":"sub_4018CC" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_4017F0",
+    "label":"sub_4017F0",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetFocus" },
+      { "tag":"j_OutputDebugStringA" },
+      { "tag":"sub_401888" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_4017F0",
+        "label":"sub_4017F0",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    j_OutputDebugStringA" },
+          { "str":"push    ebx" },
+          { "str":"push    ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401888" },
+          { "str":"pop     ebx" },
+          { "str":"call    j_GetFocus" },
+          { "str":"pop     ebp" },
+          { "str":"retn    0Ch" }
+        ],
+        "callees":[
+          { "tag":"j_GetFocus" },
+          { "tag":"j_OutputDebugStringA" },
+          { "tag":"sub_401888" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401810",
+    "label":"sub_401810",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetConsoleCP" },
+      { "tag":"j_GetFocus" },
+      { "tag":"loc_401730" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401810",
+        "label":"sub_401810",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"call    j_GetFocus" },
+          { "str":"push    ebx" },
+          { "str":"push    ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    loc_401730" },
+          { "str":"pop     ebx" },
+          { "str":"call    j_GetConsoleCP" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"j_GetConsoleCP" },
+          { "tag":"j_GetFocus" },
+          { "tag":"loc_401730" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_40182C",
+    "label":"sub_40182C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetActiveWindow" },
+      { "tag":"j_GetThreadPriority" },
+      { "tag":"sub_40170C" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_40182C",
+        "label":"sub_40182C",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"call    j_GetActiveWindow" },
+          { "str":"push    ebx" },
+          { "str":"push    edi" },
+          { "str":"push    ecx" },
+          { "str":"push    esi" },
+          { "str":"push    eax" },
+          { "str":"call    sub_40170C" },
+          { "str":"pop     ebx" },
+          { "str":"push    0FFFFFFFEh" },
+          { "str":"call    j_GetThreadPriority" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"j_GetActiveWindow" },
+          { "tag":"j_GetThreadPriority" },
+          { "tag":"sub_40170C" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_40184C",
+    "label":"sub_40184C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetActiveWindow" },
+      { "tag":"j_GetForegroundWindow" },
+      { "tag":"sub_401810" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_40184C",
+        "label":"sub_40184C",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ebx" },
+          { "str":"push    esi" },
+          { "str":"push    edx" },
+          { "str":"call    sub_401810" },
+          { "str":"pop     ebx" },
+          { "str":"call    j_GetActiveWindow" },
+          { "str":"call    j_GetForegroundWindow" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"j_GetActiveWindow" },
+          { "tag":"j_GetForegroundWindow" },
+          { "tag":"sub_401810" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401868",
+    "label":"sub_401868",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetFocus" },
+      { "tag":"j_IsDBCSLeadByte" },
+      { "tag":"loc_401798" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401868",
+        "label":"sub_401868",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ebx" },
+          { "str":"push    esi" },
+          { "str":"push    edx" },
+          { "str":"push    esi" },
+          { "str":"push    esi" },
+          { "str":"call    loc_401798" },
+          { "str":"pop     ebx" },
+          { "str":"push    0" },
+          { "str":"call    j_IsDBCSLeadByte" },
+          { "str":"call    j_GetFocus" },
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[
+          { "tag":"j_GetFocus" },
+          { "tag":"j_IsDBCSLeadByte" },
+          { "tag":"loc_401798" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401888",
+    "label":"sub_401888",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetForegroundWindow" },
+      { "tag":"j_GetNumberOfConsoleMouseButtons" },
+      { "tag":"sub_4019D8" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401888",
+        "label":"sub_401888",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ebx" },
+          { "str":"push    edi" },
+          { "str":"push    esi" },
+          { "str":"push    esi" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_4019D8" },
+          { "str":"pop     ebx" },
+          { "str":"call    j_GetForegroundWindow" },
+          { "str":"push    0" },
+          { "str":"call    j_GetNumberOfConsoleMouseButtons" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"j_GetForegroundWindow" },
+          { "tag":"j_GetNumberOfConsoleMouseButtons" },
+          { "tag":"sub_4019D8" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_4018A8",
+    "label":"sub_4018A8",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetNumberOfConsoleMouseButtons" },
+      { "tag":"j_OutputDebugStringA" },
+      { "tag":"sub_40192C" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_4018A8",
+        "label":"sub_4018A8",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    j_OutputDebugStringA" },
+          { "str":"push    ebx" },
+          { "str":"push    ecx" },
+          { "str":"push    eax" },
+          { "str":"call    sub_40192C" },
+          { "str":"pop     ebx" },
+          { "str":"push    0" },
+          { "str":"call    j_GetNumberOfConsoleMouseButtons" },
+          { "str":"pop     ebp" },
+          { "str":"retn    0Ch" }
+        ],
+        "callees":[
+          { "tag":"j_GetNumberOfConsoleMouseButtons" },
+          { "tag":"j_OutputDebugStringA" },
+          { "tag":"sub_40192C" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_4018CC",
+    "label":"sub_4018CC",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetNumberOfConsoleMouseButtons" },
+      { "tag":"j_GetThreadLocale" },
+      { "tag":"sub_40177C" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_4018CC",
+        "label":"sub_4018CC",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"call    j_GetThreadLocale" },
+          { "str":"push    ebx" },
+          { "str":"push    edi" },
+          { "str":"push    edx" },
+          { "str":"push    edi" },
+          { "str":"push    edx" },
+          { "str":"call    sub_40177C" },
+          { "str":"pop     ebx" },
+          { "str":"mov     esi, 0" },
+          { "str":"push    esi" },
+          { "str":"call    j_GetNumberOfConsoleMouseButtons" },
+          { "str":"pop     ebp" },
+          { "str":"retn    0Ch" }
+        ],
+        "callees":[
+          { "tag":"j_GetNumberOfConsoleMouseButtons" },
+          { "tag":"j_GetThreadLocale" },
+          { "tag":"sub_40177C" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_4018F0",
+    "label":"sub_4018F0",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetConsoleCP" },
+      { "tag":"j_GetThreadLocale" },
+      { "tag":"sub_4017F0" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_4018F0",
+        "label":"sub_4018F0",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ebx" },
+          { "str":"push    esi" },
+          { "str":"push    eax" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_4017F0" },
+          { "str":"pop     ebx" },
+          { "str":"call    j_GetThreadLocale" },
+          { "str":"call    j_GetConsoleCP" },
+          { "str":"pop     ebp" },
+          { "str":"retn    0Ch" }
+        ],
+        "callees":[
+          { "tag":"j_GetConsoleCP" },
+          { "tag":"j_GetThreadLocale" },
+          { "tag":"sub_4017F0" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_40190C",
+    "label":"sub_40190C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetOEMCP" },
+      { "tag":"j_ReleaseMutex" },
+      { "tag":"loc_401698" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_40190C",
+        "label":"sub_40190C",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"call    j_GetOEMCP" },
+          { "str":"push    ebx" },
+          { "str":"push    edi" },
+          { "str":"push    edi" },
+          { "str":"push    esi" },
+          { "str":"push    edi" },
+          { "str":"call    loc_401698" },
+          { "str":"pop     ebx" },
+          { "str":"push    0" },
+          { "str":"call    j_ReleaseMutex" },
+          { "str":"pop     ebp" },
+          { "str":"retn    0Ch" }
+        ],
+        "callees":[
+          { "tag":"j_GetOEMCP" },
+          { "tag":"j_ReleaseMutex" },
+          { "tag":"loc_401698" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_40192C",
+    "label":"sub_40192C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetForegroundWindow" },
+      { "tag":"j_GetUserDefaultLangID" },
+      { "tag":"sub_401A40" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_40192C",
+        "label":"sub_40192C",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ebx" },
+          { "str":"push    eax" },
+          { "str":"push    eax" },
+          { "str":"push    eax" },
+          { "str":"push    edi" },
+          { "str":"call    sub_401A40" },
+          { "str":"pop     ebx" },
+          { "str":"call    j_GetUserDefaultLangID" },
+          { "str":"call    j_GetForegroundWindow" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"j_GetForegroundWindow" },
+          { "tag":"j_GetUserDefaultLangID" },
+          { "tag":"sub_401A40" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401948",
+    "label":"sub_401948",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_OutputDebugStringA" },
+      { "tag":"j_SetEvent" },
+      { "tag":"sub_4017CC" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401948",
+        "label":"sub_401948",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     esi, 0" },
+          { "str":"push    esi" },
+          { "str":"call    j_SetEvent" },
+          { "str":"push    ebx" },
+          { "str":"push    esi" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_4017CC" },
+          { "str":"pop     ebx" },
+          { "str":"mov     esi, 0" },
+          { "str":"push    esi" },
+          { "str":"call    j_OutputDebugStringA" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"j_OutputDebugStringA" },
+          { "tag":"j_SetEvent" },
+          { "tag":"sub_4017CC" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401970",
+    "label":"sub_401970",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetNumberOfConsoleMouseButtons" },
+      { "tag":"j_GetThreadPriority" },
+      { "tag":"sub_401994" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401970",
+        "label":"sub_401970",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ebx" },
+          { "str":"push    eax" },
+          { "str":"push    edx" },
+          { "str":"call    sub_401994" },
+          { "str":"pop     ebx" },
+          { "str":"push    0FFFFFFFEh" },
+          { "str":"call    j_GetThreadPriority" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    j_GetNumberOfConsoleMouseButtons" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"j_GetNumberOfConsoleMouseButtons" },
+          { "tag":"j_GetThreadPriority" },
+          { "tag":"sub_401994" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401994",
+    "label":"sub_401994",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetConsoleCP" },
+      { "tag":"j_GetThreadPriority" },
+      { "tag":"sub_4015EC" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401994",
+        "label":"sub_401994",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ebx" },
+          { "str":"push    ecx" },
+          { "str":"push    edx" },
+          { "str":"push    esi" },
+          { "str":"call    sub_4015EC" },
+          { "str":"pop     ebx" },
+          { "str":"push    0FFFFFFFEh" },
+          { "str":"call    j_GetThreadPriority" },
+          { "str":"call    j_GetConsoleCP" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"j_GetConsoleCP" },
+          { "tag":"j_GetThreadPriority" },
+          { "tag":"sub_4015EC" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_4019B4",
+    "label":"sub_4019B4",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetThreadLocale" },
+      { "tag":"j_SetEvent" },
+      { "tag":"sub_401868" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_4019B4",
+        "label":"sub_4019B4",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"call    j_GetThreadLocale" },
+          { "str":"push    ebx" },
+          { "str":"push    edi" },
+          { "str":"push    edi" },
+          { "str":"push    eax" },
+          { "str":"push    edi" },
+          { "str":"call    sub_401868" },
+          { "str":"pop     ebx" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    j_SetEvent" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"j_GetThreadLocale" },
+          { "tag":"j_SetEvent" },
+          { "tag":"sub_401868" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_4019D8",
+    "label":"sub_4019D8",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetNumberOfConsoleMouseButtons" },
+      { "tag":"j_PulseEvent" },
+      { "tag":"sub_4015A0" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_4019D8",
+        "label":"sub_4019D8",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ebx" },
+          { "str":"push    edx" },
+          { "str":"push    edx" },
+          { "str":"push    edi" },
+          { "str":"call    sub_4015A0" },
+          { "str":"pop     ebx" },
+          { "str":"push    0" },
+          { "str":"call    j_PulseEvent" },
+          { "str":"push    0" },
+          { "str":"call    j_GetNumberOfConsoleMouseButtons" },
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[
+          { "tag":"j_GetNumberOfConsoleMouseButtons" },
+          { "tag":"j_PulseEvent" },
+          { "tag":"sub_4015A0" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_5",
+    "label":"rtn_5",
+    "type":"ours",
+    "callees":[
+      { "tag":"esi" },
+      { "tag":"j_GetUserDefaultLangID" },
+      { "tag":"sub_401674" }
+    ],
+    "blocks":[
+      {
+        "tag":"loc_4019F8",
+        "label":"loc_4019F8",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"lea     ebx, unk_403202" },
+          { "str":"push    ebx" },
+          { "str":"push    esi" },
+          { "str":"push    eax" },
+          { "str":"push    esi" },
+          { "str":"push    eax" },
+          { "str":"call    sub_401674" },
+          { "str":"pop     ebx" },
+          { "str":"call    j_GetUserDefaultLangID" },
+          { "str":"mov     ecx, ds:GetModuleHandleA" },
+          { "str":"push    ecx" },
+          { "str":"mov     esi, [ebx-148h]" },
+          { "str":"call    esi" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"esi" },
+          { "tag":"j_GetUserDefaultLangID" },
+          { "tag":"sub_401674" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401A24",
+    "label":"sub_401A24",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetForegroundWindow" },
+      { "tag":"j_GetUserDefaultLangID" },
+      { "tag":"sub_401B3C" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401A24",
+        "label":"sub_401A24",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ebx" },
+          { "str":"push    edi" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401B3C" },
+          { "str":"pop     ebx" },
+          { "str":"call    j_GetForegroundWindow" },
+          { "str":"call    j_GetUserDefaultLangID" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"j_GetForegroundWindow" },
+          { "tag":"j_GetUserDefaultLangID" },
+          { "tag":"sub_401B3C" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401A40",
+    "label":"sub_401A40",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetThreadPriority" },
+      { "tag":"j_SetEvent" },
+      { "tag":"sub_4016EC" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401A40",
+        "label":"sub_401A40",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     edx, 0FFFFFFFEh" },
+          { "str":"push    edx" },
+          { "str":"call    j_GetThreadPriority" },
+          { "str":"push    ebx" },
+          { "str":"push    ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_4016EC" },
+          { "str":"pop     ebx" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    j_SetEvent" },
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[
+          { "tag":"j_GetThreadPriority" },
+          { "tag":"j_SetEvent" },
+          { "tag":"sub_4016EC" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401A68",
+    "label":"sub_401A68",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetForegroundWindow" },
+      { "tag":"j_GetThreadLocale" },
+      { "tag":"sub_401A84" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401A68",
+        "label":"sub_401A68",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ebx" },
+          { "str":"push    edx" },
+          { "str":"push    edi" },
+          { "str":"push    ecx" },
+          { "str":"push    eax" },
+          { "str":"call    sub_401A84" },
+          { "str":"pop     ebx" },
+          { "str":"call    j_GetForegroundWindow" },
+          { "str":"call    j_GetThreadLocale" },
+          { "str":"pop     ebp" },
+          { "str":"retn    0Ch" }
+        ],
+        "callees":[
+          { "tag":"j_GetForegroundWindow" },
+          { "tag":"j_GetThreadLocale" },
+          { "tag":"sub_401A84" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401A84",
+    "label":"sub_401A84",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetActiveWindow" },
+      { "tag":"j_GetNumberOfConsoleMouseButtons" },
+      { "tag":"sub_40190C" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401A84",
+        "label":"sub_401A84",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"call    j_GetActiveWindow" },
+          { "str":"push    ebx" },
+          { "str":"push    edx" },
+          { "str":"push    esi" },
+          { "str":"push    edi" },
+          { "str":"call    sub_40190C" },
+          { "str":"pop     ebx" },
+          { "str":"mov     esi, 0" },
+          { "str":"push    esi" },
+          { "str":"call    j_GetNumberOfConsoleMouseButtons" },
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[
+          { "tag":"j_GetActiveWindow" },
+          { "tag":"j_GetNumberOfConsoleMouseButtons" },
+          { "tag":"sub_40190C" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401AA8",
+    "label":"sub_401AA8",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetActiveWindow" },
+      { "tag":"j_VirtualAlloc" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401AA8",
+        "label":"sub_401AA8",
+        "out_true":"loc_401AE1",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"lea     edx, [ebx-0B0h]" },
+          { "str":"push    edx" },
+          { "str":"push    40h" },
+          { "str":"push    1000h" },
+          { "str":"push    560h" },
+          { "str":"push    0" },
+          { "str":"call    j_VirtualAlloc" },
+          { "str":"pop     edx" },
+          { "str":"mov     [edx-98h], eax" },
+          { "str":"mov     ebx, eax" },
+          { "str":"add     ebx, 117h" },
+          { "str":"mov     ecx, offset word_401036" },
+          { "str":"xor     esi, esi" },
+          { "str":"add     esi, 560h" }
+        ],
+        "callees":[
+          { "tag":"j_VirtualAlloc" }
+        ]
+      },
+{
+        "tag":"loc_401AE1",
+        "label":"loc_401AE1",
+        "out_true":"loc_401B0E",
+        "out_false":"label_6",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"cmp     esi, 0" },
+          { "str":"jz      short loc_401B0E" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_6",
+        "label":"label_6",
+        "out_true":"loc_401AE1",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"sub     esi, 4" },
+          { "str":"add     ecx, 4" },
+          { "str":"mov     eax, [ecx-4]" },
+          { "str":"mov     [ebx-117h], eax" },
+          { "str":"add     ebx, 4" },
+          { "str":"sub     dword ptr [ebx-11Bh], 93EACF78h" },
+          { "str":"xor     dword ptr [ebx-11Bh], 0B0927E15h" },
+          { "str":"jmp     short loc_401AE1" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_401B0E",
+        "label":"loc_401B0E",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    edx" },
+          { "str":"call    j_GetActiveWindow" },
+          { "str":"pop     edx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    0Ch" }
+        ],
+        "callees":[
+          { "tag":"j_GetActiveWindow" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401B1C",
+    "label":"sub_401B1C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetForegroundWindow" },
+      { "tag":"j_PulseEvent" },
+      { "tag":"sub_401A68" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401B1C",
+        "label":"sub_401B1C",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"call    j_GetForegroundWindow" },
+          { "str":"push    ebx" },
+          { "str":"push    eax" },
+          { "str":"push    eax" },
+          { "str":"push    edi" },
+          { "str":"call    sub_401A68" },
+          { "str":"pop     ebx" },
+          { "str":"push    0" },
+          { "str":"call    j_PulseEvent" },
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[
+          { "tag":"j_GetForegroundWindow" },
+          { "tag":"j_PulseEvent" },
+          { "tag":"sub_401A68" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401B3C",
+    "label":"sub_401B3C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetConsoleCP" },
+      { "tag":"sub_401948" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401B3C",
+        "label":"sub_401B3C",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"call    j_GetConsoleCP" },
+          { "str":"push    ebx" },
+          { "str":"push    ecx" },
+          { "str":"push    eax" },
+          { "str":"call    sub_401948" },
+          { "str":"pop     ebx" },
+          { "str":"call    j_GetConsoleCP" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"j_GetConsoleCP" },
+          { "tag":"sub_401948" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401B58",
+    "label":"sub_401B58",
+    "type":"idapro",
+    "callees":[
+      { "tag":"j_GetNumberOfConsoleMouseButtons" },
+      { "tag":"j_OutputDebugStringA" },
+      { "tag":"loc_4015C4" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401B58",
+        "label":"sub_401B58",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    j_GetNumberOfConsoleMouseButtons" },
+          { "str":"push    ebx" },
+          { "str":"push    edx" },
+          { "str":"push    esi" },
+          { "str":"push    esi" },
+          { "str":"call    loc_4015C4" },
+          { "str":"pop     ebx" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    j_OutputDebugStringA" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"j_GetNumberOfConsoleMouseButtons" },
+          { "tag":"j_OutputDebugStringA" },
+          { "tag":"loc_4015C4" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_6",
+    "label":"rtn_6",
+    "type":"ours",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"blk_7",
+        "label":"blk_7",
+        "out_true":"ds_GetExitCodeThread",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:GetExitCodeThread" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_8",
+        "label":"label_8",
+        "out_true":"ds_EnumCalendarInfoA",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:EnumCalendarInfoA" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_9",
+        "label":"label_9",
+        "out_true":"ds_GetConsoleInputWaitHandle",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:GetConsoleInputWaitHandle" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_10",
+        "label":"label_10",
+        "out_true":"ds_lstrcpyA",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:lstrcpyA" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_11",
+        "label":"label_11",
+        "out_true":"ds_TlsFree",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:TlsFree" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_12",
+        "label":"label_12",
+        "out_true":"ds_TlsGetValue",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:TlsGetValue" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_13",
+        "label":"label_13",
+        "out_true":"ds_GetThreadTimes",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:GetThreadTimes" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_14",
+        "label":"label_14",
+        "out_true":"ds_lstrcatA",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:lstrcatA" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_15",
+        "label":"label_15",
+        "out_true":"ds_GetWindowTextLengthA",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:GetWindowTextLengthA" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_16",
+        "label":"label_16",
+        "out_true":"ds_GetSystemMetrics",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:GetSystemMetrics" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_17",
+        "label":"label_17",
+        "out_true":"ds_ShowWindow",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:ShowWindow" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_18",
+        "label":"label_18",
+        "out_true":"ds_ValidateRect",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:ValidateRect" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_19",
+        "label":"label_19",
+        "out_true":"ds_GetWindow",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:GetWindow" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_20",
+        "label":"label_20",
+        "out_true":"ds_ReleaseDC",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:ReleaseDC" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_21",
+        "label":"label_21",
+        "out_true":"ds_GetClassInfoExA",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:GetClassInfoExA" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_22",
+        "label":"label_22",
+        "out_true":"ds_IsWindowVisible",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:IsWindowVisible" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_23",
+        "label":"label_23",
+        "out_true":"ds_off_402080",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:off_402080" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_24",
+        "label":"label_24",
+        "out_true":"ds_GetDC",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:GetDC" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_25",
+        "label":"label_25",
+        "out_true":"ds_CloseWindow",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:CloseWindow" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_26",
+        "label":"label_26",
+        "out_true":"ds_GetClassNameA",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:GetClassNameA" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_27",
+        "label":"label_27",
+        "out_true":"ds_InvalidateRect",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:InvalidateRect" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_28",
+        "label":"label_28",
+        "out_true":"ds_RegisterClassA",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:RegisterClassA" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_29",
+        "label":"label_29",
+        "out_true":"ds_IsIconic",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:IsIconic" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_30",
+        "label":"label_30",
+        "out_true":"ds_GetWindowTextA",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:GetWindowTextA" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_31",
+        "label":"label_31",
+        "out_true":"ds_MMCSetLineInfo",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:MMCSetLineInfo" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_32",
+        "label":"label_32",
+        "out_true":"ds_MMCSetServerConfig",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:MMCSetServerConfig" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_33",
+        "label":"label_33",
+        "out_true":"ds_MMCSetPhoneInfo",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:MMCSetPhoneInfo" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_34",
+        "label":"label_34",
+        "out_true":"ds_MMCShutdown",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:MMCShutdown" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_35",
+        "label":"label_35",
+        "out_true":"ds_MMCInitialize",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:MMCInitialize" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_36",
+        "label":"label_36",
+        "out_true":"ds_DllGetClassObject",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:DllGetClassObject" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"esi",
+    "label":"esi",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"j_GetActiveWindow",
+    "label":"j_GetActiveWindow",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"j_GetConsoleCP",
+    "label":"j_GetConsoleCP",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"j_GetFocus",
+    "label":"j_GetFocus",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"j_GetForegroundWindow",
+    "label":"j_GetForegroundWindow",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"j_GetModuleHandleA",
+    "label":"j_GetModuleHandleA",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"j_GetNumberOfConsoleMouseButtons",
+    "label":"j_GetNumberOfConsoleMouseButtons",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"j_GetOEMCP",
+    "label":"j_GetOEMCP",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"j_GetThreadLocale",
+    "label":"j_GetThreadLocale",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"j_GetThreadPriority",
+    "label":"j_GetThreadPriority",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"j_GetUserDefaultLangID",
+    "label":"j_GetUserDefaultLangID",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"j_IsDBCSLeadByte",
+    "label":"j_IsDBCSLeadByte",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"j_OutputDebugStringA",
+    "label":"j_OutputDebugStringA",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"j_PulseEvent",
+    "label":"j_PulseEvent",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"j_ReleaseMutex",
+    "label":"j_ReleaseMutex",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"j_SetEvent",
+    "label":"j_SetEvent",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"j_VirtualAlloc",
+    "label":"j_VirtualAlloc",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_4015C4",
+    "label":"loc_4015C4",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_401698",
+    "label":"loc_401698",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_4016C4",
+    "label":"loc_4016C4",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_401730",
+    "label":"loc_401730",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_401798",
+    "label":"loc_401798",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "routines": [
+  {
+    "tag":"rtn_0",
+    "label":"rtn_0",
+    "type":"ours",
+    "callees":[
+      { "tag":"loc_10001024_1" }
+    ],
+    "blocks":[
+      {
+        "tag":"blk_0",
+        "label":"blk_0",
+        "out_true":"loc_10000FA9",
+        "out_false":"label_1",
+        "last_inst":"jnp",
+        "instructions":[
+          { "str":"push    1845h" },
+          { "str":"push    40D1E80Ah" },
+          { "str":"call    near ptr loc_10001024+1" },
+          { "str":"jnp     short loc_10000FA9" }
+        ],
+        "callees":[
+          { "tag":"loc_10001024_1" }
+        ]
+      },
+{
+        "tag":"label_1",
+        "label":"label_1",
+        "out_true":"loc_10001024",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"icebp" },
+          { "str":"setalc" },
+          { "str":"push    edi" },
+          { "str":"inc     esp" },
+          { "str":"sub     eax, 29B0F362h" },
+          { "str":"scasb" },
+          { "str":"dec     edi" },
+          { "str":"fsubr   st(5), st" },
+          { "str":"mov     edx, 8661C86Bh" },
+          { "str":"inc     edi" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_10001024",
+        "label":"loc_10001024",
+        "out_true":"loc_1000100A_4",
+        "out_false":"label_2",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"jz      short near ptr loc_1000100A+4" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_2",
+        "label":"label_2",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"sbb     al, 0" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"loc_10001024_1",
+    "label":"loc_10001024+1",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  }
+  ]
+}

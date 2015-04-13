@@ -1,0 +1,2013 @@
+{
+  "routines": [
+  {
+    "tag":"sub_401000",
+    "label":"sub_401000",
+    "type":"idapro",
+    "callees":[
+      { "tag":"ExitProcess" },
+      { "tag":"SetUnhandledExceptionFilter" },
+      { "tag":"__getmainargs" },
+      { "tag":"__p__environ" },
+      { "tag":"_cexit" },
+      { "tag":"_fileno" },
+      { "tag":"_fpreset" },
+      { "tag":"_setmode" },
+      { "tag":"loc_401211_3" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401000",
+        "label":"sub_401000",
+        "out_true":"loc_4010D8",
+        "out_false":"label_0",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 24h" },
+          { "str":"push    ebx" },
+          { "str":"add     esp, 0FFFFFFF4h" },
+          { "str":"push    offset TopLevelExceptionFilter" },
+          { "str":"call    SetUnhandledExceptionFilter" },
+          { "str":"add     esp, 0FFFFFFFCh" },
+          { "str":"call    _fpreset" },
+          { "str":"add     esp, 10h" },
+          { "str":"mov     [ebp+var_4], 0" },
+          { "str":"add     esp, 0FFFFFFF4h" },
+          { "str":"lea     eax, [ebp+var_4]" },
+          { "str":"push    eax" },
+          { "str":"mov     eax, dword_402008" },
+          { "str":"push    eax" },
+          { "str":"lea     eax, [ebp+var_8]" },
+          { "str":"push    eax" },
+          { "str":"push    offset dword_402004" },
+          { "str":"push    offset dword_402000" },
+          { "str":"call    __getmainargs" },
+          { "str":"add     esp, 20h" },
+          { "str":"mov     edx, dword_40200C" },
+          { "str":"test    edx, edx" },
+          { "str":"jz      loc_4010D8" }
+        ],
+        "callees":[
+          { "tag":"SetUnhandledExceptionFilter" },
+          { "tag":"__getmainargs" },
+          { "tag":"_fpreset" }
+        ]
+      },
+{
+        "tag":"label_0",
+        "label":"label_0",
+        "out_true":"loc_401086",
+        "out_false":"label_1",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"mov     eax, ds:_fmode" },
+          { "str":"mov     [eax], edx" },
+          { "str":"mov     edx, ds:_iob" },
+          { "str":"test    edx, edx" },
+          { "str":"jz      short loc_401086" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_1",
+        "label":"label_1",
+        "out_true":"loc_401086",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"add     esp, 0FFFFFFF8h" },
+          { "str":"mov     eax, dword_40200C" },
+          { "str":"push    eax" },
+          { "str":"add     esp, 0FFFFFFF4h" },
+          { "str":"push    edx" },
+          { "str":"call    _fileno" },
+          { "str":"add     esp, 10h" },
+          { "str":"push    eax" },
+          { "str":"call    _setmode" },
+          { "str":"add     esp, 10h" }
+        ],
+        "callees":[
+          { "tag":"_fileno" },
+          { "tag":"_setmode" }
+        ]
+      },
+{
+        "tag":"loc_401086",
+        "label":"loc_401086",
+        "out_true":"loc_4010AF",
+        "out_false":"label_2",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"mov     edx, ds:_iob" },
+          { "str":"add     edx, 20h" },
+          { "str":"jz      short loc_4010AF" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_2",
+        "label":"label_2",
+        "out_true":"loc_4010AF",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"add     esp, 0FFFFFFF8h" },
+          { "str":"mov     eax, dword_40200C" },
+          { "str":"push    eax" },
+          { "str":"add     esp, 0FFFFFFF4h" },
+          { "str":"push    edx" },
+          { "str":"call    _fileno" },
+          { "str":"add     esp, 10h" },
+          { "str":"push    eax" },
+          { "str":"call    _setmode" },
+          { "str":"add     esp, 10h" }
+        ],
+        "callees":[
+          { "tag":"_fileno" },
+          { "tag":"_setmode" }
+        ]
+      },
+{
+        "tag":"loc_4010AF",
+        "label":"loc_4010AF",
+        "out_true":"loc_4010D8",
+        "out_false":"label_3",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"mov     edx, ds:_iob" },
+          { "str":"add     edx, 40h" },
+          { "str":"jz      short loc_4010D8" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_3",
+        "label":"label_3",
+        "out_true":"loc_4010D8",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"add     esp, 0FFFFFFF8h" },
+          { "str":"mov     eax, dword_40200C" },
+          { "str":"push    eax" },
+          { "str":"add     esp, 0FFFFFFF4h" },
+          { "str":"push    edx" },
+          { "str":"call    _fileno" },
+          { "str":"add     esp, 10h" },
+          { "str":"push    eax" },
+          { "str":"call    _setmode" },
+          { "str":"add     esp, 10h" }
+        ],
+        "callees":[
+          { "tag":"_fileno" },
+          { "tag":"_setmode" }
+        ]
+      },
+{
+        "tag":"loc_4010D8",
+        "label":"loc_4010D8",
+        "out_true":"TopLevelExceptionFilter",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"add     esp, 0FFFFFFFCh" },
+          { "str":"call    __p__environ" },
+          { "str":"mov     eax, [eax]" },
+          { "str":"push    eax" },
+          { "str":"mov     eax, dword_402004" },
+          { "str":"push    eax" },
+          { "str":"mov     eax, dword_402000" },
+          { "str":"push    eax" },
+          { "str":"call    near ptr loc_401211+3" },
+          { "str":"mov     ebx, eax" },
+          { "str":"call    _cexit" },
+          { "str":"add     esp, 0FFFFFFF4h" },
+          { "str":"push    ebx" },
+          { "str":"call    ExitProcess" }
+        ],
+        "callees":[
+          { "tag":"ExitProcess" },
+          { "tag":"__p__environ" },
+          { "tag":"_cexit" },
+          { "tag":"loc_401211_3" }
+        ]
+      }
+    ]
+  },{
+    "tag":"TopLevelExceptionFilter",
+    "label":"TopLevelExceptionFilter",
+    "type":"user",
+    "callees":[
+      { "tag":"_fpreset" },
+      { "tag":"eax" },
+      { "tag":"signal" }
+    ],
+    "blocks":[
+      {
+        "tag":"TopLevelExceptionFilter",
+        "label":"TopLevelExceptionFilter",
+        "out_true":"loc_401134",
+        "out_false":"label_4",
+        "last_inst":"ja",
+        "instructions":[
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 10h" },
+          { "str":"push    esi" },
+          { "str":"push    ebx" },
+          { "str":"xor     esi, esi" },
+          { "str":"mov     eax, [ebp+ExceptionInfo]" },
+          { "str":"xor     ebx, ebx" },
+          { "str":"mov     eax, [eax]" },
+          { "str":"mov     eax, [eax]" },
+          { "str":"cmp     eax, 0C0000091h" },
+          { "str":"ja      short loc_401134" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_4",
+        "label":"label_4",
+        "out_true":"loc_401180",
+        "out_false":"label_5",
+        "last_inst":"jnb",
+        "instructions":[
+          { "str":"cmp     eax, 0C000008Dh" },
+          { "str":"jnb     short loc_401180" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_5",
+        "label":"label_5",
+        "out_true":"loc_401148",
+        "out_false":"label_6",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"cmp     eax, 0C0000005h" },
+          { "str":"jz      short loc_401148" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_6",
+        "label":"label_6",
+        "out_true":"loc_4011C8",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     loc_4011C8" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_401134",
+        "label":"loc_401134",
+        "out_true":"loc_401180",
+        "out_false":"label_7",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"cmp     eax, 0C0000093h" },
+          { "str":"jz      short loc_401180" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_7",
+        "label":"label_7",
+        "out_true":"loc_401185",
+        "out_false":"label_8",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"cmp     eax, 0C0000094h" },
+          { "str":"jz      short loc_401185" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_8",
+        "label":"label_8",
+        "out_true":"loc_4011C8",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     loc_4011C8" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_401148",
+        "label":"loc_401148",
+        "out_true":"loc_401170",
+        "out_false":"label_9",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"add     esp, 0FFFFFFF8h" },
+          { "str":"push    0" },
+          { "str":"push    0Bh" },
+          { "str":"call    signal" },
+          { "str":"add     esp, 10h" },
+          { "str":"cmp     eax, 1" },
+          { "str":"jnz     short loc_401170" }
+        ],
+        "callees":[
+          { "tag":"signal" }
+        ]
+      },
+{
+        "tag":"label_9",
+        "label":"label_9",
+        "out_true":"loc_4011C8",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"add     esp, 0FFFFFFF8h" },
+          { "str":"mov     ebx, 0FFFFFFFFh" },
+          { "str":"push    1" },
+          { "str":"push    0Bh" },
+          { "str":"call    signal" },
+          { "str":"jmp     short loc_4011C8" }
+        ],
+        "callees":[
+          { "tag":"signal" }
+        ]
+      },
+{
+        "tag":"loc_401170",
+        "label":"loc_401170",
+        "out_true":"loc_4011C8",
+        "out_false":"label_10",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"test    eax, eax" },
+          { "str":"jz      short loc_4011C8" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_10",
+        "label":"label_10",
+        "out_true":"loc_4011C6",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"add     esp, 0FFFFFFF4h" },
+          { "str":"mov     ebx, 0FFFFFFFFh" },
+          { "str":"push    0Bh" },
+          { "str":"jmp     short loc_4011C6" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_401180",
+        "label":"loc_401180",
+        "out_true":"loc_401185",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     esi, 1" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_401185",
+        "label":"loc_401185",
+        "out_true":"loc_4011B8",
+        "out_false":"label_11",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"add     esp, 0FFFFFFF8h" },
+          { "str":"push    0" },
+          { "str":"push    8" },
+          { "str":"call    signal" },
+          { "str":"add     esp, 10h" },
+          { "str":"cmp     eax, 1" },
+          { "str":"jnz     short loc_4011B8" }
+        ],
+        "callees":[
+          { "tag":"signal" }
+        ]
+      },
+{
+        "tag":"label_11",
+        "label":"label_11",
+        "out_true":"loc_4011B1",
+        "out_false":"label_12",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"add     esp, 0FFFFFFF8h" },
+          { "str":"push    1" },
+          { "str":"push    8" },
+          { "str":"call    signal" },
+          { "str":"add     esp, 10h" },
+          { "str":"test    esi, esi" },
+          { "str":"jz      short loc_4011B1" }
+        ],
+        "callees":[
+          { "tag":"signal" }
+        ]
+      },
+{
+        "tag":"label_12",
+        "label":"label_12",
+        "out_true":"loc_4011B1",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"call    _fpreset" }
+        ],
+        "callees":[
+          { "tag":"_fpreset" }
+        ]
+      },
+{
+        "tag":"loc_4011B1",
+        "label":"loc_4011B1",
+        "out_true":"loc_4011C8",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"mov     ebx, 0FFFFFFFFh" },
+          { "str":"jmp     short loc_4011C8" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_4011B8",
+        "label":"loc_4011B8",
+        "out_true":"loc_4011C8",
+        "out_false":"label_13",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"test    eax, eax" },
+          { "str":"jz      short loc_4011C8" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_13",
+        "label":"label_13",
+        "out_true":"loc_4011C6",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"add     esp, 0FFFFFFF4h" },
+          { "str":"mov     ebx, 0FFFFFFFFh" },
+          { "str":"push    8" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_4011C6",
+        "label":"loc_4011C6",
+        "out_true":"loc_4011C8",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"call    eax" }
+        ],
+        "callees":[
+          { "tag":"eax" }
+        ]
+      },
+{
+        "tag":"loc_4011C8",
+        "label":"loc_4011C8",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"lea     esp, [ebp-18h]" },
+          { "str":"mov     eax, ebx" },
+          { "str":"pop     ebx" },
+          { "str":"pop     esi" },
+          { "str":"mov     esp, ebp" },
+          { "str":"pop     ebp" },
+          { "str":"retn    4" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"rtn_0",
+    "label":"rtn_0",
+    "type":"ours",
+    "callees":[
+      { "tag":"eax" },
+      { "tag":"sub_401000" }
+    ],
+    "blocks":[
+      {
+        "tag":"blk_14",
+        "label":"blk_14",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 8" },
+          { "str":"add     esp, 0FFFFFFF4h" },
+          { "str":"push    1" },
+          { "str":"mov     eax, ds:__set_app_type" },
+          { "str":"call    eax" },
+          { "str":"call    sub_401000" },
+          { "str":"mov     esp, ebp" },
+          { "str":"xor     eax, eax" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"eax" },
+          { "tag":"sub_401000" }
+        ]
+      }
+    ]
+  },{
+    "tag":"start",
+    "label":"start",
+    "type":"user",
+    "callees":[
+      { "tag":"ds_VirtualAlloc" }
+    ],
+    "blocks":[
+      {
+        "tag":"start",
+        "label":"start",
+        "out_true":"loc_401211",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"sub     esp, 4" },
+          { "str":"pusha" },
+          { "str":"xor     ebx, ebx" },
+          { "str":"inc     ebx" },
+          { "str":"shl     ebx, 6" },
+          { "str":"push    ebx" },
+          { "str":"mov     ecx, 1" },
+          { "str":"shl     ecx, 0Ch" },
+          { "str":"push    ecx" },
+          { "str":"mov     edx, 100h" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_401211",
+        "label":"loc_401211",
+        "out_true":"loc_40123C",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"lea     edx, [edx+700h]" },
+          { "str":"push    edx" },
+          { "str":"push    0" },
+          { "str":"call    ds:VirtualAlloc" },
+          { "str":"push    eax" },
+          { "str":"pop     edi" },
+          { "str":"push    offset unk_404080" },
+          { "str":"pop     esi" },
+          { "str":"mov     ecx, esi" },
+          { "str":"add     ecx, 0FFBFBF80h" },
+          { "str":"push    ecx" },
+          { "str":"push    edi" },
+          { "str":"xor     eax, eax" },
+          { "str":"add     eax, esi" },
+          { "str":"mov     edx, [eax]" },
+          { "str":"inc     esi" },
+          { "str":"add     esi, 3" }
+        ],
+        "callees":[
+          { "tag":"ds_VirtualAlloc" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_1",
+    "label":"rtn_1",
+    "type":"ours",
+    "callees":[
+      { "tag":"GetModuleHandleA" },
+      { "tag":"ebx" },
+      { "tag":"sub_401494" }
+    ],
+    "blocks":[
+      {
+        "tag":"loc_40123C",
+        "label":"loc_40123C",
+        "out_true":"loc_40123C",
+        "out_false":"label_15",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"lea     eax, [esi+edx-1]" },
+          { "str":"movzx   ecx, byte ptr [eax]" },
+          { "str":"lea     ebx, [edi+edx-1]" },
+          { "str":"mov     [ebx], cl" },
+          { "str":"add     edx, 0FFFFFFFFh" },
+          { "str":"or      edx, edx" },
+          { "str":"jnz     short loc_40123C" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_15",
+        "label":"label_15",
+        "out_true":"loc_401275",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"pop     ebx" },
+          { "str":"mov     [ebx+1], ebx" },
+          { "str":"call    ebx" },
+          { "str":"sbb     eax, 0F575C084h" },
+          { "str":"jmp     short loc_401275" }
+        ],
+        "callees":[
+          { "tag":"ebx" }
+        ]
+      },
+{
+        "tag":"loc_401260",
+        "label":"loc_401260",
+        "out_true":"loc_401274",
+        "out_false":"label_16",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"inc     ebx" },
+          { "str":"mov     al, [ebx]" },
+          { "str":"cmp     al, 20h" },
+          { "str":"jz      short loc_401274" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_16",
+        "label":"label_16",
+        "out_true":"loc_401275",
+        "out_false":"label_17",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"cmp     al, 9" },
+          { "str":"jz      short loc_401275" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_17",
+        "label":"label_17",
+        "out_true":"loc_401260",
+        "out_false":"label_18",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"test    al, al" },
+          { "str":"jnz     short loc_401260" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_18",
+        "label":"label_18",
+        "out_true":"loc_401275",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     short loc_401275" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_401274",
+        "label":"loc_401274",
+        "out_true":"loc_401275",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"inc     ebx" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_401275",
+        "label":"loc_401275",
+        "out_true":"loc_401274",
+        "out_false":"label_19",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"mov     al, [ebx]" },
+          { "str":"cmp     al, 20h" },
+          { "str":"jz      short loc_401274" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_19",
+        "label":"label_19",
+        "out_true":"loc_401274",
+        "out_false":"label_20",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"cmp     al, 9" },
+          { "str":"jz      short loc_401274" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_20",
+        "label":"label_20",
+        "out_true":"loc_40128E",
+        "out_false":"label_21",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"mov     eax, 0Ah" },
+          { "str":"test    byte ptr [ebp-24h], 1" },
+          { "str":"jz      short loc_40128E" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_21",
+        "label":"label_21",
+        "out_true":"loc_40128E",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"movzx   eax, word ptr [ebp-20h]" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_40128E",
+        "label":"loc_40128E",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    eax" },
+          { "str":"push    ebx" },
+          { "str":"push    0" },
+          { "str":"add     esp, 0FFFFFFF4h" },
+          { "str":"push    0" },
+          { "str":"call    GetModuleHandleA" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"push    eax" },
+          { "str":"call    sub_401494" },
+          { "str":"mov     ebx, [ebp-68h]" },
+          { "str":"mov     esp, ebp" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"GetModuleHandleA" },
+          { "tag":"sub_401494" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_4012AC",
+    "label":"sub_4012AC",
+    "type":"idapro",
+    "callees":[
+      { "tag":"eax" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_4012AC",
+        "label":"sub_4012AC",
+        "out_true":"loc_4012D9",
+        "out_false":"loc_4012BC",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"mov     eax, off_402010" },
+          { "str":"sub     esp, 8" },
+          { "str":"cmp     dword ptr [eax], 0" },
+          { "str":"jz      short loc_4012D9" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_4012BC",
+        "label":"loc_4012BC",
+        "out_true":"loc_4012BC",
+        "out_false":"loc_4012D9",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"mov     eax, off_402010" },
+          { "str":"mov     eax, [eax]" },
+          { "str":"call    eax" },
+          { "str":"mov     eax, off_402010" },
+          { "str":"lea     edx, [eax+4]" },
+          { "str":"mov     off_402010, edx" },
+          { "str":"cmp     dword ptr [eax+4], 0" },
+          { "str":"jnz     short loc_4012BC" }
+        ],
+        "callees":[
+          { "tag":"eax" }
+        ]
+      },
+{
+        "tag":"loc_4012D9",
+        "label":"loc_4012D9",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     esp, ebp" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"rtn_2",
+    "label":"rtn_2",
+    "type":"ours",
+    "callees":[
+      { "tag":"atexit" },
+      { "tag":"eax" }
+    ],
+    "blocks":[
+      {
+        "tag":"blk_22",
+        "label":"blk_22",
+        "out_true":"loc_40130D",
+        "out_false":"label_23",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 14h" },
+          { "str":"push    ebx" },
+          { "str":"mov     eax, ds:dword_401748" },
+          { "str":"cmp     eax, 0FFFFFFFFh" },
+          { "str":"jnz     short loc_40130D" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_23",
+        "label":"label_23",
+        "out_true":"loc_40130D",
+        "out_false":"label_24",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"xor     eax, eax" },
+          { "str":"cmp     ds:dword_40174C, 0" },
+          { "str":"jz      short loc_40130D" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_24",
+        "label":"label_24",
+        "out_true":"loc_401304",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edx, offset dword_40174C" },
+          { "str":"lea     esi, [esi+0]" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_401304",
+        "label":"loc_401304",
+        "out_true":"loc_401304",
+        "out_false":"loc_40130D",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"add     edx, 4" },
+          { "str":"inc     eax" },
+          { "str":"cmp     dword ptr [edx], 0" },
+          { "str":"jnz     short loc_401304" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_40130D",
+        "label":"loc_40130D",
+        "out_true":"loc_401320",
+        "out_false":"label_25",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"mov     ebx, eax" },
+          { "str":"test    ebx, ebx" },
+          { "str":"jz      short loc_401320" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_25",
+        "label":"label_25",
+        "out_true":"loc_401314",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"nop" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_401314",
+        "label":"loc_401314",
+        "out_true":"loc_401314",
+        "out_false":"loc_401320",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"mov     eax, ds:dword_401748[ebx*4]" },
+          { "str":"call    eax" },
+          { "str":"dec     ebx" },
+          { "str":"jnz     short loc_401314" }
+        ],
+        "callees":[
+          { "tag":"eax" }
+        ]
+      },
+{
+        "tag":"loc_401320",
+        "label":"loc_401320",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"add     esp, 0FFFFFFF4h" },
+          { "str":"push    offset sub_4012AC" },
+          { "str":"call    atexit" },
+          { "str":"mov     ebx, [ebp-18h]" },
+          { "str":"mov     esp, ebp" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"atexit" }
+        ]
+      },
+{
+        "tag":"label_26",
+        "label":"label_26",
+        "out_true":"loc_401391",
+        "out_false":"label_27",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 14h" },
+          { "str":"push    ebx" },
+          { "str":"cmp     dword_402014, 0" },
+          { "str":"jnz     short loc_401391" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_27",
+        "label":"label_27",
+        "out_true":"loc_401371",
+        "out_false":"label_28",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"mov     dword_402014, 1" },
+          { "str":"mov     eax, ds:dword_401748" },
+          { "str":"cmp     eax, 0FFFFFFFFh" },
+          { "str":"jnz     short loc_401371" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_28",
+        "label":"label_28",
+        "out_true":"loc_401371",
+        "out_false":"label_29",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"xor     eax, eax" },
+          { "str":"cmp     ds:dword_40174C, 0" },
+          { "str":"jz      short loc_401371" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_29",
+        "label":"label_29",
+        "out_true":"loc_401368",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edx, offset dword_40174C" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_401368",
+        "label":"loc_401368",
+        "out_true":"loc_401368",
+        "out_false":"loc_401371",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"add     edx, 4" },
+          { "str":"inc     eax" },
+          { "str":"cmp     dword ptr [edx], 0" },
+          { "str":"jnz     short loc_401368" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_401371",
+        "label":"loc_401371",
+        "out_true":"loc_401384",
+        "out_false":"label_30",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"mov     ebx, eax" },
+          { "str":"test    ebx, ebx" },
+          { "str":"jz      short loc_401384" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_30",
+        "label":"label_30",
+        "out_true":"loc_401378",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"nop" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_401378",
+        "label":"loc_401378",
+        "out_true":"loc_401378",
+        "out_false":"loc_401384",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"mov     eax, ds:dword_401748[ebx*4]" },
+          { "str":"call    eax" },
+          { "str":"dec     ebx" },
+          { "str":"jnz     short loc_401378" }
+        ],
+        "callees":[
+          { "tag":"eax" }
+        ]
+      },
+{
+        "tag":"loc_401384",
+        "label":"loc_401384",
+        "out_true":"loc_401391",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"add     esp, 0FFFFFFF4h" },
+          { "str":"push    offset sub_4012AC" },
+          { "str":"call    atexit" }
+        ],
+        "callees":[
+          { "tag":"atexit" }
+        ]
+      },
+{
+        "tag":"loc_401391",
+        "label":"loc_401391",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     ebx, [ebp-18h]" },
+          { "str":"mov     esp, ebp" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_401398",
+    "label":"sub_401398",
+    "type":"idapro",
+    "callees":[
+      { "tag":"CloseHandle" },
+      { "tag":"GetLastError" },
+      { "tag":"GetProcAddress" },
+      { "tag":"Sleep" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401398",
+        "label":"sub_401398",
+        "out_true":"loc_4013A8",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 20h" },
+          { "str":"push    esi" },
+          { "str":"push    ebx" },
+          { "str":"mov     esi, [ebp+arg_0]" },
+          { "str":"mov     [ebp+var_1], 0" },
+          { "str":"nop" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_4013A8",
+        "label":"loc_4013A8",
+        "out_true":"loc_4013C6",
+        "out_false":"label_31",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"push    esi" },
+          { "str":"push    1" },
+          { "str":"push    1" },
+          { "str":"push    0" },
+          { "str":"call    GetProcAddress" },
+          { "str":"mov     ebx, eax" },
+          { "str":"call    GetLastError" },
+          { "str":"cmp     eax, 0B7h" },
+          { "str":"jz      short loc_4013C6" }
+        ],
+        "callees":[
+          { "tag":"GetLastError" },
+          { "tag":"GetProcAddress" }
+        ]
+      },
+{
+        "tag":"label_31",
+        "label":"label_31",
+        "out_true":"loc_4013C6",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     [ebp+var_1], 1" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_4013C6",
+        "label":"loc_4013C6",
+        "out_true":"loc_4013D6",
+        "out_false":"label_32",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"test    ebx, ebx" },
+          { "str":"jz      short loc_4013D6" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_32",
+        "label":"label_32",
+        "out_true":"loc_4013D6",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"add     esp, 0FFFFFFF4h" },
+          { "str":"push    ebx" },
+          { "str":"call    CloseHandle" },
+          { "str":"add     esp, 0Ch" }
+        ],
+        "callees":[
+          { "tag":"CloseHandle" }
+        ]
+      },
+{
+        "tag":"loc_4013D6",
+        "label":"loc_4013D6",
+        "out_true":"loc_4013F0",
+        "out_false":"label_33",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"cmp     [ebp+var_1], 0" },
+          { "str":"jnz     short loc_4013F0" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_33",
+        "label":"label_33",
+        "out_true":"loc_4013A8",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"add     esp, 0FFFFFFF4h" },
+          { "str":"push    0C8h" },
+          { "str":"call    Sleep" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"jmp     short loc_4013A8" }
+        ],
+        "callees":[
+          { "tag":"Sleep" }
+        ]
+      },
+{
+        "tag":"loc_4013F0",
+        "label":"loc_4013F0",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"lea     esp, [ebp-28h]" },
+          { "str":"pop     ebx" },
+          { "str":"pop     esi" },
+          { "str":"leave" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_4013F8",
+    "label":"sub_4013F8",
+    "type":"idapro",
+    "callees":[
+      { "tag":"GetFullPathNameA" },
+      { "tag":"GetModuleFileNameA" },
+      { "tag":"SetCurrentDirectoryA" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_4013F8",
+        "label":"sub_4013F8",
+        "out_true":"loc_40146A",
+        "out_false":"label_34",
+        "last_inst":"jb",
+        "instructions":[
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 23Ch" },
+          { "str":"push    edi" },
+          { "str":"push    esi" },
+          { "str":"push    ebx" },
+          { "str":"add     esp, 0FFFFFFFCh" },
+          { "str":"push    104h" },
+          { "str":"lea     ebx, [ebp+Filename]" },
+          { "str":"push    ebx" },
+          { "str":"push    0" },
+          { "str":"call    GetModuleFileNameA" },
+          { "str":"add     esp, 0FFFFFFF4h" },
+          { "str":"lea     eax, [ebp+FilePart]" },
+          { "str":"push    eax" },
+          { "str":"lea     esi, [ebp+Buffer]" },
+          { "str":"push    esi" },
+          { "str":"push    104h" },
+          { "str":"push    ebx" },
+          { "str":"call    GetFullPathNameA" },
+          { "str":"mov     eax, [ebp+FilePart]" },
+          { "str":"mov     byte ptr [eax], 0" },
+          { "str":"mov     edi, esi" },
+          { "str":"mov     al, 0" },
+          { "str":"cld" },
+          { "str":"mov     ecx, 0FFFFFFFFh" },
+          { "str":"repne scasb" },
+          { "str":"not     ecx" },
+          { "str":"lea     eax, [ecx-1]" },
+          { "str":"add     esp, 10h" },
+          { "str":"cmp     eax, 3" },
+          { "str":"jbe     short loc_40146A" }
+        ],
+        "callees":[
+          { "tag":"GetFullPathNameA" },
+          { "tag":"GetModuleFileNameA" }
+        ]
+      },
+{
+        "tag":"label_34",
+        "label":"label_34",
+        "out_true":"loc_40146A",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, esi" },
+          { "str":"mov     al, 0" },
+          { "str":"cld" },
+          { "str":"mov     ecx, 0FFFFFFFFh" },
+          { "str":"repne scasb" },
+          { "str":"not     ecx" },
+          { "str":"mov     [esi+ecx-2], al" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_40146A",
+        "label":"loc_40146A",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"add     esp, 0FFFFFFF4h" },
+          { "str":"push    esi" },
+          { "str":"call    SetCurrentDirectoryA" },
+          { "str":"lea     esp, [ebp-248h]" },
+          { "str":"pop     ebx" },
+          { "str":"pop     esi" },
+          { "str":"pop     edi" },
+          { "str":"leave" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"SetCurrentDirectoryA" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401494",
+    "label":"sub_401494",
+    "type":"idapro",
+    "callees":[
+      { "tag":"DeleteFileA" },
+      { "tag":"GetModuleFileNameA" },
+      { "tag":"GetVersionExA" },
+      { "tag":"LoadLibraryA" },
+      { "tag":"MoveFileExA" },
+      { "tag":"RemoveDirectoryA" },
+      { "tag":"fclose" },
+      { "tag":"fgets" },
+      { "tag":"fopen" },
+      { "tag":"sub_401398" },
+      { "tag":"sub_4013F8" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401494",
+        "label":"sub_401494",
+        "out_true":"loc_40164F",
+        "out_false":"label_35",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 1CCh" },
+          { "str":"push    edi" },
+          { "str":"push    esi" },
+          { "str":"push    ebx" },
+          { "str":"mov     [ebp+VersionInformation.dwOSVersionInfoSize], 94h" },
+          { "str":"add     esp, 0FFFFFFF4h" },
+          { "str":"lea     eax, [ebp+VersionInformation]" },
+          { "str":"push    eax" },
+          { "str":"call    GetVersionExA" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"test    eax, eax" },
+          { "str":"jz      loc_40164F" }
+        ],
+        "callees":[
+          { "tag":"GetVersionExA" }
+        ]
+      },
+{
+        "tag":"label_35",
+        "label":"label_35",
+        "out_true":"loc_4014DC",
+        "out_false":"label_36",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"cmp     [ebp+Filename], 0" },
+          { "str":"jz      short loc_4014DC" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_36",
+        "label":"label_36",
+        "out_true":"loc_4014E8",
+        "out_false":"loc_4014DC",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"mov     edi, [ebp+Filename]" },
+          { "str":"mov     al, 0" },
+          { "str":"cld" },
+          { "str":"mov     ecx, 0FFFFFFFFh" },
+          { "str":"repne scasb" },
+          { "str":"cmp     ecx, 0FFFFFFFEh" },
+          { "str":"jnz     short loc_4014E8" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_4014DC",
+        "label":"loc_4014DC",
+        "out_true":"loc_401651",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"mov     eax, 1" },
+          { "str":"jmp     loc_401651" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_4014E8",
+        "label":"loc_4014E8",
+        "out_true":"loc_401500",
+        "out_false":"label_37",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"cmp     [ebp+arg_C], 0E4653C7h" },
+          { "str":"jnz     short loc_401500" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_37",
+        "label":"label_37",
+        "out_true":"loc_401500",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"add     esp, 0FFFFFFF8h" },
+          { "str":"push    0" },
+          { "str":"push    0" },
+          { "str":"call    LoadLibraryA" },
+          { "str":"add     esp, 8" }
+        ],
+        "callees":[
+          { "tag":"LoadLibraryA" }
+        ]
+      },
+{
+        "tag":"loc_401500",
+        "label":"loc_401500",
+        "out_true":"loc_40164F",
+        "out_false":"label_38",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"call    sub_4013F8" },
+          { "str":"xor     ebx, ebx" },
+          { "str":"add     esp, 0FFFFFFF8h" },
+          { "str":"push    offset Mode" },
+          { "str":"mov     eax, [ebp+Filename]" },
+          { "str":"push    eax" },
+          { "str":"call    fopen" },
+          { "str":"mov     [ebp+File], eax" },
+          { "str":"add     esp, 10h" },
+          { "str":"test    eax, eax" },
+          { "str":"jz      loc_40164F" }
+        ],
+        "callees":[
+          { "tag":"fopen" },
+          { "tag":"sub_4013F8" }
+        ]
+      },
+{
+        "tag":"label_38",
+        "label":"label_38",
+        "out_true":"loc_4015EE",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     loc_4015EE" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_401530",
+        "label":"loc_401530",
+        "out_true":"loc_401535",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     byte ptr [esi+edx-1], 0" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_401535",
+        "label":"loc_401535",
+        "out_true":"loc_401556",
+        "out_false":"label_39",
+        "last_inst":"jl",
+        "instructions":[
+          { "str":"mov     edi, esi" },
+          { "str":"mov     al, 0" },
+          { "str":"cld" },
+          { "str":"mov     ecx, 0FFFFFFFFh" },
+          { "str":"repne scasb" },
+          { "str":"not     ecx" },
+          { "str":"lea     edx, [ecx-1]" },
+          { "str":"test    edx, edx" },
+          { "str":"jle     short loc_401556" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_39",
+        "label":"label_39",
+        "out_true":"loc_401530",
+        "out_false":"label_40",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"mov     al, [esi+ecx-2]" },
+          { "str":"cmp     al, 0Dh" },
+          { "str":"jz      short loc_401530" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_40",
+        "label":"label_40",
+        "out_true":"loc_401530",
+        "out_false":"loc_401556",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"cmp     al, 0Ah" },
+          { "str":"jz      short loc_401530" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_401556",
+        "label":"loc_401556",
+        "out_true":"loc_401570",
+        "out_false":"label_41",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"lea     esi, [ebp+FileName]" },
+          { "str":"mov     edi, esi" },
+          { "str":"mov     al, 0" },
+          { "str":"cld" },
+          { "str":"mov     ecx, 0FFFFFFFFh" },
+          { "str":"repne scasb" },
+          { "str":"cmp     ecx, 0FFFFFFFEh" },
+          { "str":"jnz     short loc_401570" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_41",
+        "label":"label_41",
+        "out_true":"loc_4015EE",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"inc     ebx" },
+          { "str":"jmp     short loc_4015EE" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_401570",
+        "label":"loc_401570",
+        "out_true":"loc_401588",
+        "out_false":"label_42",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"test    ebx, ebx" },
+          { "str":"jnz     short loc_401588" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_42",
+        "label":"label_42",
+        "out_true":"loc_4015EE",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"add     esp, 0FFFFFFF4h" },
+          { "str":"push    esi" },
+          { "str":"call    sub_401398" },
+          { "str":"mov     ebx, 1" },
+          { "str":"add     esp, 10h" },
+          { "str":"jmp     short loc_4015EE" }
+        ],
+        "callees":[
+          { "tag":"sub_401398" }
+        ]
+      },
+{
+        "tag":"loc_401588",
+        "label":"loc_401588",
+        "out_true":"loc_4015AC",
+        "out_false":"label_43",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"cmp     ebx, 1" },
+          { "str":"jnz     short loc_4015AC" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_43",
+        "label":"label_43",
+        "out_true":"loc_4015EE",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"mov     edi, offset aReboot_deletio" },
+          { "str":"mov     ecx, 10h" },
+          { "str":"cld" },
+          { "str":"test    al, 0" },
+          { "str":"repe cmpsb" },
+          { "str":"setz    [ebp+var_1B5]" },
+          { "str":"mov     ebx, 2" },
+          { "str":"jmp     short loc_4015EE" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_4015AC",
+        "label":"loc_4015AC",
+        "out_true":"loc_4015BC",
+        "out_false":"label_44",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"cmp     ebx, 2" },
+          { "str":"jnz     short loc_4015BC" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_44",
+        "label":"label_44",
+        "out_true":"loc_4015C5",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"add     esp, 0FFFFFFF4h" },
+          { "str":"push    esi" },
+          { "str":"call    DeleteFileA" },
+          { "str":"jmp     short loc_4015C5" }
+        ],
+        "callees":[
+          { "tag":"DeleteFileA" }
+        ]
+      },
+{
+        "tag":"loc_4015BC",
+        "label":"loc_4015BC",
+        "out_true":"loc_4015C5",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"add     esp, 0FFFFFFF4h" },
+          { "str":"push    esi" },
+          { "str":"call    RemoveDirectoryA" }
+        ],
+        "callees":[
+          { "tag":"RemoveDirectoryA" }
+        ]
+      },
+{
+        "tag":"loc_4015C5",
+        "label":"loc_4015C5",
+        "out_true":"loc_4015EE",
+        "out_false":"label_45",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"add     esp, 0Ch" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short loc_4015EE" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_45",
+        "label":"label_45",
+        "out_true":"loc_4015EE",
+        "out_false":"label_46",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"cmp     [ebp+var_1B5], 0" },
+          { "str":"jz      short loc_4015EE" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_46",
+        "label":"label_46",
+        "out_true":"loc_4015EE",
+        "out_false":"label_47",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"cmp     [ebp+VersionInformation.dwPlatformId], 2" },
+          { "str":"jnz     short loc_4015EE" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_47",
+        "label":"label_47",
+        "out_true":"loc_4015EE",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"add     esp, 0FFFFFFFCh" },
+          { "str":"push    4" },
+          { "str":"push    0" },
+          { "str":"push    esi" },
+          { "str":"call    MoveFileExA" },
+          { "str":"add     esp, 4" }
+        ],
+        "callees":[
+          { "tag":"MoveFileExA" }
+        ]
+      },
+{
+        "tag":"loc_4015EE",
+        "label":"loc_4015EE",
+        "out_true":"loc_401535",
+        "out_false":"label_48",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"add     esp, 0FFFFFFFCh" },
+          { "str":"mov     eax, [ebp+File]" },
+          { "str":"push    eax" },
+          { "str":"push    104h" },
+          { "str":"lea     esi, [ebp+FileName]" },
+          { "str":"push    esi" },
+          { "str":"call    fgets" },
+          { "str":"add     esp, 10h" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     loc_401535" }
+        ],
+        "callees":[
+          { "tag":"fgets" }
+        ]
+      },
+{
+        "tag":"label_48",
+        "label":"label_48",
+        "out_true":"loc_40164F",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"add     esp, 0FFFFFFF4h" },
+          { "str":"mov     eax, [ebp+File]" },
+          { "str":"push    eax" },
+          { "str":"call    fclose" },
+          { "str":"add     esp, 0FFFFFFF4h" },
+          { "str":"mov     eax, [ebp+Filename]" },
+          { "str":"push    eax" },
+          { "str":"call    DeleteFileA" },
+          { "str":"add     esp, 0FFFFFFF8h" },
+          { "str":"push    104h" },
+          { "str":"push    esi" },
+          { "str":"push    0" },
+          { "str":"call    GetModuleFileNameA" },
+          { "str":"add     esp, 24h" },
+          { "str":"add     esp, 0FFFFFFFCh" },
+          { "str":"push    4" },
+          { "str":"push    0" },
+          { "str":"push    esi" },
+          { "str":"call    MoveFileExA" }
+        ],
+        "callees":[
+          { "tag":"DeleteFileA" },
+          { "tag":"GetModuleFileNameA" },
+          { "tag":"MoveFileExA" },
+          { "tag":"fclose" }
+        ]
+      },
+{
+        "tag":"loc_40164F",
+        "label":"loc_40164F",
+        "out_true":"loc_401651",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"xor     eax, eax" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_401651",
+        "label":"loc_401651",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"lea     esp, [ebp-1D8h]" },
+          { "str":"pop     ebx" },
+          { "str":"pop     esi" },
+          { "str":"pop     edi" },
+          { "str":"leave" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"rtn_3",
+    "label":"rtn_3",
+    "type":"ours",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"blk_49",
+        "label":"blk_49",
+        "out_true":"ds___set_app_type",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:__set_app_type" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_50",
+        "label":"label_50",
+        "out_true":"ds_VirtualAlloc",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:VirtualAlloc" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_51",
+        "label":"label_51",
+        "out_true":"ds_GetStartupInfoA",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     ds:GetStartupInfoA" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"CloseHandle",
+    "label":"CloseHandle",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"DeleteFileA",
+    "label":"DeleteFileA",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ExitProcess",
+    "label":"ExitProcess",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"GetFullPathNameA",
+    "label":"GetFullPathNameA",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"GetLastError",
+    "label":"GetLastError",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"GetModuleFileNameA",
+    "label":"GetModuleFileNameA",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"GetModuleHandleA",
+    "label":"GetModuleHandleA",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"GetProcAddress",
+    "label":"GetProcAddress",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"GetVersionExA",
+    "label":"GetVersionExA",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"LoadLibraryA",
+    "label":"LoadLibraryA",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"MoveFileExA",
+    "label":"MoveFileExA",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"RemoveDirectoryA",
+    "label":"RemoveDirectoryA",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"SetCurrentDirectoryA",
+    "label":"SetCurrentDirectoryA",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"SetUnhandledExceptionFilter",
+    "label":"SetUnhandledExceptionFilter",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"Sleep",
+    "label":"Sleep",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"__getmainargs",
+    "label":"__getmainargs",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"__p__environ",
+    "label":"__p__environ",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"_cexit",
+    "label":"_cexit",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"_fileno",
+    "label":"_fileno",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"_fpreset",
+    "label":"_fpreset",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"_setmode",
+    "label":"_setmode",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"atexit",
+    "label":"atexit",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_VirtualAlloc",
+    "label":"ds:VirtualAlloc",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"eax",
+    "label":"eax",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ebx",
+    "label":"ebx",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"fclose",
+    "label":"fclose",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"fgets",
+    "label":"fgets",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"fopen",
+    "label":"fopen",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_401211_3",
+    "label":"loc_401211+3",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"signal",
+    "label":"signal",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  }
+  ]
+}

@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function() {	
 	Slider = Backbone.View.extend({
 	initialize:function(options){
 		this.options = options.options;

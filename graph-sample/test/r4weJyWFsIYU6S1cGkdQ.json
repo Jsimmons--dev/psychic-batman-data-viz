@@ -1,0 +1,3233 @@
+{
+  "routines": [
+  {
+    "tag":"sub_635010",
+    "label":"sub_635010",
+    "type":"idapro",
+    "callees":[
+      { "tag":"FindClose" },
+      { "tag":"esi" },
+      { "tag":"sub_635094" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635010",
+        "label":"sub_635010",
+        "out_true":"loc_635013",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_635013",
+        "label":"loc_635013",
+        "out_true":"loc_635013",
+        "out_false":"label_0",
+        "last_inst":"jb",
+        "instructions":[
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 44h" },
+          { "str":"mov     ebx, offset unk_6380B0" },
+          { "str":"cmp     ebx, 8D3h" },
+          { "str":"jb      short loc_635013" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_0",
+        "label":"label_0",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ebx" },
+          { "str":"push    eax" },
+          { "str":"push    dword ptr [ebx+1FCh]" },
+          { "str":"push    edi" },
+          { "str":"call    sub_635094" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     ebx" },
+          { "str":"mov     edi, 0" },
+          { "str":"push    edi" },
+          { "str":"call    FindClose" },
+          { "str":"mov     edx, offset GetModuleHandleA" },
+          { "str":"mov     edx, [edx]" },
+          { "str":"push    edx" },
+          { "str":"push    dword ptr [ebx+7Ch]" },
+          { "str":"pop     esi" },
+          { "str":"call    esi" },
+          { "str":"add     esp, 44h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"FindClose" },
+          { "tag":"esi" },
+          { "tag":"sub_635094" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635058",
+    "label":"sub_635058",
+    "type":"idapro",
+    "callees":[
+      { "tag":"ReleaseMutex" },
+      { "tag":"Sleep" },
+      { "tag":"sub_635BC0" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635058",
+        "label":"sub_635058",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 28h" },
+          { "str":"lea     esi, [ebx+7Ch]" },
+          { "str":"adc     ebx, [esi+20h]" },
+          { "str":"push    0" },
+          { "str":"call    Sleep" },
+          { "str":"push    esi" },
+          { "str":"push    ecx" },
+          { "str":"push    dword ptr [esi+1D0h]" },
+          { "str":"push    dword ptr [esi+0E8h]" },
+          { "str":"call    sub_635BC0" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     esi" },
+          { "str":"push    0" },
+          { "str":"call    ReleaseMutex" },
+          { "str":"add     esp, 28h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"ReleaseMutex" },
+          { "tag":"Sleep" },
+          { "tag":"sub_635BC0" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635094",
+    "label":"sub_635094",
+    "type":"idapro",
+    "callees":[
+      { "tag":"FindClose" },
+      { "tag":"SetLastError" },
+      { "tag":"sub_635320" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635094",
+        "label":"sub_635094",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 3Ch" },
+          { "str":"mov     esi, offset unk_638150" },
+          { "str":"mov     dword ptr [esi+40h], 62h" },
+          { "str":"push    0" },
+          { "str":"call    SetLastError" },
+          { "str":"push    esi" },
+          { "str":"push    edi" },
+          { "str":"push    dword ptr [esi+0F4h]" },
+          { "str":"push    dword ptr [esi+0C0h]" },
+          { "str":"push    edi" },
+          { "str":"call    sub_635320" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     esi" },
+          { "str":"mov     ebx, 0" },
+          { "str":"push    ebx" },
+          { "str":"call    FindClose" },
+          { "str":"add     esp, 3Ch" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"FindClose" },
+          { "tag":"SetLastError" },
+          { "tag":"sub_635320" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6350DC",
+    "label":"sub_6350DC",
+    "type":"idapro",
+    "callees":[
+      { "tag":"ReleaseMutex" },
+      { "tag":"SetLastError" },
+      { "tag":"sub_635E54" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6350DC",
+        "label":"sub_6350DC",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 5Ch" },
+          { "str":"mov     ecx, offset unk_63815C" },
+          { "str":"sbb     ebx, [ebp+var_4]" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    ReleaseMutex" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    esi" },
+          { "str":"push    dword ptr [ecx+154h]" },
+          { "str":"push    dword ptr [ecx+7Ch]" },
+          { "str":"call    sub_635E54" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"mov     ebx, 0" },
+          { "str":"push    ebx" },
+          { "str":"call    SetLastError" },
+          { "str":"pop     ecx" },
+          { "str":"add     esp, 5Ch" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"ReleaseMutex" },
+          { "tag":"SetLastError" },
+          { "tag":"sub_635E54" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635120",
+    "label":"sub_635120",
+    "type":"idapro",
+    "callees":[
+      { "tag":"CloseHandle" },
+      { "tag":"IsWindow" },
+      { "tag":"sub_635D08" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635120",
+        "label":"sub_635120",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 40h" },
+          { "str":"mov     edx, offset unk_6380E8" },
+          { "str":"adc     [edx+70h], eax" },
+          { "str":"push    edx" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    IsWindow" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"push    dword ptr [edx+0DCh]" },
+          { "str":"push    esi" },
+          { "str":"push    esi" },
+          { "str":"call    sub_635D08" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"push    0" },
+          { "str":"call    CloseHandle" },
+          { "str":"pop     edx" },
+          { "str":"add     esp, 40h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"CloseHandle" },
+          { "tag":"IsWindow" },
+          { "tag":"sub_635D08" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635164",
+    "label":"sub_635164",
+    "type":"idapro",
+    "callees":[
+      { "tag":"GlobalUnlock" },
+      { "tag":"ReleaseMutex" },
+      { "tag":"sub_635F78" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635164",
+        "label":"sub_635164",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 28h" },
+          { "str":"lea     edi, [ecx+50h]" },
+          { "str":"xor     eax, [ebp+var_10]" },
+          { "str":"push    edi" },
+          { "str":"push    esi" },
+          { "str":"push    edx" },
+          { "str":"call    sub_635F78" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     edi" },
+          { "str":"mov     esi, 0" },
+          { "str":"push    esi" },
+          { "str":"call    ReleaseMutex" },
+          { "str":"push    0" },
+          { "str":"call    GlobalUnlock" },
+          { "str":"add     esp, 28h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"GlobalUnlock" },
+          { "tag":"ReleaseMutex" },
+          { "tag":"sub_635F78" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6351A0",
+    "label":"sub_6351A0",
+    "type":"idapro",
+    "callees":[
+      { "tag":"PulseEvent" },
+      { "tag":"Sleep" },
+      { "tag":"sub_6350DC" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6351A0",
+        "label":"sub_6351A0",
+        "out_true":"loc_6351A3",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_6351A3",
+        "label":"loc_6351A3",
+        "out_true":"loc_6351A3",
+        "out_false":"label_1",
+        "last_inst":"jb",
+        "instructions":[
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 34h" },
+          { "str":"mov     ebx, offset unk_6380B8" },
+          { "str":"cmp     ebx, 50A3h" },
+          { "str":"jbe     short loc_6351A3" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_1",
+        "label":"label_1",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ebx" },
+          { "str":"push    dword ptr [ebx+68h]" },
+          { "str":"push    dword ptr [ebx+120h]" },
+          { "str":"push    dword ptr [ebx+0A0h]" },
+          { "str":"call    sub_6350DC" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     ebx" },
+          { "str":"push    0" },
+          { "str":"call    PulseEvent" },
+          { "str":"mov     edi, 0" },
+          { "str":"push    edi" },
+          { "str":"call    Sleep" },
+          { "str":"add     esp, 34h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"PulseEvent" },
+          { "tag":"Sleep" },
+          { "tag":"sub_6350DC" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6351EC",
+    "label":"sub_6351EC",
+    "type":"idapro",
+    "callees":[
+      { "tag":"CloseHandle" },
+      { "tag":"GetModuleHandleA" },
+      { "tag":"sub_635A9C" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6351EC",
+        "label":"sub_6351EC",
+        "out_true":"loc_63522A",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 54h" },
+          { "str":"lea     eax, [ecx-0D8h]" },
+          { "str":"sub     [ebp+var_38], 37D7h" },
+          { "str":"push    eax" },
+          { "str":"push    edx" },
+          { "str":"push    dword ptr [eax+1D0h]" },
+          { "str":"push    dword ptr [eax+0E0h]" },
+          { "str":"push    dword ptr [eax+0A8h]" },
+          { "str":"call    sub_635A9C" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"push    0" },
+          { "str":"call    CloseHandle" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" }
+        ],
+        "callees":[
+          { "tag":"CloseHandle" },
+          { "tag":"sub_635A9C" }
+        ]
+      },
+{
+        "tag":"loc_63522A",
+        "label":"loc_63522A",
+        "out_true":"loc_63522A",
+        "out_false":"label_2",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"lea     edi, [eax-98h]" },
+          { "str":"push    edi" },
+          { "str":"call    GetModuleHandleA" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short loc_63522A" }
+        ],
+        "callees":[
+          { "tag":"GetModuleHandleA" }
+        ]
+      },
+{
+        "tag":"label_2",
+        "label":"label_2",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"pop     eax" },
+          { "str":"add     esp, 54h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_635244",
+    "label":"sub_635244",
+    "type":"idapro",
+    "callees":[
+      { "tag":"LocalFree" },
+      { "tag":"TlsGetValue" },
+      { "tag":"sub_635638" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635244",
+        "label":"sub_635244",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 44h" },
+          { "str":"mov     ebx, offset unk_638198" },
+          { "str":"xor     [ebx-0C4h], ecx" },
+          { "str":"push    0" },
+          { "str":"call    LocalFree" },
+          { "str":"push    ebx" },
+          { "str":"push    esi" },
+          { "str":"push    edi" },
+          { "str":"push    dword ptr [ebx+0E0h]" },
+          { "str":"call    sub_635638" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     ebx" },
+          { "str":"push    0" },
+          { "str":"call    TlsGetValue" },
+          { "str":"add     esp, 44h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"LocalFree" },
+          { "tag":"TlsGetValue" },
+          { "tag":"sub_635638" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635284",
+    "label":"sub_635284",
+    "type":"idapro",
+    "callees":[
+      { "tag":"GetACP" },
+      { "tag":"SetFocus" },
+      { "tag":"sub_635930" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635284",
+        "label":"sub_635284",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 5Ch" },
+          { "str":"mov     ecx, offset unk_6380AC" },
+          { "str":"sub     eax, [ecx+50h]" },
+          { "str":"push    ecx" },
+          { "str":"call    GetACP" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    edi" },
+          { "str":"push    dword ptr [ecx+1A4h]" },
+          { "str":"push    ebx" },
+          { "str":"push    dword ptr [ecx+180h]" },
+          { "str":"call    sub_635930" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    SetFocus" },
+          { "str":"pop     ecx" },
+          { "str":"add     esp, 5Ch" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"GetACP" },
+          { "tag":"SetFocus" },
+          { "tag":"sub_635930" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6352CC",
+    "label":"sub_6352CC",
+    "type":"idapro",
+    "callees":[
+      { "tag":"IsWindow" },
+      { "tag":"SetLastError" },
+      { "tag":"sub_635D54" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6352CC",
+        "label":"sub_6352CC",
+        "out_true":"loc_6352CF",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_6352CF",
+        "label":"loc_6352CF",
+        "out_true":"loc_6352CF",
+        "out_false":"label_3",
+        "last_inst":"jb",
+        "instructions":[
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 2Ch" },
+          { "str":"mov     ecx, offset unk_638044" },
+          { "str":"cmp     ecx, 1C2Fh" },
+          { "str":"jbe     short loc_6352CF" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_3",
+        "label":"label_3",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ecx" },
+          { "str":"push    edx" },
+          { "str":"push    dword ptr [ecx+1Ch]" },
+          { "str":"push    esi" },
+          { "str":"push    esi" },
+          { "str":"call    sub_635D54" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"mov     edi, 0" },
+          { "str":"push    edi" },
+          { "str":"call    IsWindow" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    SetLastError" },
+          { "str":"pop     ecx" },
+          { "str":"add     esp, 2Ch" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"IsWindow" },
+          { "tag":"SetLastError" },
+          { "tag":"sub_635D54" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635320",
+    "label":"sub_635320",
+    "type":"idapro",
+    "callees":[
+      { "tag":"LocalFree" },
+      { "tag":"PulseEvent" },
+      { "tag":"sub_635AD0" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635320",
+        "label":"sub_635320",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 34h" },
+          { "str":"lea     ebx, unk_63807C" },
+          { "str":"add     eax, edi" },
+          { "str":"push    0" },
+          { "str":"call    LocalFree" },
+          { "str":"push    ebx" },
+          { "str":"push    dword ptr [ebx+24h]" },
+          { "str":"push    dword ptr [ebx+114h]" },
+          { "str":"push    esi" },
+          { "str":"call    sub_635AD0" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     ebx" },
+          { "str":"mov     edi, 0" },
+          { "str":"push    edi" },
+          { "str":"call    PulseEvent" },
+          { "str":"add     esp, 34h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"LocalFree" },
+          { "tag":"PulseEvent" },
+          { "tag":"sub_635AD0" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635360",
+    "label":"sub_635360",
+    "type":"idapro",
+    "callees":[
+      { "tag":"CloseHandle" },
+      { "tag":"IsWindow" },
+      { "tag":"sub_635830" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635360",
+        "label":"sub_635360",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 48h" },
+          { "str":"lea     esi, [edi-28h]" },
+          { "str":"mov     [ebp+var_40], 5E75h" },
+          { "str":"push    esi" },
+          { "str":"push    edx" },
+          { "str":"push    eax" },
+          { "str":"call    sub_635830" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     esi" },
+          { "str":"push    0" },
+          { "str":"call    IsWindow" },
+          { "str":"push    0" },
+          { "str":"call    CloseHandle" },
+          { "str":"add     esp, 48h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"CloseHandle" },
+          { "tag":"IsWindow" },
+          { "tag":"sub_635830" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_63539C",
+    "label":"sub_63539C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"GetDC" },
+      { "tag":"Sleep" },
+      { "tag":"sub_635244" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_63539C",
+        "label":"sub_63539C",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 3Ch" },
+          { "str":"lea     esi, [eax+0ACh]" },
+          { "str":"adc     ecx, 74B6h" },
+          { "str":"push    esi" },
+          { "str":"push    dword ptr [esi+1C0h]" },
+          { "str":"push    dword ptr [esi+78h]" },
+          { "str":"call    sub_635244" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     esi" },
+          { "str":"push    0" },
+          { "str":"call    GetDC" },
+          { "str":"push    0" },
+          { "str":"call    Sleep" },
+          { "str":"add     esp, 3Ch" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"GetDC" },
+          { "tag":"Sleep" },
+          { "tag":"sub_635244" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6353E0",
+    "label":"sub_6353E0",
+    "type":"idapro",
+    "callees":[
+      { "tag":"ReleaseMutex" },
+      { "tag":"lstrlen" },
+      { "tag":"sub_635120" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6353E0",
+        "label":"sub_6353E0",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 60h" },
+          { "str":"lea     ebx, [esi-0Ch]" },
+          { "str":"sub     [ebp+var_54], 0FFFFF0EAh" },
+          { "str":"push    ebx" },
+          { "str":"push    dword ptr [ebx+3Ch]" },
+          { "str":"push    dword ptr [ebx+0E0h]" },
+          { "str":"push    dword ptr [ebx+14Ch]" },
+          { "str":"push    dword ptr [ebx+8]" },
+          { "str":"call    sub_635120" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     ebx" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    lstrlen" },
+          { "str":"mov     edi, 0" },
+          { "str":"push    edi" },
+          { "str":"call    ReleaseMutex" },
+          { "str":"add     esp, 60h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"ReleaseMutex" },
+          { "tag":"lstrlen" },
+          { "tag":"sub_635120" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635434",
+    "label":"sub_635434",
+    "type":"idapro",
+    "callees":[
+      { "tag":"FindClose" },
+      { "tag":"GetACP" },
+      { "tag":"sub_635508" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635434",
+        "label":"sub_635434",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 50h" },
+          { "str":"lea     eax, unk_638010" },
+          { "str":"xor     dword ptr [eax+2Ch], 6C73h" },
+          { "str":"push    eax" },
+          { "str":"push    0" },
+          { "str":"call    FindClose" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"push    edx" },
+          { "str":"push    dword ptr [eax+0Ch]" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_635508" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"call    GetACP" },
+          { "str":"pop     eax" },
+          { "str":"add     esp, 50h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"FindClose" },
+          { "tag":"GetACP" },
+          { "tag":"sub_635508" }
+        ]
+      }
+    ]
+  },{
+    "tag":"start",
+    "label":"start",
+    "type":"user",
+    "callees":[
+      { "tag":"ds_GetConsoleMode" },
+      { "tag":"ds_LoadLibraryExA" },
+      { "tag":"eax" }
+    ],
+    "blocks":[
+      {
+        "tag":"start",
+        "label":"start",
+        "out_true":"sub_635010",
+        "out_false":"loc_6354C2",
+        "last_inst":"ja",
+        "instructions":[
+          { "str":"push    0" },
+          { "str":"mov     eax, ds:lstrlen" },
+          { "str":"dec     eax" },
+          { "str":"call    eax" },
+          { "str":"call    ds:GetConsoleMode" },
+          { "str":"sub     esp, 8" },
+          { "str":"call    ds:GetConsoleMode" },
+          { "str":"sub     esp, 8" },
+          { "str":"xor     eax, eax" },
+          { "str":"lea     eax, ds:638100h[eax*2]" },
+          { "str":"lea     ecx, [eax+6]" },
+          { "str":"sub     byte ptr [ecx], 50h" },
+          { "str":"push    0" },
+          { "str":"push    0" },
+          { "str":"push    eax" },
+          { "str":"call    ds:LoadLibraryExA" },
+          { "str":"mov     ecx, [eax+3Ch]" },
+          { "str":"add     ecx, 29h" },
+          { "str":"mov     eax, [eax+ecx]" },
+          { "str":"mov     cl, 20h" },
+          { "str":"cmp     al, cl" },
+          { "str":"pusha" },
+          { "str":"ja      sub_635010" }
+        ],
+        "callees":[
+          { "tag":"ds_GetConsoleMode" },
+          { "tag":"ds_LoadLibraryExA" },
+          { "tag":"eax" }
+        ]
+      },
+{
+        "tag":"loc_6354C2",
+        "label":"loc_6354C2",
+        "out_true":"loc_6354C2",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"jmp     short loc_6354C2" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_6354C4",
+    "label":"sub_6354C4",
+    "type":"idapro",
+    "callees":[
+      { "tag":"IsWindow" },
+      { "tag":"PulseEvent" },
+      { "tag":"sub_635A10" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6354C4",
+        "label":"sub_6354C4",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 24h" },
+          { "str":"lea     edi, [ebx+58h]" },
+          { "str":"sbb     esi, [ebp+var_8]" },
+          { "str":"push    edi" },
+          { "str":"push    dword ptr [edi]" },
+          { "str":"push    ecx" },
+          { "str":"push    dword ptr [edi+100h]" },
+          { "str":"push    dword ptr [edi+90h]" },
+          { "str":"call    sub_635A10" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     edi" },
+          { "str":"mov     ebx, 0" },
+          { "str":"push    ebx" },
+          { "str":"call    PulseEvent" },
+          { "str":"push    0" },
+          { "str":"call    IsWindow" },
+          { "str":"add     esp, 24h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"IsWindow" },
+          { "tag":"PulseEvent" },
+          { "tag":"sub_635A10" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635508",
+    "label":"sub_635508",
+    "type":"idapro",
+    "callees":[
+      { "tag":"GlobalUnlock" },
+      { "tag":"SetLastError" },
+      { "tag":"sub_635164" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635508",
+        "label":"sub_635508",
+        "out_true":"loc_63550B",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_63550B",
+        "label":"loc_63550B",
+        "out_true":"loc_63550B",
+        "out_false":"label_4",
+        "last_inst":"jb",
+        "instructions":[
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 50h" },
+          { "str":"lea     ecx, unk_638040" },
+          { "str":"cmp     ecx, 2F6h" },
+          { "str":"jbe     short loc_63550B" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_4",
+        "label":"label_4",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ecx" },
+          { "str":"push    dword ptr [ecx+1C8h]" },
+          { "str":"push    edx" },
+          { "str":"call    sub_635164" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    SetLastError" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    GlobalUnlock" },
+          { "str":"pop     ecx" },
+          { "str":"add     esp, 50h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"GlobalUnlock" },
+          { "tag":"SetLastError" },
+          { "tag":"sub_635164" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635554",
+    "label":"sub_635554",
+    "type":"idapro",
+    "callees":[
+      { "tag":"SetLastError" },
+      { "tag":"sub_6356B4" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635554",
+        "label":"sub_635554",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 38h" },
+          { "str":"mov     esi, offset unk_638114" },
+          { "str":"sub     [ebp+var_28], 44h" },
+          { "str":"mov     eax, 0" },
+          { "str":"push    eax" },
+          { "str":"call    SetLastError" },
+          { "str":"push    esi" },
+          { "str":"push    ecx" },
+          { "str":"push    dword ptr [esi+1CCh]" },
+          { "str":"push    dword ptr [esi+9Ch]" },
+          { "str":"push    edi" },
+          { "str":"call    sub_6356B4" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     esi" },
+          { "str":"push    0" },
+          { "str":"call    SetLastError" },
+          { "str":"add     esp, 38h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"SetLastError" },
+          { "tag":"sub_6356B4" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_63559C",
+    "label":"sub_63559C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"FindClose" },
+      { "tag":"IsWindow" },
+      { "tag":"sub_6357D8" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_63559C",
+        "label":"sub_63559C",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 44h" },
+          { "str":"lea     esi, unk_6380E0" },
+          { "str":"sub     [ebp+var_C], esi" },
+          { "str":"push    0" },
+          { "str":"call    FindClose" },
+          { "str":"push    esi" },
+          { "str":"push    dword ptr [esi+190h]" },
+          { "str":"push    dword ptr [esi+0Ch]" },
+          { "str":"push    dword ptr [esi+188h]" },
+          { "str":"call    sub_6357D8" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     esi" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    IsWindow" },
+          { "str":"add     esp, 44h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"FindClose" },
+          { "tag":"IsWindow" },
+          { "tag":"sub_6357D8" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6355E8",
+    "label":"sub_6355E8",
+    "type":"idapro",
+    "callees":[
+      { "tag":"FindClose" },
+      { "tag":"GetModuleHandleA" },
+      { "tag":"sub_635874" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6355E8",
+        "label":"sub_6355E8",
+        "out_true":"loc_635621_1",
+        "out_false":"label_5",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 50h" },
+          { "str":"lea     esi, unk_63812C" },
+          { "str":"or      [ebp+var_28], 4C73h" },
+          { "str":"push    esi" },
+          { "str":"push    ecx" },
+          { "str":"push    dword ptr [esi+1B0h]" },
+          { "str":"push    dword ptr [esi+124h]" },
+          { "str":"call    sub_635874" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     esi" },
+          { "str":"mov     edi, 0" },
+          { "str":"push    edi" },
+          { "str":"call    FindClose" },
+          { "str":"lea     edx, [esi-12Ch]" },
+          { "str":"push    edx" },
+          { "str":"call    GetModuleHandleA" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short near ptr loc_635621+1" }
+        ],
+        "callees":[
+          { "tag":"FindClose" },
+          { "tag":"GetModuleHandleA" },
+          { "tag":"sub_635874" }
+        ]
+      },
+{
+        "tag":"label_5",
+        "label":"label_5",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"add     esp, 50h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_635638",
+    "label":"sub_635638",
+    "type":"idapro",
+    "callees":[
+      { "tag":"GetACP" },
+      { "tag":"TlsGetValue" },
+      { "tag":"sub_635C04" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635638",
+        "label":"sub_635638",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 60h" },
+          { "str":"lea     ecx, [ebx+2Ch]" },
+          { "str":"or      [ebp+var_34], ebx" },
+          { "str":"push    ecx" },
+          { "str":"push    ebx" },
+          { "str":"push    dword ptr [ecx+0F8h]" },
+          { "str":"call    sub_635C04" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    GetACP" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    TlsGetValue" },
+          { "str":"pop     ecx" },
+          { "str":"add     esp, 60h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"GetACP" },
+          { "tag":"TlsGetValue" },
+          { "tag":"sub_635C04" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635670",
+    "label":"sub_635670",
+    "type":"idapro",
+    "callees":[
+      { "tag":"PulseEvent" },
+      { "tag":"lstrlen" },
+      { "tag":"sub_635744" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635670",
+        "label":"sub_635670",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 40h" },
+          { "str":"mov     eax, offset unk_6381BC" },
+          { "str":"adc     dword ptr [eax-0B0h], 3B34h" },
+          { "str":"push    eax" },
+          { "str":"mov     esi, 0" },
+          { "str":"push    esi" },
+          { "str":"call    lstrlen" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"push    edx" },
+          { "str":"push    edx" },
+          { "str":"call    sub_635744" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"push    0" },
+          { "str":"call    PulseEvent" },
+          { "str":"pop     eax" },
+          { "str":"add     esp, 40h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"PulseEvent" },
+          { "tag":"lstrlen" },
+          { "tag":"sub_635744" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6356B4",
+    "label":"sub_6356B4",
+    "type":"idapro",
+    "callees":[
+      { "tag":"PulseEvent" },
+      { "tag":"Sleep" },
+      { "tag":"sub_6359C8" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6356B4",
+        "label":"sub_6356B4",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 40h" },
+          { "str":"lea     ecx, unk_638158" },
+          { "str":"sbb     [ebp+var_40], 0FFFFFFEEh" },
+          { "str":"push    ecx" },
+          { "str":"mov     eax, 0" },
+          { "str":"push    eax" },
+          { "str":"call    PulseEvent" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    dword ptr [ecx+174h]" },
+          { "str":"push    edi" },
+          { "str":"push    edx" },
+          { "str":"call    sub_6359C8" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    Sleep" },
+          { "str":"pop     ecx" },
+          { "str":"add     esp, 40h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"PulseEvent" },
+          { "tag":"Sleep" },
+          { "tag":"sub_6359C8" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_0",
+    "label":"rtn_0",
+    "type":"ours",
+    "callees":[
+      { "tag":"CloseHandle" },
+      { "tag":"GetModuleHandleA" },
+      { "tag":"sub_6358F8" }
+    ],
+    "blocks":[
+      {
+        "tag":"loc_635700",
+        "label":"loc_635700",
+        "out_true":"loc_63571F_1",
+        "out_false":"label_6",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 1Ch" },
+          { "str":"lea     esi, unk_638120" },
+          { "str":"or      ebx, [ebp-8]" },
+          { "str":"push    esi" },
+          { "str":"push    dword ptr [esi+50h]" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_6358F8" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     esi" },
+          { "str":"lea     ecx, [esi-120h]" },
+          { "str":"push    ecx" },
+          { "str":"call    GetModuleHandleA" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short near ptr loc_63571F+1" }
+        ],
+        "callees":[
+          { "tag":"GetModuleHandleA" },
+          { "tag":"sub_6358F8" }
+        ]
+      },
+{
+        "tag":"label_6",
+        "label":"label_6",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     ebx, 0" },
+          { "str":"push    ebx" },
+          { "str":"call    CloseHandle" },
+          { "str":"add     esp, 1Ch" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"CloseHandle" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635744",
+    "label":"sub_635744",
+    "type":"idapro",
+    "callees":[
+      { "tag":"ReleaseMutex" },
+      { "tag":"Sleep" },
+      { "tag":"sub_635A58" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635744",
+        "label":"sub_635744",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 30h" },
+          { "str":"lea     ebx, [eax-190h]" },
+          { "str":"mov     [ebx-0Ch], ebx" },
+          { "str":"push    ebx" },
+          { "str":"push    edi" },
+          { "str":"push    dword ptr [ebx+170h]" },
+          { "str":"call    sub_635A58" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     ebx" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    Sleep" },
+          { "str":"mov     edi, 0" },
+          { "str":"push    edi" },
+          { "str":"call    ReleaseMutex" },
+          { "str":"add     esp, 30h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"ReleaseMutex" },
+          { "tag":"Sleep" },
+          { "tag":"sub_635A58" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635788",
+    "label":"sub_635788",
+    "type":"idapro",
+    "callees":[
+      { "tag":"GlobalUnlock" },
+      { "tag":"IsWindow" },
+      { "tag":"sub_6354C4" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635788",
+        "label":"sub_635788",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 3Ch" },
+          { "str":"lea     ebx, [edx-124h]" },
+          { "str":"or      [ebp+var_18], 4Fh" },
+          { "str":"push    0" },
+          { "str":"call    IsWindow" },
+          { "str":"push    ebx" },
+          { "str":"push    dword ptr [ebx+108h]" },
+          { "str":"push    dword ptr [ebx+9Ch]" },
+          { "str":"push    dword ptr [ebx+0A8h]" },
+          { "str":"call    sub_6354C4" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     ebx" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    GlobalUnlock" },
+          { "str":"add     esp, 3Ch" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"GlobalUnlock" },
+          { "tag":"IsWindow" },
+          { "tag":"sub_6354C4" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6357D8",
+    "label":"sub_6357D8",
+    "type":"idapro",
+    "callees":[
+      { "tag":"GetDC" },
+      { "tag":"LocalFree" },
+      { "tag":"sub_635434" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6357D8",
+        "label":"sub_6357D8",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 4Ch" },
+          { "str":"mov     ecx, offset unk_638124" },
+          { "str":"adc     dword ptr [ecx+0A4h], 0FFFF8C16h" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    GetDC" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    dword ptr [ecx+0A4h]" },
+          { "str":"push    dword ptr [ecx+1B8h]" },
+          { "str":"push    dword ptr [ecx+1Ch]" },
+          { "str":"push    dword ptr [ecx+1B0h]" },
+          { "str":"call    sub_635434" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    LocalFree" },
+          { "str":"pop     ecx" },
+          { "str":"add     esp, 4Ch" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"GetDC" },
+          { "tag":"LocalFree" },
+          { "tag":"sub_635434" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635830",
+    "label":"sub_635830",
+    "type":"idapro",
+    "callees":[
+      { "tag":"FindClose" },
+      { "tag":"PulseEvent" },
+      { "tag":"sub_635B74" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635830",
+        "label":"sub_635830",
+        "out_true":"loc_635833",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_635833",
+        "label":"loc_635833",
+        "out_true":"loc_635833",
+        "out_false":"label_7",
+        "last_inst":"jb",
+        "instructions":[
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 40h" },
+          { "str":"mov     eax, offset aPsDll" },
+          { "str":"cmp     eax, 47C7h" },
+          { "str":"jbe     short loc_635833" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_7",
+        "label":"label_7",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    eax" },
+          { "str":"push    dword ptr [eax+154h]" },
+          { "str":"push    esi" },
+          { "str":"call    sub_635B74" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"push    0" },
+          { "str":"call    FindClose" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    PulseEvent" },
+          { "str":"pop     eax" },
+          { "str":"add     esp, 40h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"FindClose" },
+          { "tag":"PulseEvent" },
+          { "tag":"sub_635B74" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635874",
+    "label":"sub_635874",
+    "type":"idapro",
+    "callees":[
+      { "tag":"SetLastError" },
+      { "tag":"sub_63597C" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635874",
+        "label":"sub_635874",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 48h" },
+          { "str":"lea     ebx, [esi+18h]" },
+          { "str":"xor     [ebp+var_8], esi" },
+          { "str":"push    ebx" },
+          { "str":"push    dword ptr [ebx+3Ch]" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_63597C" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     ebx" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    SetLastError" },
+          { "str":"push    0" },
+          { "str":"call    SetLastError" },
+          { "str":"add     esp, 48h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"SetLastError" },
+          { "tag":"sub_63597C" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6358AC",
+    "label":"sub_6358AC",
+    "type":"idapro",
+    "callees":[
+      { "tag":"GetModuleHandleA" },
+      { "tag":"PulseEvent" },
+      { "tag":"sub_635670" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6358AC",
+        "label":"sub_6358AC",
+        "out_true":"loc_6358C1",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 44h" },
+          { "str":"mov     edx, offset unk_6381F0" },
+          { "str":"or      dword ptr [edx-178h], 0FFFFFFA8h" },
+          { "str":"push    edx" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_6358C1",
+        "label":"loc_6358C1",
+        "out_true":"loc_6358C1",
+        "out_false":"label_8",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"lea     eax, [edx-1F0h]" },
+          { "str":"push    eax" },
+          { "str":"call    GetModuleHandleA" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short loc_6358C1" }
+        ],
+        "callees":[
+          { "tag":"GetModuleHandleA" }
+        ]
+      },
+{
+        "tag":"label_8",
+        "label":"label_8",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"push    eax" },
+          { "str":"push    dword ptr [edx+68h]" },
+          { "str":"push    eax" },
+          { "str":"push    esi" },
+          { "str":"call    sub_635670" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    PulseEvent" },
+          { "str":"pop     edx" },
+          { "str":"add     esp, 44h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"PulseEvent" },
+          { "tag":"sub_635670" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6358F8",
+    "label":"sub_6358F8",
+    "type":"idapro",
+    "callees":[
+      { "tag":"CloseHandle" },
+      { "tag":"SetFocus" },
+      { "tag":"sub_635058" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6358F8",
+        "label":"sub_6358F8",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 60h" },
+          { "str":"mov     ebx, offset unk_63805C" },
+          { "str":"or      esi, edi" },
+          { "str":"push    ebx" },
+          { "str":"push    ecx" },
+          { "str":"push    dword ptr [ebx+48h]" },
+          { "str":"call    sub_635058" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     ebx" },
+          { "str":"push    0" },
+          { "str":"call    SetFocus" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    CloseHandle" },
+          { "str":"add     esp, 60h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"CloseHandle" },
+          { "tag":"SetFocus" },
+          { "tag":"sub_635058" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635930",
+    "label":"sub_635930",
+    "type":"idapro",
+    "callees":[
+      { "tag":"ReleaseMutex" },
+      { "tag":"SetLastError" },
+      { "tag":"sub_635788" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635930",
+        "label":"sub_635930",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 28h" },
+          { "str":"lea     edx, unk_638124" },
+          { "str":"adc     [ebp+var_10], 0FFFFFF90h" },
+          { "str":"push    edx" },
+          { "str":"push    dword ptr [edx+18h]" },
+          { "str":"push    dword ptr [edx+12Ch]" },
+          { "str":"push    eax" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_635788" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"mov     esi, 0" },
+          { "str":"push    esi" },
+          { "str":"call    ReleaseMutex" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"push    0" },
+          { "str":"call    SetLastError" },
+          { "str":"pop     edx" },
+          { "str":"add     esp, 28h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"ReleaseMutex" },
+          { "tag":"SetLastError" },
+          { "tag":"sub_635788" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_63597C",
+    "label":"sub_63597C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"GetACP" },
+      { "tag":"LocalFree" },
+      { "tag":"sub_635C7C" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_63597C",
+        "label":"sub_63597C",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 20h" },
+          { "str":"lea     eax, [ebx-0E8h]" },
+          { "str":"and     [ebp+var_10], edi" },
+          { "str":"push    eax" },
+          { "str":"call    GetACP" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"push    ebx" },
+          { "str":"push    ecx" },
+          { "str":"push    dword ptr [eax+1ACh]" },
+          { "str":"call    sub_635C7C" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    LocalFree" },
+          { "str":"pop     eax" },
+          { "str":"add     esp, 20h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"GetACP" },
+          { "tag":"LocalFree" },
+          { "tag":"sub_635C7C" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6359C8",
+    "label":"sub_6359C8",
+    "type":"idapro",
+    "callees":[
+      { "tag":"GetACP" },
+      { "tag":"IsWindow" },
+      { "tag":"sub_635B24" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6359C8",
+        "label":"sub_6359C8",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 54h" },
+          { "str":"lea     eax, [ecx-150h]" },
+          { "str":"sbb     [eax+0D4h], ebx" },
+          { "str":"push    eax" },
+          { "str":"push    dword ptr [eax+8Ch]" },
+          { "str":"push    ecx" },
+          { "str":"push    dword ptr [eax+2Ch]" },
+          { "str":"call    sub_635B24" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"call    GetACP" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"mov     esi, 0" },
+          { "str":"push    esi" },
+          { "str":"call    IsWindow" },
+          { "str":"pop     eax" },
+          { "str":"add     esp, 54h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"GetACP" },
+          { "tag":"IsWindow" },
+          { "tag":"sub_635B24" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635A10",
+    "label":"sub_635A10",
+    "type":"idapro",
+    "callees":[
+      { "tag":"CloseHandle" },
+      { "tag":"PulseEvent" },
+      { "tag":"sub_635EE0" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635A10",
+        "label":"sub_635A10",
+        "out_true":"loc_635A13",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_635A13",
+        "label":"loc_635A13",
+        "out_true":"loc_635A13",
+        "out_false":"label_9",
+        "last_inst":"jb",
+        "instructions":[
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 28h" },
+          { "str":"lea     edx, unk_638190" },
+          { "str":"cmp     edx, 15ADh" },
+          { "str":"jb      short loc_635A13" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_9",
+        "label":"label_9",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    edx" },
+          { "str":"push    0" },
+          { "str":"call    PulseEvent" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"push    dword ptr [edx+19Ch]" },
+          { "str":"push    edi" },
+          { "str":"call    sub_635EE0" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"push    0" },
+          { "str":"call    CloseHandle" },
+          { "str":"pop     edx" },
+          { "str":"add     esp, 28h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"CloseHandle" },
+          { "tag":"PulseEvent" },
+          { "tag":"sub_635EE0" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635A58",
+    "label":"sub_635A58",
+    "type":"idapro",
+    "callees":[
+      { "tag":"IsWindow" },
+      { "tag":"ReleaseMutex" },
+      { "tag":"sub_6351A0" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635A58",
+        "label":"sub_635A58",
+        "out_true":"loc_635A5B",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_635A5B",
+        "label":"loc_635A5B",
+        "out_true":"loc_635A5B",
+        "out_false":"label_10",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 3Ch" },
+          { "str":"lea     edi, [ebx+1B0h]" },
+          { "str":"cmp     edi, 728Eh" },
+          { "str":"jz      short loc_635A5B" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_10",
+        "label":"label_10",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    0" },
+          { "str":"call    ReleaseMutex" },
+          { "str":"push    edi" },
+          { "str":"push    dword ptr [edi+0A4h]" },
+          { "str":"push    dword ptr [edi+1C4h]" },
+          { "str":"push    esi" },
+          { "str":"call    sub_6351A0" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     edi" },
+          { "str":"push    0" },
+          { "str":"call    IsWindow" },
+          { "str":"add     esp, 3Ch" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"IsWindow" },
+          { "tag":"ReleaseMutex" },
+          { "tag":"sub_6351A0" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635A9C",
+    "label":"sub_635A9C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"GetACP" },
+      { "tag":"Sleep" },
+      { "tag":"sub_635284" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635A9C",
+        "label":"sub_635A9C",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 30h" },
+          { "str":"lea     esi, [eax-20h]" },
+          { "str":"mov     edx, [ebp+var_8]" },
+          { "str":"push    esi" },
+          { "str":"push    dword ptr [esi+30h]" },
+          { "str":"push    edx" },
+          { "str":"push    eax" },
+          { "str":"call    sub_635284" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     esi" },
+          { "str":"call    GetACP" },
+          { "str":"push    0" },
+          { "str":"call    Sleep" },
+          { "str":"add     esp, 30h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"GetACP" },
+          { "tag":"Sleep" },
+          { "tag":"sub_635284" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635AD0",
+    "label":"sub_635AD0",
+    "type":"idapro",
+    "callees":[
+      { "tag":"GetModuleHandleA" },
+      { "tag":"IsWindow" },
+      { "tag":"loc_635700" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635AD0",
+        "label":"sub_635AD0",
+        "out_true":"loc_635AE2",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 50h" },
+          { "str":"lea     ecx, unk_6380BC" },
+          { "str":"or      edx, [ebp+var_18]" },
+          { "str":"push    ecx" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_635AE2",
+        "label":"loc_635AE2",
+        "out_true":"loc_635AE2",
+        "out_false":"label_11",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"lea     esi, [ecx-0BCh]" },
+          { "str":"push    esi" },
+          { "str":"call    GetModuleHandleA" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short loc_635AE2" }
+        ],
+        "callees":[
+          { "tag":"GetModuleHandleA" }
+        ]
+      },
+{
+        "tag":"label_11",
+        "label":"label_11",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    dword ptr [ecx+1F8h]" },
+          { "str":"push    dword ptr [ecx+0Ch]" },
+          { "str":"push    dword ptr [ecx+8]" },
+          { "str":"call    loc_635700" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    IsWindow" },
+          { "str":"pop     ecx" },
+          { "str":"add     esp, 50h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"IsWindow" },
+          { "tag":"loc_635700" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635B24",
+    "label":"sub_635B24",
+    "type":"idapro",
+    "callees":[
+      { "tag":"GetDC" },
+      { "tag":"PulseEvent" },
+      { "tag":"sub_635C44" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635B24",
+        "label":"sub_635B24",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 54h" },
+          { "str":"lea     edx, [eax+138h]" },
+          { "str":"xor     ecx, esi" },
+          { "str":"push    edx" },
+          { "str":"push    dword ptr [edx+8Ch]" },
+          { "str":"push    dword ptr [edx+64h]" },
+          { "str":"push    eax" },
+          { "str":"push    dword ptr [edx+88h]" },
+          { "str":"call    sub_635C44" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"push    0" },
+          { "str":"call    GetDC" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"mov     esi, 0" },
+          { "str":"push    esi" },
+          { "str":"call    PulseEvent" },
+          { "str":"pop     edx" },
+          { "str":"add     esp, 54h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"GetDC" },
+          { "tag":"PulseEvent" },
+          { "tag":"sub_635C44" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635B74",
+    "label":"sub_635B74",
+    "type":"idapro",
+    "callees":[
+      { "tag":"CloseHandle" },
+      { "tag":"sub_6358AC" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635B74",
+        "label":"sub_635B74",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 28h" },
+          { "str":"lea     edi, [eax+4Ch]" },
+          { "str":"adc     [ebp+var_18], 4E06h" },
+          { "str":"push    edi" },
+          { "str":"push    eax" },
+          { "str":"push    dword ptr [edi+134h]" },
+          { "str":"push    dword ptr [edi+1F8h]" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_6358AC" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     edi" },
+          { "str":"mov     esi, 0" },
+          { "str":"push    esi" },
+          { "str":"call    CloseHandle" },
+          { "str":"mov     esi, 0" },
+          { "str":"push    esi" },
+          { "str":"call    CloseHandle" },
+          { "str":"add     esp, 28h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"CloseHandle" },
+          { "tag":"sub_6358AC" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635BC0",
+    "label":"sub_635BC0",
+    "type":"idapro",
+    "callees":[
+      { "tag":"FindClose" },
+      { "tag":"lstrlen" },
+      { "tag":"sub_6351EC" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635BC0",
+        "label":"sub_635BC0",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 2Ch" },
+          { "str":"lea     ecx, [esi+98h]" },
+          { "str":"xor     [ecx+1Ch], ebx" },
+          { "str":"push    ecx" },
+          { "str":"mov     edi, 0" },
+          { "str":"push    edi" },
+          { "str":"call    FindClose" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    dword ptr [ecx+64h]" },
+          { "str":"push    dword ptr [ecx+4]" },
+          { "str":"push    edi" },
+          { "str":"call    sub_6351EC" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    lstrlen" },
+          { "str":"pop     ecx" },
+          { "str":"add     esp, 2Ch" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"FindClose" },
+          { "tag":"lstrlen" },
+          { "tag":"sub_6351EC" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635C04",
+    "label":"sub_635C04",
+    "type":"idapro",
+    "callees":[
+      { "tag":"LocalFree" },
+      { "tag":"Sleep" },
+      { "tag":"sub_6353E0" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635C04",
+        "label":"sub_635C04",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 60h" },
+          { "str":"lea     esi, [ecx-1B4h]" },
+          { "str":"sub     ecx, eax" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    Sleep" },
+          { "str":"push    esi" },
+          { "str":"push    dword ptr [esi+0F4h]" },
+          { "str":"push    ebx" },
+          { "str":"push    edi" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_6353E0" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     esi" },
+          { "str":"push    0" },
+          { "str":"call    LocalFree" },
+          { "str":"add     esp, 60h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"LocalFree" },
+          { "tag":"Sleep" },
+          { "tag":"sub_6353E0" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635C44",
+    "label":"sub_635C44",
+    "type":"idapro",
+    "callees":[
+      { "tag":"ReleaseMutex" },
+      { "tag":"SetFocus" },
+      { "tag":"sub_635DAC" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635C44",
+        "label":"sub_635C44",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 40h" },
+          { "str":"mov     ebx, offset unk_6380C4" },
+          { "str":"adc     ecx, [ebx-50h]" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    SetFocus" },
+          { "str":"push    ebx" },
+          { "str":"push    edx" },
+          { "str":"push    edi" },
+          { "str":"call    sub_635DAC" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     ebx" },
+          { "str":"push    0" },
+          { "str":"call    ReleaseMutex" },
+          { "str":"add     esp, 40h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"ReleaseMutex" },
+          { "tag":"SetFocus" },
+          { "tag":"sub_635DAC" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635C7C",
+    "label":"sub_635C7C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"GetACP" },
+      { "tag":"IsWindow" },
+      { "tag":"sub_63559C" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635C7C",
+        "label":"sub_635C7C",
+        "out_true":"loc_635C7F",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_635C7F",
+        "label":"loc_635C7F",
+        "out_true":"loc_635C7F",
+        "out_false":"label_12",
+        "last_inst":"jb",
+        "instructions":[
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 30h" },
+          { "str":"lea     ebx, unk_6380F8" },
+          { "str":"cmp     ebx, 5BFFh" },
+          { "str":"jb      short loc_635C7F" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_12",
+        "label":"label_12",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"call    GetACP" },
+          { "str":"push    ebx" },
+          { "str":"push    edi" },
+          { "str":"push    dword ptr [ebx+128h]" },
+          { "str":"push    edi" },
+          { "str":"push    edx" },
+          { "str":"call    sub_63559C" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     ebx" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    IsWindow" },
+          { "str":"add     esp, 30h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"GetACP" },
+          { "tag":"IsWindow" },
+          { "tag":"sub_63559C" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_1",
+    "label":"rtn_1",
+    "type":"ours",
+    "callees":[
+      { "tag":"GetModuleHandleA" },
+      { "tag":"LocalFree" },
+      { "tag":"sub_635360" }
+    ],
+    "blocks":[
+      {
+        "tag":"loc_635CC4",
+        "label":"loc_635CC4",
+        "out_true":"loc_635CD8_1",
+        "out_false":"label_13",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 44h" },
+          { "str":"lea     edi, unk_6380EC" },
+          { "str":"and     ecx, [edi+0FCh]" },
+          { "str":"lea     eax, [edi-0ECh]" },
+          { "str":"push    eax" },
+          { "str":"call    GetModuleHandleA" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short near ptr loc_635CD8+1" }
+        ],
+        "callees":[
+          { "tag":"GetModuleHandleA" }
+        ]
+      },
+{
+        "tag":"label_13",
+        "label":"label_13",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    edi" },
+          { "str":"push    edx" },
+          { "str":"push    eax" },
+          { "str":"push    esi" },
+          { "str":"push    edx" },
+          { "str":"call    sub_635360" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     edi" },
+          { "str":"push    0" },
+          { "str":"call    LocalFree" },
+          { "str":"add     esp, 44h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"LocalFree" },
+          { "tag":"sub_635360" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635D08",
+    "label":"sub_635D08",
+    "type":"idapro",
+    "callees":[
+      { "tag":"FindClose" },
+      { "tag":"TlsGetValue" },
+      { "tag":"sub_635F34" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635D08",
+        "label":"sub_635D08",
+        "out_true":"loc_635D0B",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_635D0B",
+        "label":"loc_635D0B",
+        "out_true":"loc_635D0B",
+        "out_false":"label_14",
+        "last_inst":"jb",
+        "instructions":[
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 20h" },
+          { "str":"lea     eax, unk_6381A4" },
+          { "str":"cmp     eax, 3F25h" },
+          { "str":"jb      short loc_635D0B" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_14",
+        "label":"label_14",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    eax" },
+          { "str":"push    0" },
+          { "str":"call    TlsGetValue" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"push    dword ptr [eax+158h]" },
+          { "str":"push    dword ptr [eax+1ECh]" },
+          { "str":"call    sub_635F34" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"mov     edi, 0" },
+          { "str":"push    edi" },
+          { "str":"call    FindClose" },
+          { "str":"pop     eax" },
+          { "str":"add     esp, 20h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"FindClose" },
+          { "tag":"TlsGetValue" },
+          { "tag":"sub_635F34" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635D54",
+    "label":"sub_635D54",
+    "type":"idapro",
+    "callees":[
+      { "tag":"FindClose" },
+      { "tag":"GetDC" },
+      { "tag":"sub_635E94" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635D54",
+        "label":"sub_635D54",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 20h" },
+          { "str":"lea     edx, unk_6381F0" },
+          { "str":"xor     [ebp+var_18], edx" },
+          { "str":"push    edx" },
+          { "str":"mov     esi, 0" },
+          { "str":"push    esi" },
+          { "str":"call    GetDC" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"push    dword ptr [edx+1F0h]" },
+          { "str":"push    dword ptr [edx+0F0h]" },
+          { "str":"push    dword ptr [edx+164h]" },
+          { "str":"push    dword ptr [edx+19Ch]" },
+          { "str":"call    sub_635E94" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"mov     edi, 0" },
+          { "str":"push    edi" },
+          { "str":"call    FindClose" },
+          { "str":"pop     edx" },
+          { "str":"add     esp, 20h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"FindClose" },
+          { "tag":"GetDC" },
+          { "tag":"sub_635E94" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635DAC",
+    "label":"sub_635DAC",
+    "type":"idapro",
+    "callees":[
+      { "tag":"GlobalUnlock" },
+      { "tag":"LoadLibraryExA" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635DAC",
+        "label":"sub_635DAC",
+        "out_true":"loc_635E12",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 48h" },
+          { "str":"adc     [ebx+108h], eax" },
+          { "str":"mov     edx, offset unk_6381FC" },
+          { "str":"push    edx" },
+          { "str":"mov     edi, 6ACh" },
+          { "str":"push    edi" },
+          { "str":"mov     esi, 6ACh" },
+          { "str":"push    esi" },
+          { "str":"mov     ecx, 40001h" },
+          { "str":"push    ecx" },
+          { "str":"mov     edi, 863FD58Eh" },
+          { "str":"push    dword ptr [edi+7A239A86h]" },
+          { "str":"sub     [esp+5Ch+var_5C], 2" },
+          { "str":"mov     edi, offset LoadLibraryExA" },
+          { "str":"pop     dword ptr [edi]" },
+          { "str":"call    LoadLibraryExA" },
+          { "str":"xchg    eax, [esp+4Ch+var_4C]" },
+          { "str":"mov     edx, eax" },
+          { "str":"pop     dword ptr [edx-0D0h]" },
+          { "str":"mov     esi, [edx-0D0h]" },
+          { "str":"mov     ebx, esi" },
+          { "str":"sub     edi, edi" },
+          { "str":"dec     edi" },
+          { "str":"and     edi, offset byte_636031" },
+          { "str":"mov     eax, 5A89DE4Eh" },
+          { "str":"xor     esi, esi" }
+        ],
+        "callees":[
+          { "tag":"LoadLibraryExA" }
+        ]
+      },
+{
+        "tag":"loc_635E12",
+        "label":"loc_635E12",
+        "out_true":"loc_635E35",
+        "out_false":"label_15",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"cmp     esi, 6ACh" },
+          { "str":"jz      short loc_635E35" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_15",
+        "label":"label_15",
+        "out_true":"loc_635E12",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"sub     esi, 0FFFFFFFCh" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"push    dword ptr [edi]" },
+          { "str":"inc     [esp+4Ch+var_4C]" },
+          { "str":"xor     [esp+4Ch+var_4C], eax" },
+          { "str":"pop     dword ptr [ebx+ecx*2]" },
+          { "str":"push    dword ptr [edi]" },
+          { "str":"pop     eax" },
+          { "str":"add     edi, 4" },
+          { "str":"add     ebx, 4" },
+          { "str":"jmp     short loc_635E12" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_635E35",
+        "label":"loc_635E35",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    edx" },
+          { "str":"push    0" },
+          { "str":"call    GlobalUnlock" },
+          { "str":"pop     edx" },
+          { "str":"add     esp, 48h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"GlobalUnlock" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635E54",
+    "label":"sub_635E54",
+    "type":"idapro",
+    "callees":[
+      { "tag":"FindClose" },
+      { "tag":"GetACP" },
+      { "tag":"sub_6355E8" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635E54",
+        "label":"sub_635E54",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 3Ch" },
+          { "str":"lea     edi, unk_638188" },
+          { "str":"or      esi, [edi-0E8h]" },
+          { "str":"push    edi" },
+          { "str":"push    esi" },
+          { "str":"push    ebx" },
+          { "str":"push    dword ptr [edi+0A0h]" },
+          { "str":"push    dword ptr [edi+58h]" },
+          { "str":"call    sub_6355E8" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     edi" },
+          { "str":"push    0" },
+          { "str":"call    FindClose" },
+          { "str":"call    GetACP" },
+          { "str":"add     esp, 3Ch" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"FindClose" },
+          { "tag":"GetACP" },
+          { "tag":"sub_6355E8" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635E94",
+    "label":"sub_635E94",
+    "type":"idapro",
+    "callees":[
+      { "tag":"CloseHandle" },
+      { "tag":"PulseEvent" },
+      { "tag":"loc_635CC4" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635E94",
+        "label":"sub_635E94",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 28h" },
+          { "str":"lea     esi, [edx-10h]" },
+          { "str":"adc     edi, [esi-110h]" },
+          { "str":"push    esi" },
+          { "str":"push    edi" },
+          { "str":"push    dword ptr [esi+0A8h]" },
+          { "str":"push    edx" },
+          { "str":"call    loc_635CC4" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     esi" },
+          { "str":"push    0" },
+          { "str":"call    PulseEvent" },
+          { "str":"push    0" },
+          { "str":"call    CloseHandle" },
+          { "str":"add     esp, 28h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"CloseHandle" },
+          { "tag":"PulseEvent" },
+          { "tag":"loc_635CC4" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635EE0",
+    "label":"sub_635EE0",
+    "type":"idapro",
+    "callees":[
+      { "tag":"Sleep" },
+      { "tag":"TlsGetValue" },
+      { "tag":"sub_635FC0" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635EE0",
+        "label":"sub_635EE0",
+        "out_true":"loc_635EE3",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_635EE3",
+        "label":"loc_635EE3",
+        "out_true":"loc_635EE3",
+        "out_false":"label_16",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 60h" },
+          { "str":"mov     edi, offset unk_638090" },
+          { "str":"cmp     edi, 2A56h" },
+          { "str":"jz      short loc_635EE3" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_16",
+        "label":"label_16",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    0" },
+          { "str":"call    TlsGetValue" },
+          { "str":"push    edi" },
+          { "str":"push    dword ptr [edi+2Ch]" },
+          { "str":"push    ecx" },
+          { "str":"push    dword ptr [edi+9Ch]" },
+          { "str":"push    dword ptr [edi+1A4h]" },
+          { "str":"call    sub_635FC0" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     edi" },
+          { "str":"mov     eax, 0" },
+          { "str":"push    eax" },
+          { "str":"call    Sleep" },
+          { "str":"add     esp, 60h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"Sleep" },
+          { "tag":"TlsGetValue" },
+          { "tag":"sub_635FC0" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635F34",
+    "label":"sub_635F34",
+    "type":"idapro",
+    "callees":[
+      { "tag":"GlobalUnlock" },
+      { "tag":"ReleaseMutex" },
+      { "tag":"sub_635554" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635F34",
+        "label":"sub_635F34",
+        "out_true":"loc_635F37",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_635F37",
+        "label":"loc_635F37",
+        "out_true":"loc_635F37",
+        "out_false":"label_17",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 28h" },
+          { "str":"lea     ecx, [eax-20h]" },
+          { "str":"cmp     ecx, 5890h" },
+          { "str":"jz      short loc_635F37" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_17",
+        "label":"label_17",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    ReleaseMutex" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    esi" },
+          { "str":"push    esi" },
+          { "str":"push    dword ptr [ecx+0B8h]" },
+          { "str":"push    esi" },
+          { "str":"call    sub_635554" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    GlobalUnlock" },
+          { "str":"pop     ecx" },
+          { "str":"add     esp, 28h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"GlobalUnlock" },
+          { "tag":"ReleaseMutex" },
+          { "tag":"sub_635554" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635F78",
+    "label":"sub_635F78",
+    "type":"idapro",
+    "callees":[
+      { "tag":"PulseEvent" },
+      { "tag":"ReleaseMutex" },
+      { "tag":"sub_63539C" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635F78",
+        "label":"sub_635F78",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 20h" },
+          { "str":"lea     eax, [edi+0A0h]" },
+          { "str":"mov     [eax-1Ch], ecx" },
+          { "str":"push    eax" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    ReleaseMutex" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"push    ecx" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_63539C" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"push    0" },
+          { "str":"call    PulseEvent" },
+          { "str":"pop     eax" },
+          { "str":"add     esp, 20h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"PulseEvent" },
+          { "tag":"ReleaseMutex" },
+          { "tag":"sub_63539C" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635FC0",
+    "label":"sub_635FC0",
+    "type":"idapro",
+    "callees":[
+      { "tag":"IsWindow" },
+      { "tag":"Sleep" },
+      { "tag":"sub_6352CC" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635FC0",
+        "label":"sub_635FC0",
+        "out_true":"loc_635FC3",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_635FC3",
+        "label":"loc_635FC3",
+        "out_true":"loc_635FC3",
+        "out_false":"label_18",
+        "last_inst":"jb",
+        "instructions":[
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 34h" },
+          { "str":"lea     eax, [edi+68h]" },
+          { "str":"cmp     eax, 5ADEh" },
+          { "str":"jb      short loc_635FC3" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_18",
+        "label":"label_18",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    eax" },
+          { "str":"mov     eax, 0" },
+          { "str":"push    eax" },
+          { "str":"call    IsWindow" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"push    esi" },
+          { "str":"push    dword ptr [eax+180h]" },
+          { "str":"push    dword ptr [eax+0B0h]" },
+          { "str":"call    sub_6352CC" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    Sleep" },
+          { "str":"pop     eax" },
+          { "str":"add     esp, 34h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"IsWindow" },
+          { "tag":"Sleep" },
+          { "tag":"sub_6352CC" }
+        ]
+      }
+    ]
+  },{
+    "tag":"CloseHandle",
+    "label":"CloseHandle",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"FindClose",
+    "label":"FindClose",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"GetACP",
+    "label":"GetACP",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"GetDC",
+    "label":"GetDC",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"GetModuleHandleA",
+    "label":"GetModuleHandleA",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"GlobalUnlock",
+    "label":"GlobalUnlock",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"IsWindow",
+    "label":"IsWindow",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"LoadLibraryExA",
+    "label":"LoadLibraryExA",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"LocalFree",
+    "label":"LocalFree",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"PulseEvent",
+    "label":"PulseEvent",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ReleaseMutex",
+    "label":"ReleaseMutex",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"SetFocus",
+    "label":"SetFocus",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"SetLastError",
+    "label":"SetLastError",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"Sleep",
+    "label":"Sleep",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"TlsGetValue",
+    "label":"TlsGetValue",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_GetConsoleMode",
+    "label":"ds:GetConsoleMode",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_LoadLibraryExA",
+    "label":"ds:LoadLibraryExA",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"eax",
+    "label":"eax",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"esi",
+    "label":"esi",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_635700",
+    "label":"loc_635700",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_635CC4",
+    "label":"loc_635CC4",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"lstrlen",
+    "label":"lstrlen",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  }
+  ]
+}

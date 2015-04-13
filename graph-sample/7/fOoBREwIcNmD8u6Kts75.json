@@ -1,0 +1,2659 @@
+{
+  "routines": [
+  {
+    "tag":"sub_4015B8",
+    "label":"sub_4015B8",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_401B10" },
+      { "tag":"sub_401C89" },
+      { "tag":"sub_401CAC" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_4015B8",
+        "label":"sub_4015B8",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"push    edi" },
+          { "str":"push    edi" },
+          { "str":"call    sub_401B10" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"mov     ebx, 0" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_401CAC" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    sub_401C89" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[
+          { "tag":"sub_401B10" },
+          { "tag":"sub_401C89" },
+          { "tag":"sub_401CAC" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_4015E0",
+    "label":"sub_4015E0",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_401870" },
+      { "tag":"sub_401C58" },
+      { "tag":"sub_401C7B" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_4015E0",
+        "label":"sub_4015E0",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"push    eax" },
+          { "str":"push    eax" },
+          { "str":"call    sub_401870" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401C58" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    sub_401C7B" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[
+          { "tag":"sub_401870" },
+          { "tag":"sub_401C58" },
+          { "tag":"sub_401C7B" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401600",
+    "label":"sub_401600",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_401758" },
+      { "tag":"sub_401C7B" },
+      { "tag":"sub_401D15" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401600",
+        "label":"sub_401600",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"push    esi" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_401758" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401D15" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    sub_401C7B" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[
+          { "tag":"sub_401758" },
+          { "tag":"sub_401C7B" },
+          { "tag":"sub_401D15" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401620",
+    "label":"sub_401620",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_401890" },
+      { "tag":"sub_401C35" },
+      { "tag":"sub_401CC8" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401620",
+        "label":"sub_401620",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"push    edx" },
+          { "str":"push    edx" },
+          { "str":"push    edx" },
+          { "str":"call    sub_401890" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401CC8" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    sub_401C35" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"sub_401890" },
+          { "tag":"sub_401C35" },
+          { "tag":"sub_401CC8" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401644",
+    "label":"sub_401644",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_4017A0" },
+      { "tag":"sub_401C6D" },
+      { "tag":"sub_401CC8" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401644",
+        "label":"sub_401644",
+        "out_true":"loc_401648",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_401648",
+        "label":"loc_401648",
+        "out_true":"loc_401648",
+        "out_false":"label_0",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"lea     edi, [ecx+1DCh]" },
+          { "str":"push    edi" },
+          { "str":"call    sub_401C6D" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short loc_401648" }
+        ],
+        "callees":[
+          { "tag":"sub_401C6D" }
+        ]
+      },
+{
+        "tag":"label_0",
+        "label":"label_0",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    edi" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_4017A0" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401CC8" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[
+          { "tag":"sub_4017A0" },
+          { "tag":"sub_401CC8" }
+        ]
+      }
+    ]
+  },{
+    "tag":"start",
+    "label":"start",
+    "type":"user",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"start",
+        "label":"start",
+        "out_true":"sub_401A48",
+        "out_false":"label_1",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    34h" },
+          { "str":"pop     ecx" },
+          { "str":"pusha" },
+          { "str":"mov     esi, offset dword_401FFC" },
+          { "str":"rep lodsb" },
+          { "str":"lodsd" },
+          { "str":"movzx   eax, byte ptr [eax]" },
+          { "str":"sub     al, 68h" },
+          { "str":"jz      sub_401A48" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_1",
+        "label":"label_1",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_40168C",
+    "label":"sub_40168C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_4017C0" },
+      { "tag":"sub_401C6D" },
+      { "tag":"sub_401C90" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_40168C",
+        "label":"sub_40168C",
+        "out_true":"loc_4016A3",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    sub_401C90" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    eax" },
+          { "str":"push    edi" },
+          { "str":"push    edi" },
+          { "str":"call    sub_4017C0" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" }
+        ],
+        "callees":[
+          { "tag":"sub_4017C0" },
+          { "tag":"sub_401C90" }
+        ]
+      },
+{
+        "tag":"loc_4016A3",
+        "label":"loc_4016A3",
+        "out_true":"loc_4016A3",
+        "out_false":"label_2",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"lea     esi, [ecx+1DCh]" },
+          { "str":"push    esi" },
+          { "str":"call    sub_401C6D" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short loc_4016A3" }
+        ],
+        "callees":[
+          { "tag":"sub_401C6D" }
+        ]
+      },
+{
+        "tag":"label_2",
+        "label":"label_2",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_4016B8",
+    "label":"sub_4016B8",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_401950" },
+      { "tag":"sub_401C82" },
+      { "tag":"sub_401CC8" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_4016B8",
+        "label":"sub_4016B8",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"mov     eax, 0FFFFFFFEh" },
+          { "str":"push    eax" },
+          { "str":"call    sub_401C82" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    ebx" },
+          { "str":"push    eax" },
+          { "str":"push    ebx" },
+          { "str":"push    edx" },
+          { "str":"call    sub_401950" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401CC8" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"sub_401950" },
+          { "tag":"sub_401C82" },
+          { "tag":"sub_401CC8" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_4016E0",
+    "label":"sub_4016E0",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_4015E0" },
+      { "tag":"sub_401C6D" },
+      { "tag":"sub_401C7B" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_4016E0",
+        "label":"sub_4016E0",
+        "out_true":"loc_4016FC",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"push    esi" },
+          { "str":"push    edi" },
+          { "str":"push    ebx" },
+          { "str":"push    edx" },
+          { "str":"call    sub_4015E0" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"mov     ebx, 0" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_401C7B" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" }
+        ],
+        "callees":[
+          { "tag":"sub_4015E0" },
+          { "tag":"sub_401C7B" }
+        ]
+      },
+{
+        "tag":"loc_4016FC",
+        "label":"loc_4016FC",
+        "out_true":"loc_4016FC",
+        "out_false":"label_3",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"lea     edx, [ecx+1DCh]" },
+          { "str":"push    edx" },
+          { "str":"call    sub_401C6D" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short loc_4016FC" }
+        ],
+        "callees":[
+          { "tag":"sub_401C6D" }
+        ]
+      },
+{
+        "tag":"label_3",
+        "label":"label_3",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_401714",
+    "label":"sub_401714",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_401600" },
+      { "tag":"sub_401CEB" },
+      { "tag":"sub_401D15" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401714",
+        "label":"sub_401714",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401CEB" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    edx" },
+          { "str":"push    eax" },
+          { "str":"push    edi" },
+          { "str":"push    esi" },
+          { "str":"call    sub_401600" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401D15" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"sub_401600" },
+          { "tag":"sub_401CEB" },
+          { "tag":"sub_401D15" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401734",
+    "label":"sub_401734",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_4018FC" },
+      { "tag":"sub_401C7B" },
+      { "tag":"sub_401CEB" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401734",
+        "label":"sub_401734",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"push    eax" },
+          { "str":"push    esi" },
+          { "str":"push    edx" },
+          { "str":"call    sub_4018FC" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401CEB" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    sub_401C7B" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    0Ch" }
+        ],
+        "callees":[
+          { "tag":"sub_4018FC" },
+          { "tag":"sub_401C7B" },
+          { "tag":"sub_401CEB" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401758",
+    "label":"sub_401758",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_4015B8" },
+      { "tag":"sub_401C27" },
+      { "tag":"sub_401C2E" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401758",
+        "label":"sub_401758",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    sub_401C2E" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    esi" },
+          { "str":"push    edi" },
+          { "str":"push    eax" },
+          { "str":"push    eax" },
+          { "str":"call    sub_4015B8" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401C27" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"sub_4015B8" },
+          { "tag":"sub_401C27" },
+          { "tag":"sub_401C2E" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401780",
+    "label":"sub_401780",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_401734" },
+      { "tag":"sub_401CC8" },
+      { "tag":"sub_401D15" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401780",
+        "label":"sub_401780",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401CC8" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    eax" },
+          { "str":"push    esi" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_401734" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401D15" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[
+          { "tag":"sub_401734" },
+          { "tag":"sub_401CC8" },
+          { "tag":"sub_401D15" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_4017A0",
+    "label":"sub_4017A0",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_401B9C" },
+      { "tag":"sub_401C4A" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_4017A0",
+        "label":"sub_4017A0",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"push    edi" },
+          { "str":"push    edi" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_401B9C" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401C4A" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401C4A" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"sub_401B9C" },
+          { "tag":"sub_401C4A" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_4017C0",
+    "label":"sub_4017C0",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_401BFC" },
+      { "tag":"sub_401C4A" },
+      { "tag":"sub_401C7B" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_4017C0",
+        "label":"sub_4017C0",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"push    edi" },
+          { "str":"push    ebx" },
+          { "str":"push    ebx" },
+          { "str":"push    edi" },
+          { "str":"call    sub_401BFC" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401C4A" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"mov     esi, 0" },
+          { "str":"push    esi" },
+          { "str":"call    sub_401C7B" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    0Ch" }
+        ],
+        "callees":[
+          { "tag":"sub_401BFC" },
+          { "tag":"sub_401C4A" },
+          { "tag":"sub_401C7B" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_4017E8",
+    "label":"sub_4017E8",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_4016B8" },
+      { "tag":"sub_401C7B" },
+      { "tag":"sub_401CC8" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_4017E8",
+        "label":"sub_4017E8",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401CC8" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    edx" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_4016B8" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    sub_401C7B" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[
+          { "tag":"sub_4016B8" },
+          { "tag":"sub_401C7B" },
+          { "tag":"sub_401CC8" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401808",
+    "label":"sub_401808",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_40184C" },
+      { "tag":"sub_401C89" },
+      { "tag":"sub_401CEB" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401808",
+        "label":"sub_401808",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"push    ebx" },
+          { "str":"push    edi" },
+          { "str":"call    sub_40184C" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401CEB" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    sub_401C89" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"sub_40184C" },
+          { "tag":"sub_401C89" },
+          { "tag":"sub_401CEB" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401828",
+    "label":"sub_401828",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_4017E8" },
+      { "tag":"sub_401C35" },
+      { "tag":"sub_401C58" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401828",
+        "label":"sub_401828",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401C58" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    eax" },
+          { "str":"push    ebx" },
+          { "str":"push    esi" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_4017E8" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    sub_401C35" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    0Ch" }
+        ],
+        "callees":[
+          { "tag":"sub_4017E8" },
+          { "tag":"sub_401C35" },
+          { "tag":"sub_401C58" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_40184C",
+    "label":"sub_40184C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_4019A4" },
+      { "tag":"sub_401C27" },
+      { "tag":"sub_401C35" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_40184C",
+        "label":"sub_40184C",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    sub_401C35" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    eax" },
+          { "str":"push    eax" },
+          { "str":"push    eax" },
+          { "str":"push    edi" },
+          { "str":"call    sub_4019A4" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401C27" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"sub_4019A4" },
+          { "tag":"sub_401C27" },
+          { "tag":"sub_401C35" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401870",
+    "label":"sub_401870",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_401978" },
+      { "tag":"sub_401CC8" },
+      { "tag":"sub_401CEB" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401870",
+        "label":"sub_401870",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"push    edx" },
+          { "str":"push    eax" },
+          { "str":"push    eax" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_401978" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401CC8" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401CEB" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"sub_401978" },
+          { "tag":"sub_401CC8" },
+          { "tag":"sub_401CEB" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401890",
+    "label":"sub_401890",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_4018D8" },
+      { "tag":"sub_401D15" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401890",
+        "label":"sub_401890",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"push    eax" },
+          { "str":"push    edi" },
+          { "str":"push    edx" },
+          { "str":"call    sub_4018D8" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401D15" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401D15" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    0Ch" }
+        ],
+        "callees":[
+          { "tag":"sub_4018D8" },
+          { "tag":"sub_401D15" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_4018B0",
+    "label":"sub_4018B0",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_401B58" },
+      { "tag":"sub_401C89" },
+      { "tag":"sub_401CAC" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_4018B0",
+        "label":"sub_4018B0",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401C89" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    edx" },
+          { "str":"push    eax" },
+          { "str":"push    eax" },
+          { "str":"call    sub_401B58" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    sub_401CAC" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[
+          { "tag":"sub_401B58" },
+          { "tag":"sub_401C89" },
+          { "tag":"sub_401CAC" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_4018D8",
+    "label":"sub_4018D8",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_4018B0" },
+      { "tag":"sub_401C35" },
+      { "tag":"sub_401CC8" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_4018D8",
+        "label":"sub_4018D8",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"push    esi" },
+          { "str":"push    edx" },
+          { "str":"push    eax" },
+          { "str":"push    edx" },
+          { "str":"call    sub_4018B0" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401CC8" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    sub_401C35" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    0Ch" }
+        ],
+        "callees":[
+          { "tag":"sub_4018B0" },
+          { "tag":"sub_401C35" },
+          { "tag":"sub_401CC8" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_4018FC",
+    "label":"sub_4018FC",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_401620" },
+      { "tag":"sub_401C35" },
+      { "tag":"sub_401C90" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_4018FC",
+        "label":"sub_4018FC",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    sub_401C90" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    eax" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_401620" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401C35" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    0Ch" }
+        ],
+        "callees":[
+          { "tag":"sub_401620" },
+          { "tag":"sub_401C35" },
+          { "tag":"sub_401C90" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401924",
+    "label":"sub_401924",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_401B30" },
+      { "tag":"sub_401C35" },
+      { "tag":"sub_401C7B" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401924",
+        "label":"sub_401924",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"push    edi" },
+          { "str":"push    edx" },
+          { "str":"push    edx" },
+          { "str":"call    sub_401B30" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401C7B" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"mov     ebx, 0" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_401C35" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    0Ch" }
+        ],
+        "callees":[
+          { "tag":"sub_401B30" },
+          { "tag":"sub_401C35" },
+          { "tag":"sub_401C7B" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401950",
+    "label":"sub_401950",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_401924" },
+      { "tag":"sub_401C7B" },
+      { "tag":"sub_401D15" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401950",
+        "label":"sub_401950",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401C7B" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    ebx" },
+          { "str":"push    esi" },
+          { "str":"push    edx" },
+          { "str":"call    sub_401924" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401D15" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[
+          { "tag":"sub_401924" },
+          { "tag":"sub_401C7B" },
+          { "tag":"sub_401D15" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401978",
+    "label":"sub_401978",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_401714" },
+      { "tag":"sub_401C35" },
+      { "tag":"sub_401C89" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401978",
+        "label":"sub_401978",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"push    edi" },
+          { "str":"push    edx" },
+          { "str":"call    sub_401714" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"mov     ebx, 0" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_401C35" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    sub_401C89" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[
+          { "tag":"sub_401714" },
+          { "tag":"sub_401C35" },
+          { "tag":"sub_401C89" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_4019A4",
+    "label":"sub_4019A4",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_4016E0" },
+      { "tag":"sub_401C89" },
+      { "tag":"sub_401D15" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_4019A4",
+        "label":"sub_4019A4",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"push    eax" },
+          { "str":"push    eax" },
+          { "str":"push    edi" },
+          { "str":"push    edx" },
+          { "str":"call    sub_4016E0" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"mov     ebx, 0" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_401C89" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401D15" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[
+          { "tag":"sub_4016E0" },
+          { "tag":"sub_401C89" },
+          { "tag":"sub_401D15" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_4019CC",
+    "label":"sub_4019CC",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_40168C" },
+      { "tag":"sub_401C4A" },
+      { "tag":"sub_401C58" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_4019CC",
+        "label":"sub_4019CC",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401C58" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    eax" },
+          { "str":"push    edi" },
+          { "str":"call    sub_40168C" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401C4A" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    0Ch" }
+        ],
+        "callees":[
+          { "tag":"sub_40168C" },
+          { "tag":"sub_401C4A" },
+          { "tag":"sub_401C58" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_4019EC",
+    "label":"sub_4019EC",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_401A9C" },
+      { "tag":"sub_401C82" },
+      { "tag":"sub_401CAC" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_4019EC",
+        "label":"sub_4019EC",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401CAC" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    eax" },
+          { "str":"push    esi" },
+          { "str":"push    eax" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_401A9C" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0FFFFFFFEh" },
+          { "str":"call    sub_401C82" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    0Ch" }
+        ],
+        "callees":[
+          { "tag":"sub_401A9C" },
+          { "tag":"sub_401C82" },
+          { "tag":"sub_401CAC" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401A14",
+    "label":"sub_401A14",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_401644" },
+      { "tag":"sub_401C6D" },
+      { "tag":"sub_401C82" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401A14",
+        "label":"sub_401A14",
+        "out_true":"loc_401A30",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"mov     edi, 0FFFFFFFEh" },
+          { "str":"push    edi" },
+          { "str":"call    sub_401C82" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    ebx" },
+          { "str":"push    edx" },
+          { "str":"push    edi" },
+          { "str":"push    edi" },
+          { "str":"call    sub_401644" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" }
+        ],
+        "callees":[
+          { "tag":"sub_401644" },
+          { "tag":"sub_401C82" }
+        ]
+      },
+{
+        "tag":"loc_401A30",
+        "label":"loc_401A30",
+        "out_true":"loc_401A30",
+        "out_false":"label_4",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"lea     edx, [ecx+1DCh]" },
+          { "str":"push    edx" },
+          { "str":"call    sub_401C6D" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short loc_401A30" }
+        ],
+        "callees":[
+          { "tag":"sub_401C6D" }
+        ]
+      },
+{
+        "tag":"label_4",
+        "label":"label_4",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_401A48",
+    "label":"sub_401A48",
+    "type":"idapro",
+    "callees":[
+      { "tag":"esi" },
+      { "tag":"sub_401A14" },
+      { "tag":"sub_401C90" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401A48",
+        "label":"sub_401A48",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"lea     ecx, unk_403024" },
+          { "str":"push    ecx" },
+          { "str":"mov     ebx, 0" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_401C90" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    eax" },
+          { "str":"push    edi" },
+          { "str":"push    edx" },
+          { "str":"push    edi" },
+          { "str":"call    sub_401A14" },
+          { "str":"pop     ecx" },
+          { "str":"mov     eax, ds:GetModuleHandleA" },
+          { "str":"push    eax" },
+          { "str":"mov     esi, [ecx+160h]" },
+          { "str":"call    esi" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"esi" },
+          { "tag":"sub_401A14" },
+          { "tag":"sub_401C90" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401A7C",
+    "label":"sub_401A7C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_401B78" },
+      { "tag":"sub_401CC8" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401A7C",
+        "label":"sub_401A7C",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401CC8" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    esi" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_401B78" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401CC8" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[
+          { "tag":"sub_401B78" },
+          { "tag":"sub_401CC8" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401A9C",
+    "label":"sub_401A9C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_401C5F" },
+      { "tag":"sub_401C82" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401A9C",
+        "label":"sub_401A9C",
+        "out_true":"loc_401AD4",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     esi, offset unk_403090" },
+          { "str":"mov     ebx, 40h" },
+          { "str":"push    ebx" },
+          { "str":"push    1000h" },
+          { "str":"push    578h" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401C5F" },
+          { "str":"mov     [esi+0F4h], eax" },
+          { "str":"mov     ecx, eax" },
+          { "str":"sub     ecx, 0A9h" },
+          { "str":"mov     edx, offset word_401036" },
+          { "str":"xor     eax, eax" }
+        ],
+        "callees":[
+          { "tag":"sub_401C5F" }
+        ]
+      },
+{
+        "tag":"loc_401AD4",
+        "label":"loc_401AD4",
+        "out_true":"loc_401B03",
+        "out_false":"label_5",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"cmp     eax, 578h" },
+          { "str":"jz      short loc_401B03" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_5",
+        "label":"label_5",
+        "out_true":"loc_401AD4",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"add     eax, 4" },
+          { "str":"add     edx, 4" },
+          { "str":"mov     ebx, [edx-4]" },
+          { "str":"mov     [ecx+0A9h], ebx" },
+          { "str":"add     ecx, 4" },
+          { "str":"sub     dword ptr [ecx+0A5h], 0A4FBD089h" },
+          { "str":"xor     dword ptr [ecx+0A5h], 0AE8248FDh" },
+          { "str":"jmp     short loc_401AD4" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_401B03",
+        "label":"loc_401B03",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    0FFFFFFFEh" },
+          { "str":"call    sub_401C82" },
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[
+          { "tag":"sub_401C82" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401B10",
+    "label":"sub_401B10",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_401A7C" },
+      { "tag":"sub_401C58" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401B10",
+        "label":"sub_401B10",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"push    edi" },
+          { "str":"push    edx" },
+          { "str":"push    esi" },
+          { "str":"push    edx" },
+          { "str":"call    sub_401A7C" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401C58" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401C58" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"sub_401A7C" },
+          { "tag":"sub_401C58" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401B30",
+    "label":"sub_401B30",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_401808" },
+      { "tag":"sub_401C35" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401B30",
+        "label":"sub_401B30",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    sub_401C35" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    ebx" },
+          { "str":"push    edx" },
+          { "str":"call    sub_401808" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    sub_401C35" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    0Ch" }
+        ],
+        "callees":[
+          { "tag":"sub_401808" },
+          { "tag":"sub_401C35" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401B58",
+    "label":"sub_401B58",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_401BD0" },
+      { "tag":"sub_401C89" },
+      { "tag":"sub_401D15" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401B58",
+        "label":"sub_401B58",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"push    ebx" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_401BD0" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401D15" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    sub_401C89" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    0Ch" }
+        ],
+        "callees":[
+          { "tag":"sub_401BD0" },
+          { "tag":"sub_401C89" },
+          { "tag":"sub_401D15" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401B78",
+    "label":"sub_401B78",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_4019EC" },
+      { "tag":"sub_401C2E" },
+      { "tag":"sub_401C51" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401B78",
+        "label":"sub_401B78",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401C51" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    edi" },
+          { "str":"push    eax" },
+          { "str":"push    edi" },
+          { "str":"call    sub_4019EC" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    sub_401C2E" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[
+          { "tag":"sub_4019EC" },
+          { "tag":"sub_401C2E" },
+          { "tag":"sub_401C51" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401B9C",
+    "label":"sub_401B9C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_401780" },
+      { "tag":"sub_401C2E" },
+      { "tag":"sub_401C6D" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401B9C",
+        "label":"sub_401B9C",
+        "out_true":"loc_401BA0",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_401BA0",
+        "label":"loc_401BA0",
+        "out_true":"loc_401BA0",
+        "out_false":"label_6",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"lea     ebx, [ecx+1DCh]" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_401C6D" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short loc_401BA0" }
+        ],
+        "callees":[
+          { "tag":"sub_401C6D" }
+        ]
+      },
+{
+        "tag":"label_6",
+        "label":"label_6",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    eax" },
+          { "str":"push    eax" },
+          { "str":"push    edx" },
+          { "str":"push    eax" },
+          { "str":"call    sub_401780" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"mov     esi, 0" },
+          { "str":"push    esi" },
+          { "str":"call    sub_401C2E" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    0Ch" }
+        ],
+        "callees":[
+          { "tag":"sub_401780" },
+          { "tag":"sub_401C2E" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_401BD0",
+    "label":"sub_401BD0",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_4019CC" },
+      { "tag":"sub_401C4A" },
+      { "tag":"sub_401C6D" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401BD0",
+        "label":"sub_401BD0",
+        "out_true":"loc_401BE5",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"push    ebx" },
+          { "str":"push    esi" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_4019CC" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_401C4A" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" }
+        ],
+        "callees":[
+          { "tag":"sub_4019CC" },
+          { "tag":"sub_401C4A" }
+        ]
+      },
+{
+        "tag":"loc_401BE5",
+        "label":"loc_401BE5",
+        "out_true":"loc_401BE5",
+        "out_false":"label_7",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"lea     edi, [ecx+1DCh]" },
+          { "str":"push    edi" },
+          { "str":"call    sub_401C6D" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short loc_401BE5" }
+        ],
+        "callees":[
+          { "tag":"sub_401C6D" }
+        ]
+      },
+{
+        "tag":"label_7",
+        "label":"label_7",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    8" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_401BFC",
+    "label":"sub_401BFC",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_401828" },
+      { "tag":"sub_401C82" },
+      { "tag":"sub_401C89" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_401BFC",
+        "label":"sub_401BFC",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"push    ecx" },
+          { "str":"push    ebx" },
+          { "str":"push    edi" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_401828" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    sub_401C89" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0FFFFFFFEh" },
+          { "str":"call    sub_401C82" },
+          { "str":"pop     ecx" },
+          { "str":"pop     ebp" },
+          { "str":"retn    10h" }
+        ],
+        "callees":[
+          { "tag":"sub_401828" },
+          { "tag":"sub_401C82" },
+          { "tag":"sub_401C89" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_0",
+    "label":"rtn_0",
+    "type":"ours",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"blk_8",
+        "label":"blk_8",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:GetThreadTimes" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_401C27",
+    "label":"sub_401C27",
+    "type":"idapro",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"sub_401C27",
+        "label":"sub_401C27",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:GetOEMCP" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_401C2E",
+    "label":"sub_401C2E",
+    "type":"idapro",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"sub_401C2E",
+        "label":"sub_401C2E",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:ReleaseMutex" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_401C35",
+    "label":"sub_401C35",
+    "type":"idapro",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"sub_401C35",
+        "label":"sub_401C35",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:GetLargestConsoleWindowSize" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"rtn_1",
+    "label":"rtn_1",
+    "type":"ours",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"blk_9",
+        "label":"blk_9",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:CreatePipe" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_10",
+        "label":"label_10",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:GetExitCodeThread" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_401C4A",
+    "label":"sub_401C4A",
+    "type":"idapro",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"sub_401C4A",
+        "label":"sub_401C4A",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:GetUserDefaultLangID" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_401C51",
+    "label":"sub_401C51",
+    "type":"idapro",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"sub_401C51",
+        "label":"sub_401C51",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:GetThreadLocale" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_401C58",
+    "label":"sub_401C58",
+    "type":"idapro",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"sub_401C58",
+        "label":"sub_401C58",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:GetConsoleCP" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_401C5F",
+    "label":"sub_401C5F",
+    "type":"idapro",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"sub_401C5F",
+        "label":"sub_401C5F",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:VirtualAlloc" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"rtn_2",
+    "label":"rtn_2",
+    "type":"ours",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"blk_11",
+        "label":"blk_11",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:CreateMutexA" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_401C6D",
+    "label":"sub_401C6D",
+    "type":"idapro",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"sub_401C6D",
+        "label":"sub_401C6D",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:GetModuleHandleA" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"rtn_3",
+    "label":"rtn_3",
+    "type":"ours",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"blk_12",
+        "label":"blk_12",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:GetShortPathNameA" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_401C7B",
+    "label":"sub_401C7B",
+    "type":"idapro",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"sub_401C7B",
+        "label":"sub_401C7B",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:SetEvent" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_401C82",
+    "label":"sub_401C82",
+    "type":"idapro",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"sub_401C82",
+        "label":"sub_401C82",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:GetThreadPriority" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_401C89",
+    "label":"sub_401C89",
+    "type":"idapro",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"sub_401C89",
+        "label":"sub_401C89",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:IsDBCSLeadByte" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_401C90",
+    "label":"sub_401C90",
+    "type":"idapro",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"sub_401C90",
+        "label":"sub_401C90",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:AddAtomA" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"rtn_4",
+    "label":"rtn_4",
+    "type":"ours",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"blk_13",
+        "label":"blk_13",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:CompareStringA" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_14",
+        "label":"label_14",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:TlsGetValue" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_15",
+        "label":"label_15",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:TlsFree" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_401CAC",
+    "label":"sub_401CAC",
+    "type":"idapro",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"sub_401CAC",
+        "label":"sub_401CAC",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:CancelWaitableTimer" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"rtn_5",
+    "label":"rtn_5",
+    "type":"ours",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"blk_16",
+        "label":"blk_16",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:GetSystemMetrics" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_17",
+        "label":"label_17",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:IsWindowVisible" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_18",
+        "label":"label_18",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:InvalidateRect" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_401CC8",
+    "label":"sub_401CC8",
+    "type":"idapro",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"sub_401CC8",
+        "label":"sub_401CC8",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:GetFocus" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"rtn_6",
+    "label":"rtn_6",
+    "type":"ours",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"blk_19",
+        "label":"blk_19",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:GetClassInfoExA" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_20",
+        "label":"label_20",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:GetWindowTextA" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_21",
+        "label":"label_21",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:GetDC" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_22",
+        "label":"label_22",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:ShowWindow" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_401CEB",
+    "label":"sub_401CEB",
+    "type":"idapro",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"sub_401CEB",
+        "label":"sub_401CEB",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:GetForegroundWindow" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"rtn_7",
+    "label":"rtn_7",
+    "type":"ours",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"blk_23",
+        "label":"blk_23",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:ReleaseDC" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_24",
+        "label":"label_24",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:IsIconic" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_25",
+        "label":"label_25",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:GetClassNameA" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_26",
+        "label":"label_26",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:off_402088" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_27",
+        "label":"label_27",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:ValidateRect" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_401D15",
+    "label":"sub_401D15",
+    "type":"idapro",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"sub_401D15",
+        "label":"sub_401D15",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:GetActiveWindow" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"rtn_8",
+    "label":"rtn_8",
+    "type":"ours",
+    "callees":[],
+    "blocks":[
+      {
+        "tag":"blk_28",
+        "label":"blk_28",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:GetWindow" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_29",
+        "label":"label_29",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:GetWindowTextLengthA" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_30",
+        "label":"label_30",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:RegisterClassA" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_31",
+        "label":"label_31",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:CloseWindow" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_32",
+        "label":"label_32",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:DllGetClassObject" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_33",
+        "label":"label_33",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:DirectSoundEnumerateA" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_34",
+        "label":"label_34",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:DllCanUnloadNow" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_35",
+        "label":"label_35",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:DirectSoundCreate" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_36",
+        "label":"label_36",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:GetDeviceID" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_37",
+        "label":"label_37",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ds:CheckColors" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"esi",
+    "label":"esi",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  }
+  ]
+}

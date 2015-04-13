@@ -1,0 +1,3372 @@
+{
+  "routines": [
+  {
+    "tag":"sub_6356EC",
+    "label":"sub_6356EC",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_636260" },
+      { "tag":"loc_6365BC" },
+      { "tag":"sub_635B9C" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6356EC",
+        "label":"sub_6356EC",
+        "out_true":"loc_6356EF",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_6356EF",
+        "label":"loc_6356EF",
+        "out_true":"loc_6356EF",
+        "out_false":"label_0",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 2Ch" },
+          { "str":"lea     edi, [ecx+70h]" },
+          { "str":"cmp     edi, 79E9h" },
+          { "str":"jz      short loc_6356EF" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_0",
+        "label":"label_0",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    edi" },
+          { "str":"call    loc_6365BC" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edi" },
+          { "str":"push    edi" },
+          { "str":"push    edx" },
+          { "str":"push    dword ptr [edi+17Ch]" },
+          { "str":"push    dword ptr [edi+158h]" },
+          { "str":"call    sub_635B9C" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     edi" },
+          { "str":"push    edi" },
+          { "str":"call    loc_636260" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edi" },
+          { "str":"add     esp, 2Ch" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_636260" },
+          { "tag":"loc_6365BC" },
+          { "tag":"sub_635B9C" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635730",
+    "label":"sub_635730",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_635ED0" },
+      { "tag":"loc_635EDC" },
+      { "tag":"sub_635B4C" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635730",
+        "label":"sub_635730",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 60h" },
+          { "str":"lea     edi, unk_638068" },
+          { "str":"sub     [ebp+var_28], 4Dh" },
+          { "str":"push    edi" },
+          { "str":"mov     edi, 0" },
+          { "str":"push    edi" },
+          { "str":"call    loc_635EDC" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edi" },
+          { "str":"push    edi" },
+          { "str":"push    dword ptr [edi+154h]" },
+          { "str":"push    dword ptr [edi+2Ch]" },
+          { "str":"push    dword ptr [edi+158h]" },
+          { "str":"call    sub_635B4C" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     edi" },
+          { "str":"push    edi" },
+          { "str":"push    0FFFFFFF4h" },
+          { "str":"call    loc_635ED0" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edi" },
+          { "str":"add     esp, 60h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_635ED0" },
+          { "tag":"loc_635EDC" },
+          { "tag":"sub_635B4C" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_0",
+    "label":"rtn_0",
+    "type":"ours",
+    "callees":[
+      { "tag":"ds_IsWindow" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"loc_63577C",
+        "label":"loc_63577C",
+        "out_true":"sub_635788",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"call    ds:IsWindow" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_IsWindow" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635788",
+    "label":"sub_635788",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_636364" },
+      { "tag":"loc_6365BC" },
+      { "tag":"sub_636514" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635788",
+        "label":"sub_635788",
+        "out_true":"loc_63578B",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_63578B",
+        "label":"loc_63578B",
+        "out_true":"loc_63578B",
+        "out_false":"label_1",
+        "last_inst":"jb",
+        "instructions":[
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 34h" },
+          { "str":"lea     esi, unk_638170" },
+          { "str":"cmp     esi, 5E9Fh" },
+          { "str":"jbe     short loc_63578B" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_1",
+        "label":"label_1",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    esi" },
+          { "str":"push    ecx" },
+          { "str":"push    edx" },
+          { "str":"push    dword ptr [esi+150h]" },
+          { "str":"call    sub_636514" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     esi" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    loc_636364" },
+          { "str":"add     esp, 4" },
+          { "str":"call    loc_6365BC" },
+          { "str":"add     esp, 4" },
+          { "str":"add     esp, 34h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_636364" },
+          { "tag":"loc_6365BC" },
+          { "tag":"sub_636514" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6357CC",
+    "label":"sub_6357CC",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_635E14" },
+      { "tag":"loc_635F84" },
+      { "tag":"sub_636214" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6357CC",
+        "label":"sub_6357CC",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 1Ch" },
+          { "str":"mov     eax, offset unk_6381B0" },
+          { "str":"and     edx, eax" },
+          { "str":"push    eax" },
+          { "str":"push    esi" },
+          { "str":"push    dword ptr [eax+0FCh]" },
+          { "str":"call    sub_636214" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"push    0" },
+          { "str":"call    loc_635E14" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"push    0" },
+          { "str":"call    loc_635F84" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     eax" },
+          { "str":"add     esp, 1Ch" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_635E14" },
+          { "tag":"loc_635F84" },
+          { "tag":"sub_636214" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_63580C",
+    "label":"sub_63580C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_63597C" },
+      { "tag":"loc_635C2C" },
+      { "tag":"sub_6356EC" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_63580C",
+        "label":"sub_63580C",
+        "out_true":"loc_635835",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 30h" },
+          { "str":"mov     ecx, offset unk_638134" },
+          { "str":"and     edi, [ebp+var_2C]" },
+          { "str":"push    ecx" },
+          { "str":"push    eax" },
+          { "str":"push    dword ptr [ecx+10Ch]" },
+          { "str":"push    dword ptr [ecx+10Ch]" },
+          { "str":"push    edx" },
+          { "str":"call    sub_6356EC" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" }
+        ],
+        "callees":[
+          { "tag":"sub_6356EC" }
+        ]
+      },
+{
+        "tag":"loc_635835",
+        "label":"loc_635835",
+        "out_true":"loc_635835",
+        "out_false":"label_2",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"lea     edx, [ecx-134h]" },
+          { "str":"push    edx" },
+          { "str":"call    loc_635C2C" },
+          { "str":"add     esp, 4" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short loc_635835" }
+        ],
+        "callees":[
+          { "tag":"loc_635C2C" }
+        ]
+      },
+{
+        "tag":"label_2",
+        "label":"label_2",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    loc_63597C" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     ecx" },
+          { "str":"add     esp, 30h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_63597C" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_63585C",
+    "label":"sub_63585C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"edi" },
+      { "tag":"loc_6362B4" },
+      { "tag":"sub_635FA8" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_63585C",
+        "label":"sub_63585C",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 38h" },
+          { "str":"lea     eax, unk_6380F0" },
+          { "str":"and     dword ptr [eax+0DCh], 0FFFFFFC6h" },
+          { "str":"push    eax" },
+          { "str":"push    ecx" },
+          { "str":"push    dword ptr [eax+1D0h]" },
+          { "str":"push    dword ptr [eax+0CCh]" },
+          { "str":"push    dword ptr [eax+130h]" },
+          { "str":"call    sub_635FA8" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"call    loc_6362B4" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     eax" },
+          { "str":"mov     edx, offset GetModuleHandleA" },
+          { "str":"mov     edx, [edx]" },
+          { "str":"push    edx" },
+          { "str":"push    dword ptr [eax+0E4h]" },
+          { "str":"pop     edi" },
+          { "str":"call    edi" },
+          { "str":"add     esp, 38h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"edi" },
+          { "tag":"loc_6362B4" },
+          { "tag":"sub_635FA8" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6358B0",
+    "label":"sub_6358B0",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_635E14" },
+      { "tag":"loc_6361FC" },
+      { "tag":"sub_6362C0" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6358B0",
+        "label":"sub_6358B0",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 20h" },
+          { "str":"lea     ecx, [edx-58h]" },
+          { "str":"or      ebx, [ecx-0B8h]" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    loc_635E14" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    edi" },
+          { "str":"push    dword ptr [ecx+11Ch]" },
+          { "str":"call    sub_6362C0" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    loc_6361FC" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     ecx" },
+          { "str":"add     esp, 20h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_635E14" },
+          { "tag":"loc_6361FC" },
+          { "tag":"sub_6362C0" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6358F0",
+    "label":"sub_6358F0",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_635C2C" },
+      { "tag":"loc_635E14" },
+      { "tag":"sub_635E84" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6358F0",
+        "label":"sub_6358F0",
+        "out_true":"loc_635924",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 28h" },
+          { "str":"mov     eax, offset unk_6381FC" },
+          { "str":"mov     [ebp+var_28], 0FFFFFFD7h" },
+          { "str":"push    eax" },
+          { "str":"push    0" },
+          { "str":"call    loc_635E14" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"push    dword ptr [eax+34h]" },
+          { "str":"push    dword ptr [eax+164h]" },
+          { "str":"call    sub_635E84" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" }
+        ],
+        "callees":[
+          { "tag":"loc_635E14" },
+          { "tag":"sub_635E84" }
+        ]
+      },
+{
+        "tag":"loc_635924",
+        "label":"loc_635924",
+        "out_true":"loc_635924",
+        "out_false":"label_3",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"lea     edx, [eax-1FCh]" },
+          { "str":"push    edx" },
+          { "str":"call    loc_635C2C" },
+          { "str":"add     esp, 4" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short loc_635924" }
+        ],
+        "callees":[
+          { "tag":"loc_635C2C" }
+        ]
+      },
+{
+        "tag":"label_3",
+        "label":"label_3",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"pop     eax" },
+          { "str":"add     esp, 28h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_635940",
+    "label":"sub_635940",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_635D68" },
+      { "tag":"loc_635DC4" },
+      { "tag":"loc_635E14" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635940",
+        "label":"sub_635940",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 34h" },
+          { "str":"lea     esi, [ebx+118h]" },
+          { "str":"adc     [ebp+var_24], edi" },
+          { "str":"push    esi" },
+          { "str":"push    edi" },
+          { "str":"push    dword ptr [esi+0ECh]" },
+          { "str":"call    loc_635DC4" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     esi" },
+          { "str":"push    0" },
+          { "str":"call    loc_635D68" },
+          { "str":"add     esp, 4" },
+          { "str":"push    0" },
+          { "str":"call    loc_635E14" },
+          { "str":"add     esp, 4" },
+          { "str":"add     esp, 34h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_635D68" },
+          { "tag":"loc_635DC4" },
+          { "tag":"loc_635E14" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_1",
+    "label":"rtn_1",
+    "type":"ours",
+    "callees":[
+      { "tag":"ds_Sleep" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"loc_63597C",
+        "label":"loc_63597C",
+        "out_true":"sub_635988",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"call    ds:Sleep" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_Sleep" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635988",
+    "label":"sub_635988",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_6359DC" },
+      { "tag":"loc_635C2C" },
+      { "tag":"loc_635C38" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635988",
+        "label":"sub_635988",
+        "out_true":"loc_6359A5",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 48h" },
+          { "str":"mov     ecx, offset unk_6381EC" },
+          { "str":"sub     [ebp+var_34], eax" },
+          { "str":"push    ecx" },
+          { "str":"push    eax" },
+          { "str":"push    edi" },
+          { "str":"call    loc_635C38" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" }
+        ],
+        "callees":[
+          { "tag":"loc_635C38" }
+        ]
+      },
+{
+        "tag":"loc_6359A5",
+        "label":"loc_6359A5",
+        "out_true":"loc_6359A5",
+        "out_false":"label_4",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"lea     ebx, [ecx-1ECh]" },
+          { "str":"push    ebx" },
+          { "str":"call    loc_635C2C" },
+          { "str":"add     esp, 4" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short loc_6359A5" }
+        ],
+        "callees":[
+          { "tag":"loc_635C2C" }
+        ]
+      },
+{
+        "tag":"label_4",
+        "label":"label_4",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"mov     ebx, 0" },
+          { "str":"push    ebx" },
+          { "str":"call    loc_6359DC" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     ecx" },
+          { "str":"add     esp, 48h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_6359DC" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_2",
+    "label":"rtn_2",
+    "type":"ours",
+    "callees":[
+      { "tag":"ds_FindClose" },
+      { "tag":"ds_LoadLibraryExA" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"loc_6359D0",
+        "label":"loc_6359D0",
+        "out_true":"loc_6359DC",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"call    ds:LoadLibraryExA" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_LoadLibraryExA" },
+          { "tag":"edi" }
+        ]
+      },
+{
+        "tag":"loc_6359DC",
+        "label":"loc_6359DC",
+        "out_true":"sub_6359F4",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"call    ds:FindClose" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_FindClose" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6359F4",
+    "label":"sub_6359F4",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_635C2C" },
+      { "tag":"loc_636508" },
+      { "tag":"sub_635D18" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6359F4",
+        "label":"sub_6359F4",
+        "out_true":"loc_635A20",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 28h" },
+          { "str":"lea     eax, [esi+13Ch]" },
+          { "str":"or      esi, [ebp+var_10]" },
+          { "str":"push    eax" },
+          { "str":"push    dword ptr [eax+58h]" },
+          { "str":"push    ecx" },
+          { "str":"push    dword ptr [eax+114h]" },
+          { "str":"push    dword ptr [eax+19Ch]" },
+          { "str":"call    sub_635D18" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" }
+        ],
+        "callees":[
+          { "tag":"sub_635D18" }
+        ]
+      },
+{
+        "tag":"loc_635A20",
+        "label":"loc_635A20",
+        "out_true":"loc_635A20",
+        "out_false":"label_5",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"lea     ebx, [eax-1D4h]" },
+          { "str":"push    ebx" },
+          { "str":"call    loc_635C2C" },
+          { "str":"add     esp, 4" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short loc_635A20" }
+        ],
+        "callees":[
+          { "tag":"loc_635C2C" }
+        ]
+      },
+{
+        "tag":"label_5",
+        "label":"label_5",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"mov     esi, 0" },
+          { "str":"push    esi" },
+          { "str":"call    loc_636508" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     eax" },
+          { "str":"add     esp, 28h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_636508" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635A58",
+    "label":"sub_635A58",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_635D68" },
+      { "tag":"loc_635EDC" },
+      { "tag":"sub_635F48" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635A58",
+        "label":"sub_635A58",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 54h" },
+          { "str":"lea     ebx, unk_6380E0" },
+          { "str":"and     eax, ebx" },
+          { "str":"push    ebx" },
+          { "str":"push    dword ptr [ebx+0C0h]" },
+          { "str":"push    dword ptr [ebx+158h]" },
+          { "str":"call    sub_635F48" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     ebx" },
+          { "str":"push    0" },
+          { "str":"call    loc_635EDC" },
+          { "str":"add     esp, 4" },
+          { "str":"push    0" },
+          { "str":"call    loc_635D68" },
+          { "str":"add     esp, 4" },
+          { "str":"add     esp, 54h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_635D68" },
+          { "tag":"loc_635EDC" },
+          { "tag":"sub_635F48" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635ABC",
+    "label":"sub_635ABC",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_6359DC" },
+      { "tag":"loc_635EDC" },
+      { "tag":"sub_635A58" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635ABC",
+        "label":"sub_635ABC",
+        "out_true":"loc_635ABF",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_635ABF",
+        "label":"loc_635ABF",
+        "out_true":"loc_635ABF",
+        "out_false":"label_6",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 50h" },
+          { "str":"mov     ecx, offset unk_6380F8" },
+          { "str":"cmp     ecx, 3B5Ch" },
+          { "str":"jz      short loc_635ABF" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_6",
+        "label":"label_6",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ecx" },
+          { "str":"push    dword ptr [ecx+7Ch]" },
+          { "str":"push    dword ptr [ecx+54h]" },
+          { "str":"call    sub_635A58" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    loc_6359DC" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    loc_635EDC" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     ecx" },
+          { "str":"add     esp, 50h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_6359DC" },
+          { "tag":"loc_635EDC" },
+          { "tag":"sub_635A58" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635B04",
+    "label":"sub_635B04",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_635D68" },
+      { "tag":"loc_636508" },
+      { "tag":"sub_635CD8" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635B04",
+        "label":"sub_635B04",
+        "out_true":"loc_635B07",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_635B07",
+        "label":"loc_635B07",
+        "out_true":"loc_635B07",
+        "out_false":"label_7",
+        "last_inst":"jb",
+        "instructions":[
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 48h" },
+          { "str":"mov     eax, offset unk_6380D4" },
+          { "str":"cmp     eax, 2C5Eh" },
+          { "str":"jbe     short loc_635B07" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_7",
+        "label":"label_7",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    eax" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    loc_636508" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"push    esi" },
+          { "str":"push    edx" },
+          { "str":"call    sub_635CD8" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"mov     ebx, 0" },
+          { "str":"push    ebx" },
+          { "str":"call    loc_635D68" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     eax" },
+          { "str":"add     esp, 48h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_635D68" },
+          { "tag":"loc_636508" },
+          { "tag":"sub_635CD8" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635B4C",
+    "label":"sub_635B4C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_63597C" },
+      { "tag":"loc_6362B4" },
+      { "tag":"sub_6357CC" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635B4C",
+        "label":"sub_635B4C",
+        "out_true":"loc_635B4F",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_635B4F",
+        "label":"loc_635B4F",
+        "out_true":"loc_635B4F",
+        "out_false":"label_8",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 60h" },
+          { "str":"lea     ebx, [edi-20h]" },
+          { "str":"cmp     ebx, 7101h" },
+          { "str":"jz      short loc_635B4F" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_8",
+        "label":"label_8",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ebx" },
+          { "str":"push    eax" },
+          { "str":"push    dword ptr [ebx+11Ch]" },
+          { "str":"push    dword ptr [ebx+1A8h]" },
+          { "str":"call    sub_6357CC" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     ebx" },
+          { "str":"push    0" },
+          { "str":"call    loc_63597C" },
+          { "str":"add     esp, 4" },
+          { "str":"call    loc_6362B4" },
+          { "str":"add     esp, 4" },
+          { "str":"add     esp, 60h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_63597C" },
+          { "tag":"loc_6362B4" },
+          { "tag":"sub_6357CC" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635B9C",
+    "label":"sub_635B9C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_635C2C" },
+      { "tag":"loc_6365BC" },
+      { "tag":"sub_635B04" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635B9C",
+        "label":"sub_635B9C",
+        "out_true":"loc_635B9F",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_635B9F",
+        "label":"loc_635B9F",
+        "out_true":"loc_635B9F",
+        "out_false":"label_9",
+        "last_inst":"jb",
+        "instructions":[
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 60h" },
+          { "str":"mov     ebx, offset unk_6381FC" },
+          { "str":"cmp     ebx, 20B9h" },
+          { "str":"jbe     short loc_635B9F" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_9",
+        "label":"label_9",
+        "out_true":"loc_635BB1_1",
+        "out_false":"label_10",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"lea     edx, [ebx-1FCh]" },
+          { "str":"push    edx" },
+          { "str":"call    loc_635C2C" },
+          { "str":"add     esp, 4" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short near ptr loc_635BB1+1" }
+        ],
+        "callees":[
+          { "tag":"loc_635C2C" }
+        ]
+      },
+{
+        "tag":"label_10",
+        "label":"label_10",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ebx" },
+          { "str":"push    ecx" },
+          { "str":"push    dword ptr [ebx+38h]" },
+          { "str":"push    eax" },
+          { "str":"call    sub_635B04" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     ebx" },
+          { "str":"call    loc_6365BC" },
+          { "str":"add     esp, 4" },
+          { "str":"add     esp, 60h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_6365BC" },
+          { "tag":"sub_635B04" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635BE0",
+    "label":"sub_635BE0",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_635D68" },
+      { "tag":"loc_6361FC" },
+      { "tag":"sub_63580C" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635BE0",
+        "label":"sub_635BE0",
+        "out_true":"loc_635BE3",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_635BE3",
+        "label":"loc_635BE3",
+        "out_true":"loc_635BE3",
+        "out_false":"label_11",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 28h" },
+          { "str":"lea     esi, unk_6380A0" },
+          { "str":"cmp     esi, 1551h" },
+          { "str":"jz      short loc_635BE3" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_11",
+        "label":"label_11",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    esi" },
+          { "str":"push    edx" },
+          { "str":"push    dword ptr [esi+0A4h]" },
+          { "str":"push    edx" },
+          { "str":"push    dword ptr [esi+100h]" },
+          { "str":"call    sub_63580C" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     esi" },
+          { "str":"push    0" },
+          { "str":"call    loc_6361FC" },
+          { "str":"add     esp, 4" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    loc_635D68" },
+          { "str":"add     esp, 4" },
+          { "str":"add     esp, 28h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_635D68" },
+          { "tag":"loc_6361FC" },
+          { "tag":"sub_63580C" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_3",
+    "label":"rtn_3",
+    "type":"ours",
+    "callees":[
+      { "tag":"ds_GetModuleHandleA" },
+      { "tag":"edi" },
+      { "tag":"loc_635C2C" },
+      { "tag":"loc_635F84" },
+      { "tag":"sub_6359F4" }
+    ],
+    "blocks":[
+      {
+        "tag":"loc_635C2C",
+        "label":"loc_635C2C",
+        "out_true":"loc_635C38",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"call    ds:GetModuleHandleA" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_GetModuleHandleA" },
+          { "tag":"edi" }
+        ]
+      },
+{
+        "tag":"loc_635C38",
+        "label":"loc_635C38",
+        "out_true":"loc_635C6B_1",
+        "out_false":"label_12",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 50h" },
+          { "str":"lea     esi, [ecx-154h]" },
+          { "str":"adc     dword ptr [esi+0B8h], 0FFFFD089h" },
+          { "str":"push    0" },
+          { "str":"call    loc_635F84" },
+          { "str":"add     esp, 4" },
+          { "str":"push    esi" },
+          { "str":"push    dword ptr [esi+124h]" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_6359F4" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     esi" },
+          { "str":"lea     edi, [esi-98h]" },
+          { "str":"push    edi" },
+          { "str":"call    loc_635C2C" },
+          { "str":"add     esp, 4" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short near ptr loc_635C6B+1" }
+        ],
+        "callees":[
+          { "tag":"loc_635C2C" },
+          { "tag":"loc_635F84" },
+          { "tag":"sub_6359F4" }
+        ]
+      },
+{
+        "tag":"label_12",
+        "label":"label_12",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"add     esp, 50h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"start",
+    "label":"start",
+    "type":"user",
+    "callees":[
+      { "tag":"loc_6359D0" },
+      { "tag":"loc_636260" },
+      { "tag":"loc_636358" }
+    ],
+    "blocks":[
+      {
+        "tag":"start",
+        "label":"start",
+        "out_true":"sub_63585C",
+        "out_false":"label_13",
+        "last_inst":"ja",
+        "instructions":[
+          { "str":"push    edi" },
+          { "str":"sub     edi, edi" },
+          { "str":"push    edi" },
+          { "str":"push    edi" },
+          { "str":"push    edi" },
+          { "str":"push    edi" },
+          { "str":"call    loc_636260" },
+          { "str":"sub     esp, 0FFFFFFFCh" },
+          { "str":"call    loc_636358" },
+          { "str":"push    2" },
+          { "str":"xor     eax, eax" },
+          { "str":"sub     eax, offset unk_638030" },
+          { "str":"neg     eax" },
+          { "str":"push    0" },
+          { "str":"lea     ecx, [eax+7]" },
+          { "str":"add     byte ptr [ecx], 41h" },
+          { "str":"push    eax" },
+          { "str":"call    loc_6359D0" },
+          { "str":"pop     edi" },
+          { "str":"pop     edi" },
+          { "str":"pop     edi" },
+          { "str":"lea     ecx, [eax+3Bh]" },
+          { "str":"mov     edi, [ecx]" },
+          { "str":"lea     eax, [eax+edi]" },
+          { "str":"mov     eax, [eax+28h]" },
+          { "str":"pusha" },
+          { "str":"mov     ah, 45h" },
+          { "str":"sub     al, ah" },
+          { "str":"ja      sub_63585C" }
+        ],
+        "callees":[
+          { "tag":"loc_6359D0" },
+          { "tag":"loc_636260" },
+          { "tag":"loc_636358" }
+        ]
+      },
+{
+        "tag":"label_13",
+        "label":"label_13",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"popa" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_635CD8",
+    "label":"sub_635CD8",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_635ED0" },
+      { "tag":"loc_636508" },
+      { "tag":"sub_636370" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635CD8",
+        "label":"sub_635CD8",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 58h" },
+          { "str":"mov     ebx, offset unk_6380A4" },
+          { "str":"and     [ebp+var_1C], 0FFFFC5D2h" },
+          { "str":"push    ebx" },
+          { "str":"push    ecx" },
+          { "str":"push    eax" },
+          { "str":"call    sub_636370" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     ebx" },
+          { "str":"mov     esi, 0FFFFFFF4h" },
+          { "str":"push    esi" },
+          { "str":"call    loc_635ED0" },
+          { "str":"add     esp, 4" },
+          { "str":"push    0" },
+          { "str":"call    loc_636508" },
+          { "str":"add     esp, 4" },
+          { "str":"add     esp, 58h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_635ED0" },
+          { "tag":"loc_636508" },
+          { "tag":"sub_636370" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635D18",
+    "label":"sub_635D18",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_6359DC" },
+      { "tag":"loc_636508" },
+      { "tag":"sub_63656C" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635D18",
+        "label":"sub_635D18",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 20h" },
+          { "str":"lea     ebx, [eax+28h]" },
+          { "str":"xor     edx, edi" },
+          { "str":"push    0" },
+          { "str":"call    loc_6359DC" },
+          { "str":"add     esp, 4" },
+          { "str":"push    ebx" },
+          { "str":"push    dword ptr [ebx+30h]" },
+          { "str":"push    edi" },
+          { "str":"push    dword ptr [ebx+0A0h]" },
+          { "str":"push    dword ptr [ebx+1A4h]" },
+          { "str":"call    sub_63656C" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     ebx" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    loc_636508" },
+          { "str":"add     esp, 4" },
+          { "str":"add     esp, 20h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_6359DC" },
+          { "tag":"loc_636508" },
+          { "tag":"sub_63656C" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_4",
+    "label":"rtn_4",
+    "type":"ours",
+    "callees":[
+      { "tag":"ds_LocalLock" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"loc_635D68",
+        "label":"loc_635D68",
+        "out_true":"sub_635D74",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"call    ds:LocalLock" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_LocalLock" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635D74",
+    "label":"sub_635D74",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_63597C" },
+      { "tag":"loc_635C2C" },
+      { "tag":"sub_6363C4" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635D74",
+        "label":"sub_635D74",
+        "out_true":"loc_635D77",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_635D77",
+        "label":"loc_635D77",
+        "out_true":"loc_635D77",
+        "out_false":"label_14",
+        "last_inst":"jb",
+        "instructions":[
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 20h" },
+          { "str":"lea     edx, unk_6381E0" },
+          { "str":"cmp     edx, 67E6h" },
+          { "str":"jbe     short loc_635D77" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_14",
+        "label":"label_14",
+        "out_true":"loc_635DA8",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"push    edx" },
+          { "str":"push    dword ptr [edx]" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_6363C4" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"mov     eax, 0" },
+          { "str":"push    eax" },
+          { "str":"call    loc_63597C" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" }
+        ],
+        "callees":[
+          { "tag":"loc_63597C" },
+          { "tag":"sub_6363C4" }
+        ]
+      },
+{
+        "tag":"loc_635DA8",
+        "label":"loc_635DA8",
+        "out_true":"loc_635DA8",
+        "out_false":"label_15",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"lea     eax, [edx-1E0h]" },
+          { "str":"push    eax" },
+          { "str":"call    loc_635C2C" },
+          { "str":"add     esp, 4" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short loc_635DA8" }
+        ],
+        "callees":[
+          { "tag":"loc_635C2C" }
+        ]
+      },
+{
+        "tag":"label_15",
+        "label":"label_15",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"pop     edx" },
+          { "str":"add     esp, 20h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"rtn_5",
+    "label":"rtn_5",
+    "type":"ours",
+    "callees":[
+      { "tag":"ds_GetDC" },
+      { "tag":"edi" },
+      { "tag":"loc_635C2C" },
+      { "tag":"loc_6365BC" },
+      { "tag":"sub_636474" }
+    ],
+    "blocks":[
+      {
+        "tag":"loc_635DC4",
+        "label":"loc_635DC4",
+        "out_true":"loc_635DF3_1",
+        "out_false":"label_16",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 60h" },
+          { "str":"lea     ebx, [esi-178h]" },
+          { "str":"sub     [ebx+68h], edx" },
+          { "str":"push    ebx" },
+          { "str":"push    dword ptr [ebx+130h]" },
+          { "str":"push    dword ptr [ebx+144h]" },
+          { "str":"call    sub_636474" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     ebx" },
+          { "str":"call    loc_6365BC" },
+          { "str":"add     esp, 4" },
+          { "str":"lea     esi, [ebx-64h]" },
+          { "str":"push    esi" },
+          { "str":"call    loc_635C2C" },
+          { "str":"add     esp, 4" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short near ptr loc_635DF3+1" }
+        ],
+        "callees":[
+          { "tag":"loc_635C2C" },
+          { "tag":"loc_6365BC" },
+          { "tag":"sub_636474" }
+        ]
+      },
+{
+        "tag":"label_16",
+        "label":"label_16",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"add     esp, 60h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_635E14",
+        "label":"loc_635E14",
+        "out_true":"sub_635E20",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"call    ds:GetDC" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_GetDC" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635E20",
+    "label":"sub_635E20",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_635ED0" },
+      { "tag":"loc_635EDC" },
+      { "tag":"sub_635ABC" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635E20",
+        "label":"sub_635E20",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 38h" },
+          { "str":"lea     eax, [edi+18h]" },
+          { "str":"sbb     dword ptr [eax+0B8h], 0FFFFFFE1h" },
+          { "str":"push    eax" },
+          { "str":"push    dword ptr [eax+50h]" },
+          { "str":"push    dword ptr [eax+1F0h]" },
+          { "str":"call    sub_635ABC" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"mov     edi, 0" },
+          { "str":"push    edi" },
+          { "str":"call    loc_635EDC" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"mov     esi, 0FFFFFFF4h" },
+          { "str":"push    esi" },
+          { "str":"call    loc_635ED0" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     eax" },
+          { "str":"add     esp, 38h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_635ED0" },
+          { "tag":"loc_635EDC" },
+          { "tag":"sub_635ABC" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635E84",
+    "label":"sub_635E84",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_63597C" },
+      { "tag":"loc_635EDC" },
+      { "tag":"sub_6358B0" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635E84",
+        "label":"sub_635E84",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 60h" },
+          { "str":"lea     edx, unk_638198" },
+          { "str":"and     esi, [ebp+var_58]" },
+          { "str":"push    edx" },
+          { "str":"mov     ebx, 0" },
+          { "str":"push    ebx" },
+          { "str":"call    loc_635EDC" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"push    dword ptr [edx+70h]" },
+          { "str":"push    dword ptr [edx+0D4h]" },
+          { "str":"call    sub_6358B0" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    loc_63597C" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edx" },
+          { "str":"add     esp, 60h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_63597C" },
+          { "tag":"loc_635EDC" },
+          { "tag":"sub_6358B0" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_6",
+    "label":"rtn_6",
+    "type":"ours",
+    "callees":[
+      { "tag":"ds_FindAtomA" },
+      { "tag":"ds_LocalFree" },
+      { "tag":"edi" },
+      { "tag":"loc_635C2C" },
+      { "tag":"loc_635F84" },
+      { "tag":"sub_635940" }
+    ],
+    "blocks":[
+      {
+        "tag":"loc_635ED0",
+        "label":"loc_635ED0",
+        "out_true":"loc_635EDC",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"call    ds:FindAtomA" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_FindAtomA" },
+          { "tag":"edi" }
+        ]
+      },
+{
+        "tag":"loc_635EDC",
+        "label":"loc_635EDC",
+        "out_true":"loc_635EE8",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"call    ds:LocalFree" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_LocalFree" },
+          { "tag":"edi" }
+        ]
+      },
+{
+        "tag":"loc_635EE8",
+        "label":"loc_635EE8",
+        "out_true":"loc_635F17_1",
+        "out_false":"label_17",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 3Ch" },
+          { "str":"mov     ebx, offset unk_6380C4" },
+          { "str":"adc     [ebx-64h], eax" },
+          { "str":"push    ebx" },
+          { "str":"push    dword ptr [ebx+60h]" },
+          { "str":"push    dword ptr [ebx+1C8h]" },
+          { "str":"push    dword ptr [ebx+1D0h]" },
+          { "str":"push    dword ptr [ebx+120h]" },
+          { "str":"call    sub_635940" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     ebx" },
+          { "str":"lea     esi, [ebx-0C4h]" },
+          { "str":"push    esi" },
+          { "str":"call    loc_635C2C" },
+          { "str":"add     esp, 4" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short near ptr loc_635F17+1" }
+        ],
+        "callees":[
+          { "tag":"loc_635C2C" },
+          { "tag":"sub_635940" }
+        ]
+      },
+{
+        "tag":"label_17",
+        "label":"label_17",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    0" },
+          { "str":"call    loc_635F84" },
+          { "str":"add     esp, 4" },
+          { "str":"add     esp, 3Ch" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_635F84" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635F48",
+    "label":"sub_635F48",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_6359DC" },
+      { "tag":"loc_635EE8" },
+      { "tag":"loc_636364" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635F48",
+        "label":"sub_635F48",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 24h" },
+          { "str":"mov     esi, offset unk_638190" },
+          { "str":"or      edi, ecx" },
+          { "str":"push    esi" },
+          { "str":"push    dword ptr [esi+44h]" },
+          { "str":"push    edi" },
+          { "str":"push    edi" },
+          { "str":"call    loc_635EE8" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     esi" },
+          { "str":"push    0" },
+          { "str":"call    loc_636364" },
+          { "str":"add     esp, 4" },
+          { "str":"mov     eax, 0" },
+          { "str":"push    eax" },
+          { "str":"call    loc_6359DC" },
+          { "str":"add     esp, 4" },
+          { "str":"add     esp, 24h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_6359DC" },
+          { "tag":"loc_635EE8" },
+          { "tag":"loc_636364" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_7",
+    "label":"rtn_7",
+    "type":"ours",
+    "callees":[
+      { "tag":"ds_CloseHandle" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"loc_635F84",
+        "label":"loc_635F84",
+        "out_true":"sub_635FA8",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"call    ds:CloseHandle" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_CloseHandle" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635FA8",
+    "label":"sub_635FA8",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_635ED0" },
+      { "tag":"loc_636364" },
+      { "tag":"sub_635730" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635FA8",
+        "label":"sub_635FA8",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 20h" },
+          { "str":"lea     ecx, [eax+14h]" },
+          { "str":"and     ebx, 0FFFFFFE2h" },
+          { "str":"push    ecx" },
+          { "str":"push    dword ptr [ecx+1C4h]" },
+          { "str":"push    edi" },
+          { "str":"push    dword ptr [ecx+19Ch]" },
+          { "str":"call    sub_635730" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"mov     edi, 0FFFFFFF4h" },
+          { "str":"push    edi" },
+          { "str":"call    loc_635ED0" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    loc_636364" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     ecx" },
+          { "str":"add     esp, 20h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_635ED0" },
+          { "tag":"loc_636364" },
+          { "tag":"sub_635730" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635FFC",
+    "label":"sub_635FFC",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_6361FC" },
+      { "tag":"loc_6362B4" },
+      { "tag":"sub_6360D0" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635FFC",
+        "label":"sub_635FFC",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 44h" },
+          { "str":"lea     esi, [edx+18Ch]" },
+          { "str":"xor     edi, esi" },
+          { "str":"push    esi" },
+          { "str":"push    ebx" },
+          { "str":"push    dword ptr [esi+120h]" },
+          { "str":"push    ebx" },
+          { "str":"push    dword ptr [esi+0A4h]" },
+          { "str":"call    sub_6360D0" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     esi" },
+          { "str":"call    loc_6362B4" },
+          { "str":"add     esp, 4" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    loc_6361FC" },
+          { "str":"add     esp, 4" },
+          { "str":"add     esp, 44h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_6361FC" },
+          { "tag":"loc_6362B4" },
+          { "tag":"sub_6360D0" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_636040",
+    "label":"sub_636040",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_63597C" },
+      { "tag":"loc_635EDC" },
+      { "tag":"sub_6358F0" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_636040",
+        "label":"sub_636040",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 48h" },
+          { "str":"lea     esi, [edi-4Ch]" },
+          { "str":"xor     [ebp+var_44], 3E64h" },
+          { "str":"push    0" },
+          { "str":"call    loc_635EDC" },
+          { "str":"add     esp, 4" },
+          { "str":"push    esi" },
+          { "str":"push    dword ptr [esi+0F8h]" },
+          { "str":"push    eax" },
+          { "str":"push    dword ptr [esi+0F8h]" },
+          { "str":"push    edi" },
+          { "str":"call    sub_6358F0" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     esi" },
+          { "str":"mov     eax, 0" },
+          { "str":"push    eax" },
+          { "str":"call    loc_63597C" },
+          { "str":"add     esp, 4" },
+          { "str":"add     esp, 48h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_63597C" },
+          { "tag":"loc_635EDC" },
+          { "tag":"sub_6358F0" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_636088",
+    "label":"sub_636088",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_63577C" },
+      { "tag":"loc_635F84" },
+      { "tag":"sub_6361A4" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_636088",
+        "label":"sub_636088",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 28h" },
+          { "str":"mov     esi, offset unk_6380D4" },
+          { "str":"and     dword ptr [esi+14h], 0FFFFFDCBh" },
+          { "str":"push    0" },
+          { "str":"call    loc_635F84" },
+          { "str":"add     esp, 4" },
+          { "str":"push    esi" },
+          { "str":"push    dword ptr [esi+128h]" },
+          { "str":"push    dword ptr [esi+0B4h]" },
+          { "str":"push    edx" },
+          { "str":"push    dword ptr [esi+54h]" },
+          { "str":"call    sub_6361A4" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     esi" },
+          { "str":"push    0" },
+          { "str":"call    loc_63577C" },
+          { "str":"add     esp, 4" },
+          { "str":"add     esp, 28h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_63577C" },
+          { "tag":"loc_635F84" },
+          { "tag":"sub_6361A4" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6360D0",
+    "label":"sub_6360D0",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_6361FC" },
+      { "tag":"loc_636364" },
+      { "tag":"sub_635E20" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6360D0",
+        "label":"sub_6360D0",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 58h" },
+          { "str":"mov     edi, offset unk_638070" },
+          { "str":"mov     ebx, [ebp+var_34]" },
+          { "str":"push    edi" },
+          { "str":"push    0" },
+          { "str":"call    loc_636364" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edi" },
+          { "str":"push    edi" },
+          { "str":"push    dword ptr [edi+1B4h]" },
+          { "str":"push    edx" },
+          { "str":"call    sub_635E20" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     edi" },
+          { "str":"push    edi" },
+          { "str":"push    0" },
+          { "str":"call    loc_6361FC" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edi" },
+          { "str":"add     esp, 58h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_6361FC" },
+          { "tag":"loc_636364" },
+          { "tag":"sub_635E20" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_63611C",
+    "label":"sub_63611C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_635ED0" },
+      { "tag":"loc_636364" },
+      { "tag":"sub_6364BC" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_63611C",
+        "label":"sub_63611C",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 48h" },
+          { "str":"mov     esi, offset a_dl" },
+          { "str":"sub     eax, 0FFFFFFC4h" },
+          { "str":"push    0FFFFFFF4h" },
+          { "str":"call    loc_635ED0" },
+          { "str":"add     esp, 4" },
+          { "str":"push    esi" },
+          { "str":"push    dword ptr [esi+0A4h]" },
+          { "str":"push    dword ptr [esi+1ACh]" },
+          { "str":"push    dword ptr [esi+24h]" },
+          { "str":"call    sub_6364BC" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     esi" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    loc_636364" },
+          { "str":"add     esp, 4" },
+          { "str":"add     esp, 48h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_635ED0" },
+          { "tag":"loc_636364" },
+          { "tag":"sub_6364BC" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_636164",
+    "label":"sub_636164",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_635EDC" },
+      { "tag":"loc_636508" },
+      { "tag":"sub_635988" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_636164",
+        "label":"sub_636164",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 48h" },
+          { "str":"lea     edx, [eax+198h]" },
+          { "str":"mov     [ebp+var_24], edx" },
+          { "str":"push    edx" },
+          { "str":"push    esi" },
+          { "str":"push    esi" },
+          { "str":"push    esi" },
+          { "str":"push    edi" },
+          { "str":"call    sub_635988" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"mov     ebx, 0" },
+          { "str":"push    ebx" },
+          { "str":"call    loc_636508" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"push    0" },
+          { "str":"call    loc_635EDC" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edx" },
+          { "str":"add     esp, 48h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_635EDC" },
+          { "tag":"loc_636508" },
+          { "tag":"sub_635988" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6361A4",
+    "label":"sub_6361A4",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_6361FC" },
+      { "tag":"loc_636508" },
+      { "tag":"sub_6365D4" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6361A4",
+        "label":"sub_6361A4",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 60h" },
+          { "str":"mov     edi, offset unk_638154" },
+          { "str":"or      eax, [ebp+var_3C]" },
+          { "str":"push    edi" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    loc_6361FC" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edi" },
+          { "str":"push    edi" },
+          { "str":"push    dword ptr [edi+1F8h]" },
+          { "str":"push    dword ptr [edi+1B8h]" },
+          { "str":"push    ebx" },
+          { "str":"push    dword ptr [edi+40h]" },
+          { "str":"call    sub_6365D4" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     edi" },
+          { "str":"push    edi" },
+          { "str":"push    0" },
+          { "str":"call    loc_636508" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edi" },
+          { "str":"add     esp, 60h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_6361FC" },
+          { "tag":"loc_636508" },
+          { "tag":"sub_6365D4" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_8",
+    "label":"rtn_8",
+    "type":"ours",
+    "callees":[
+      { "tag":"ds_GlobalUnlock" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"loc_6361FC",
+        "label":"loc_6361FC",
+        "out_true":"sub_636214",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"call    ds:GlobalUnlock" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_GlobalUnlock" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_636214",
+    "label":"sub_636214",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_635ED0" },
+      { "tag":"loc_636260" },
+      { "tag":"sub_635788" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_636214",
+        "label":"sub_636214",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 50h" },
+          { "str":"mov     edi, offset unk_638020" },
+          { "str":"add     eax, edx" },
+          { "str":"push    edi" },
+          { "str":"push    0FFFFFFF4h" },
+          { "str":"call    loc_635ED0" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edi" },
+          { "str":"push    edi" },
+          { "str":"push    dword ptr [edi+74h]" },
+          { "str":"push    dword ptr [edi+9Ch]" },
+          { "str":"call    sub_635788" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     edi" },
+          { "str":"push    edi" },
+          { "str":"call    loc_636260" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edi" },
+          { "str":"add     esp, 50h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_635ED0" },
+          { "tag":"loc_636260" },
+          { "tag":"sub_635788" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_9",
+    "label":"rtn_9",
+    "type":"ours",
+    "callees":[
+      { "tag":"ds_GetACP" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"loc_636260",
+        "label":"loc_636260",
+        "out_true":"sub_63626C",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"call    ds:GetACP" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_GetACP" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_63626C",
+    "label":"sub_63626C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_635EDC" },
+      { "tag":"loc_636364" },
+      { "tag":"sub_636088" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_63626C",
+        "label":"sub_63626C",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 34h" },
+          { "str":"lea     edx, unk_6381D8" },
+          { "str":"mov     edi, [ebp+var_C]" },
+          { "str":"push    edx" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    loc_636364" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"push    ebx" },
+          { "str":"push    dword ptr [edx+1B4h]" },
+          { "str":"push    ebx" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_636088" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"push    0" },
+          { "str":"call    loc_635EDC" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edx" },
+          { "str":"add     esp, 34h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_635EDC" },
+          { "tag":"loc_636364" },
+          { "tag":"sub_636088" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_10",
+    "label":"rtn_10",
+    "type":"ours",
+    "callees":[
+      { "tag":"ds_GetConsoleCP" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"loc_6362B4",
+        "label":"loc_6362B4",
+        "out_true":"sub_6362C0",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"call    ds:GetConsoleCP" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_GetConsoleCP" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6362C0",
+    "label":"sub_6362C0",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_6359D0" },
+      { "tag":"loc_6365BC" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6362C0",
+        "label":"sub_6362C0",
+        "out_true":"loc_636328",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 58h" },
+          { "str":"sbb     [ecx-9Ch], edi" },
+          { "str":"mov     eax, offset unk_638144" },
+          { "str":"push    eax" },
+          { "str":"mov     esi, 6ACh" },
+          { "str":"push    esi" },
+          { "str":"push    6ACh" },
+          { "str":"mov     ebx, 40001h" },
+          { "str":"push    ebx" },
+          { "str":"mov     ebx, 863FD58Ah" },
+          { "str":"push    dword ptr [ebx+7A239A86h]" },
+          { "str":"sub     [esp+6Ch+var_6C], 2" },
+          { "str":"mov     ebx, offset LoadLibraryExA" },
+          { "str":"pop     dword ptr [ebx]" },
+          { "str":"call    loc_6359D0" },
+          { "str":"add     esp, 4" },
+          { "str":"xchg    eax, [esp+60h+var_60]" },
+          { "str":"pop     dword ptr [eax+90h]" },
+          { "str":"mov     esi, [eax+90h]" },
+          { "str":"mov     ecx, esi" },
+          { "str":"sub     edi, edi" },
+          { "str":"dec     edi" },
+          { "str":"and     edi, offset dword_635014" },
+          { "str":"mov     esi, 8D9AE218h" },
+          { "str":"push    6ACh" },
+          { "str":"pop     ebx" }
+        ],
+        "callees":[
+          { "tag":"loc_6359D0" }
+        ]
+      },
+{
+        "tag":"loc_636328",
+        "label":"loc_636328",
+        "out_true":"loc_636328",
+        "out_false":"label_18",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"xor     edx, edx" },
+          { "str":"push    dword ptr [edi+edx]" },
+          { "str":"add     [esp+60h+var_60], esi" },
+          { "str":"pop     dword ptr [ecx+edx*2]" },
+          { "str":"dec     dword ptr [ecx]" },
+          { "str":"xor     esi, esi" },
+          { "str":"add     esi, [edi]" },
+          { "str":"add     edi, 4" },
+          { "str":"add     ecx, 4" },
+          { "str":"sub     ebx, 4" },
+          { "str":"cmp     ebx, 0" },
+          { "str":"jnz     short loc_636328" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_18",
+        "label":"label_18",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    eax" },
+          { "str":"call    loc_6365BC" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     eax" },
+          { "str":"add     esp, 58h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_6365BC" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_11",
+    "label":"rtn_11",
+    "type":"ours",
+    "callees":[
+      { "tag":"ds_SetFocus" },
+      { "tag":"ds_WaitForMultipleObjects" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"loc_636358",
+        "label":"loc_636358",
+        "out_true":"loc_636364",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"call    ds:WaitForMultipleObjects" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_WaitForMultipleObjects" },
+          { "tag":"edi" }
+        ]
+      },
+{
+        "tag":"loc_636364",
+        "label":"loc_636364",
+        "out_true":"sub_636370",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"call    ds:SetFocus" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_SetFocus" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_636370",
+    "label":"sub_636370",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_635E14" },
+      { "tag":"loc_636508" },
+      { "tag":"sub_636040" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_636370",
+        "label":"sub_636370",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 2Ch" },
+          { "str":"lea     edi, [ebx+10Ch]" },
+          { "str":"sbb     dword ptr [edi-28h], 6348h" },
+          { "str":"push    edi" },
+          { "str":"push    0" },
+          { "str":"call    loc_636508" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edi" },
+          { "str":"push    edi" },
+          { "str":"push    dword ptr [edi+198h]" },
+          { "str":"push    dword ptr [edi+0F0h]" },
+          { "str":"push    dword ptr [edi+0F0h]" },
+          { "str":"call    sub_636040" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     edi" },
+          { "str":"push    edi" },
+          { "str":"mov     ebx, 0" },
+          { "str":"push    ebx" },
+          { "str":"call    loc_635E14" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edi" },
+          { "str":"add     esp, 2Ch" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_635E14" },
+          { "tag":"loc_636508" },
+          { "tag":"sub_636040" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6363C4",
+    "label":"sub_6363C4",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_635ED0" },
+      { "tag":"loc_636508" },
+      { "tag":"sub_636164" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6363C4",
+        "label":"sub_6363C4",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 60h" },
+          { "str":"lea     eax, unk_638000" },
+          { "str":"adc     [ebp+var_2C], 0FFFFFFABh" },
+          { "str":"push    eax" },
+          { "str":"mov     edi, 0FFFFFFF4h" },
+          { "str":"push    edi" },
+          { "str":"call    loc_635ED0" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"push    dword ptr [eax+64h]" },
+          { "str":"push    edx" },
+          { "str":"call    sub_636164" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    loc_636508" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     eax" },
+          { "str":"add     esp, 60h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_635ED0" },
+          { "tag":"loc_636508" },
+          { "tag":"sub_636164" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_636418",
+    "label":"sub_636418",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_635D68" },
+      { "tag":"loc_636508" },
+      { "tag":"sub_63626C" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_636418",
+        "label":"sub_636418",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 30h" },
+          { "str":"mov     eax, offset unk_638024" },
+          { "str":"adc     edx, [eax+40h]" },
+          { "str":"push    eax" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    loc_636508" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"push    dword ptr [eax+104h]" },
+          { "str":"push    dword ptr [eax+134h]" },
+          { "str":"push    dword ptr [eax+7Ch]" },
+          { "str":"push    dword ptr [eax+138h]" },
+          { "str":"call    sub_63626C" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"push    0" },
+          { "str":"call    loc_635D68" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     eax" },
+          { "str":"add     esp, 30h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_635D68" },
+          { "tag":"loc_636508" },
+          { "tag":"sub_63626C" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_636474",
+    "label":"sub_636474",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_63577C" },
+      { "tag":"loc_635EDC" },
+      { "tag":"sub_63611C" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_636474",
+        "label":"sub_636474",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 60h" },
+          { "str":"mov     edi, offset unk_638164" },
+          { "str":"or      [ebp+var_48], edi" },
+          { "str":"push    edi" },
+          { "str":"mov     ebx, 0" },
+          { "str":"push    ebx" },
+          { "str":"call    loc_63577C" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edi" },
+          { "str":"push    edi" },
+          { "str":"push    ecx" },
+          { "str":"push    dword ptr [edi+0B0h]" },
+          { "str":"call    sub_63611C" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     edi" },
+          { "str":"push    edi" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    loc_635EDC" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edi" },
+          { "str":"add     esp, 60h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_63577C" },
+          { "tag":"loc_635EDC" },
+          { "tag":"sub_63611C" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6364BC",
+    "label":"sub_6364BC",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_63597C" },
+      { "tag":"loc_635D68" },
+      { "tag":"sub_635D74" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6364BC",
+        "label":"sub_6364BC",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 28h" },
+          { "str":"lea     eax, unk_63805C" },
+          { "str":"and     edi, 0FFFF8B77h" },
+          { "str":"push    eax" },
+          { "str":"mov     esi, 0" },
+          { "str":"push    esi" },
+          { "str":"call    loc_63597C" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"push    dword ptr [eax+68h]" },
+          { "str":"push    edx" },
+          { "str":"push    dword ptr [eax+110h]" },
+          { "str":"call    sub_635D74" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"push    0" },
+          { "str":"call    loc_635D68" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     eax" },
+          { "str":"add     esp, 28h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_63597C" },
+          { "tag":"loc_635D68" },
+          { "tag":"sub_635D74" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_12",
+    "label":"rtn_12",
+    "type":"ours",
+    "callees":[
+      { "tag":"ds_TlsGetValue" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"loc_636508",
+        "label":"loc_636508",
+        "out_true":"sub_636514",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"call    ds:TlsGetValue" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_TlsGetValue" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_636514",
+    "label":"sub_636514",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_635C2C" },
+      { "tag":"loc_635D68" },
+      { "tag":"sub_635FFC" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_636514",
+        "label":"sub_636514",
+        "out_true":"loc_636526",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 50h" },
+          { "str":"lea     edx, [esi-104h]" },
+          { "str":"xor     esi, 0FFFFFFF1h" },
+          { "str":"push    edx" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_636526",
+        "label":"loc_636526",
+        "out_true":"loc_636526",
+        "out_false":"label_19",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"lea     esi, [edx-6Ch]" },
+          { "str":"push    esi" },
+          { "str":"call    loc_635C2C" },
+          { "str":"add     esp, 4" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short loc_636526" }
+        ],
+        "callees":[
+          { "tag":"loc_635C2C" }
+        ]
+      },
+{
+        "tag":"label_19",
+        "label":"label_19",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"push    ebx" },
+          { "str":"push    dword ptr [edx+0BCh]" },
+          { "str":"push    esi" },
+          { "str":"call    sub_635FFC" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"mov     esi, 0" },
+          { "str":"push    esi" },
+          { "str":"call    loc_635D68" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edx" },
+          { "str":"add     esp, 50h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_635D68" },
+          { "tag":"sub_635FFC" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_63656C",
+    "label":"sub_63656C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_63597C" },
+      { "tag":"loc_635F84" },
+      { "tag":"sub_636418" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_63656C",
+        "label":"sub_63656C",
+        "out_true":"loc_63656F",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_63656F",
+        "label":"loc_63656F",
+        "out_true":"loc_63656F",
+        "out_false":"label_20",
+        "last_inst":"jb",
+        "instructions":[
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 50h" },
+          { "str":"lea     ecx, unk_63815C" },
+          { "str":"cmp     ecx, 30F2h" },
+          { "str":"jb      short loc_63656F" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_20",
+        "label":"label_20",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ecx" },
+          { "str":"push    ebx" },
+          { "str":"push    dword ptr [ecx+168h]" },
+          { "str":"push    edi" },
+          { "str":"push    dword ptr [ecx+154h]" },
+          { "str":"call    sub_636418" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    loc_63597C" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"mov     ebx, 0" },
+          { "str":"push    ebx" },
+          { "str":"call    loc_635F84" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     ecx" },
+          { "str":"add     esp, 50h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_63597C" },
+          { "tag":"loc_635F84" },
+          { "tag":"sub_636418" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_13",
+    "label":"rtn_13",
+    "type":"ours",
+    "callees":[
+      { "tag":"ds_GetLastError" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"loc_6365BC",
+        "label":"loc_6365BC",
+        "out_true":"sub_6365D4",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"call    ds:GetLastError" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_GetLastError" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6365D4",
+    "label":"sub_6365D4",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_635EDC" },
+      { "tag":"loc_636364" },
+      { "tag":"sub_635BE0" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6365D4",
+        "label":"sub_6365D4",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 4Ch" },
+          { "str":"lea     ecx, unk_638104" },
+          { "str":"add     dword ptr [ecx+0A4h], 3A1Fh" },
+          { "str":"push    ecx" },
+          { "str":"push    edx" },
+          { "str":"push    eax" },
+          { "str":"call    sub_635BE0" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"push    0" },
+          { "str":"call    loc_635EDC" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    loc_636364" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     ecx" },
+          { "str":"add     esp, 4Ch" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_635EDC" },
+          { "tag":"loc_636364" },
+          { "tag":"sub_635BE0" }
+        ]
+      }
+    ]
+  },{
+    "tag":"ds_CloseHandle",
+    "label":"ds:CloseHandle",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_FindAtomA",
+    "label":"ds:FindAtomA",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_FindClose",
+    "label":"ds:FindClose",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_GetACP",
+    "label":"ds:GetACP",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_GetConsoleCP",
+    "label":"ds:GetConsoleCP",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_GetDC",
+    "label":"ds:GetDC",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_GetLastError",
+    "label":"ds:GetLastError",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_GetModuleHandleA",
+    "label":"ds:GetModuleHandleA",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_GlobalUnlock",
+    "label":"ds:GlobalUnlock",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_IsWindow",
+    "label":"ds:IsWindow",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_LoadLibraryExA",
+    "label":"ds:LoadLibraryExA",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_LocalFree",
+    "label":"ds:LocalFree",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_LocalLock",
+    "label":"ds:LocalLock",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_SetFocus",
+    "label":"ds:SetFocus",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_Sleep",
+    "label":"ds:Sleep",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_TlsGetValue",
+    "label":"ds:TlsGetValue",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_WaitForMultipleObjects",
+    "label":"ds:WaitForMultipleObjects",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"edi",
+    "label":"edi",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_63577C",
+    "label":"loc_63577C",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_63597C",
+    "label":"loc_63597C",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_6359D0",
+    "label":"loc_6359D0",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_6359DC",
+    "label":"loc_6359DC",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_635C2C",
+    "label":"loc_635C2C",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_635C38",
+    "label":"loc_635C38",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_635D68",
+    "label":"loc_635D68",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_635DC4",
+    "label":"loc_635DC4",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_635E14",
+    "label":"loc_635E14",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_635ED0",
+    "label":"loc_635ED0",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_635EDC",
+    "label":"loc_635EDC",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_635EE8",
+    "label":"loc_635EE8",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_635F84",
+    "label":"loc_635F84",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_6361FC",
+    "label":"loc_6361FC",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_636260",
+    "label":"loc_636260",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_6362B4",
+    "label":"loc_6362B4",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_636358",
+    "label":"loc_636358",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_636364",
+    "label":"loc_636364",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_636508",
+    "label":"loc_636508",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_6365BC",
+    "label":"loc_6365BC",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  }
+  ]
+}

@@ -1,0 +1,2530 @@
+{
+  "routines": [
+  {
+    "tag":"sub_6356F4",
+    "label":"sub_6356F4",
+    "type":"idapro",
+    "callees":[
+      { "tag":"ds_GetModuleHandleA_ecx_4_" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6356F4",
+        "label":"sub_6356F4",
+        "out_true":"sub_635700",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:GetModuleHandleA[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_GetModuleHandleA_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635700",
+    "label":"sub_635700",
+    "type":"idapro",
+    "callees":[
+      { "tag":"ds_LoadLibraryExA_ecx_4_" },
+      { "tag":"edi" },
+      { "tag":"edx" },
+      { "tag":"sub_635764" },
+      { "tag":"sub_635BE4" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635700",
+        "label":"sub_635700",
+        "out_true":"loc_63570C",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:LoadLibraryExA[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_LoadLibraryExA_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      },
+{
+        "tag":"loc_63570C",
+        "label":"loc_63570C",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 44h" },
+          { "str":"lea     edi, unk_63801C" },
+          { "str":"sbb     [edi+1BCh], ecx" },
+          { "str":"push    edi" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_635BE4" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edi" },
+          { "str":"push    edi" },
+          { "str":"push    dword ptr [edi+8]" },
+          { "str":"push    esi" },
+          { "str":"push    dword ptr [edi+1E8h]" },
+          { "str":"call    sub_635764" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     edi" },
+          { "str":"mov     ebx, offset GetModuleHandleA" },
+          { "str":"mov     ebx, [ebx]" },
+          { "str":"push    ebx" },
+          { "str":"push    dword ptr [edi+2Ch]" },
+          { "str":"pop     edx" },
+          { "str":"call    edx" },
+          { "str":"add     esp, 44h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"edx" },
+          { "tag":"sub_635764" },
+          { "tag":"sub_635BE4" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635758",
+    "label":"sub_635758",
+    "type":"idapro",
+    "callees":[
+      { "tag":"ds_CloseHandle_ecx_4_" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635758",
+        "label":"sub_635758",
+        "out_true":"sub_635764",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:CloseHandle[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_CloseHandle_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635764",
+    "label":"sub_635764",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_6358E8" },
+      { "tag":"sub_635B14" },
+      { "tag":"sub_635FF0" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635764",
+        "label":"sub_635764",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 50h" },
+          { "str":"lea     ebx, unk_6380E8" },
+          { "str":"or      [ebp+var_34], 313Bh" },
+          { "str":"call    sub_635FF0" },
+          { "str":"add     esp, 4" },
+          { "str":"push    ebx" },
+          { "str":"push    dword ptr [ebx+16Ch]" },
+          { "str":"push    esi" },
+          { "str":"call    sub_6358E8" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     ebx" },
+          { "str":"mov     esi, 0" },
+          { "str":"push    esi" },
+          { "str":"call    sub_635B14" },
+          { "str":"add     esp, 4" },
+          { "str":"add     esp, 50h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"sub_6358E8" },
+          { "tag":"sub_635B14" },
+          { "tag":"sub_635FF0" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_0",
+    "label":"rtn_0",
+    "type":"ours",
+    "callees":[
+      { "tag":"ds_GetMessageA_ecx_4_" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"blk_0",
+        "label":"blk_0",
+        "out_true":"sub_6357B4",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:GetMessageA[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_GetMessageA_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6357B4",
+    "label":"sub_6357B4",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_635758" },
+      { "tag":"sub_63593C" },
+      { "tag":"sub_635C14" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6357B4",
+        "label":"sub_6357B4",
+        "out_true":"loc_6357B7",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_6357B7",
+        "label":"loc_6357B7",
+        "out_true":"loc_6357B7",
+        "out_false":"label_1",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 60h" },
+          { "str":"lea     eax, unk_638168" },
+          { "str":"cmp     eax, 0B65h" },
+          { "str":"jz      short loc_6357B7" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_1",
+        "label":"label_1",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    eax" },
+          { "str":"push    esi" },
+          { "str":"push    edi" },
+          { "str":"push    edx" },
+          { "str":"call    sub_63593C" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"mov     ecx, 0FFFFFFF4h" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_635C14" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"push    0" },
+          { "str":"call    sub_635758" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     eax" },
+          { "str":"add     esp, 60h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"sub_635758" },
+          { "tag":"sub_63593C" },
+          { "tag":"sub_635C14" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_1",
+    "label":"rtn_1",
+    "type":"ours",
+    "callees":[
+      { "tag":"ds_ASN1BEREncFlush_ecx_4_" },
+      { "tag":"ds_CreateFileA_ecx_4_" },
+      { "tag":"edi" },
+      { "tag":"sub_6356F4" },
+      { "tag":"sub_635D74" },
+      { "tag":"sub_635FF0" }
+    ],
+    "blocks":[
+      {
+        "tag":"blk_2",
+        "label":"blk_2",
+        "out_true":"loc_635804",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:CreateFileA[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_CreateFileA_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      },
+{
+        "tag":"loc_635804",
+        "label":"loc_635804",
+        "out_true":"loc_635828_1",
+        "out_false":"label_3",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 48h" },
+          { "str":"mov     esi, offset unk_6381BC" },
+          { "str":"sub     edx, esi" },
+          { "str":"call    sub_635FF0" },
+          { "str":"add     esp, 4" },
+          { "str":"push    esi" },
+          { "str":"push    edx" },
+          { "str":"push    ecx" },
+          { "str":"push    edi" },
+          { "str":"call    sub_635D74" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     esi" },
+          { "str":"lea     edx, [esi-1BCh]" },
+          { "str":"push    edx" },
+          { "str":"call    sub_6356F4" },
+          { "str":"add     esp, 4" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short near ptr loc_635828+1" }
+        ],
+        "callees":[
+          { "tag":"sub_6356F4" },
+          { "tag":"sub_635D74" },
+          { "tag":"sub_635FF0" }
+        ]
+      },
+{
+        "tag":"label_3",
+        "label":"label_3",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"add     esp, 48h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_4",
+        "label":"label_4",
+        "out_true":"sub_63584C",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:ASN1BEREncFlush[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_ASN1BEREncFlush_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_63584C",
+    "label":"sub_63584C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_636008" },
+      { "tag":"sub_635E20" },
+      { "tag":"sub_635E38" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_63584C",
+        "label":"sub_63584C",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 24h" },
+          { "str":"lea     edx, [esi+12Ch]" },
+          { "str":"xor     esi, [edx-0ACh]" },
+          { "str":"push    edx" },
+          { "str":"push    0" },
+          { "str":"call    sub_635E20" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"push    dword ptr [edx+30h]" },
+          { "str":"push    esi" },
+          { "str":"push    dword ptr [edx+15Ch]" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_635E38" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"push    0" },
+          { "str":"call    loc_636008" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edx" },
+          { "str":"add     esp, 24h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_636008" },
+          { "tag":"sub_635E20" },
+          { "tag":"sub_635E38" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635894",
+    "label":"sub_635894",
+    "type":"idapro",
+    "callees":[
+      { "tag":"ds_GetACP_ecx_4_" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635894",
+        "label":"sub_635894",
+        "out_true":"sub_6358A0",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:GetACP[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_GetACP_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6358A0",
+    "label":"sub_6358A0",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_635758" },
+      { "tag":"sub_635C14" },
+      { "tag":"sub_635CEC" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6358A0",
+        "label":"sub_6358A0",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 40h" },
+          { "str":"lea     edx, [edi+84h]" },
+          { "str":"sub     dword ptr [edx-4Ch], 7Ah" },
+          { "str":"push    edx" },
+          { "str":"push    ebx" },
+          { "str":"push    dword ptr [edx+0A4h]" },
+          { "str":"call    sub_635CEC" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"mov     ecx, 0FFFFFFF4h" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_635C14" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_635758" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edx" },
+          { "str":"add     esp, 40h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"sub_635758" },
+          { "tag":"sub_635C14" },
+          { "tag":"sub_635CEC" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6358E8",
+    "label":"sub_6358E8",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_63584C" },
+      { "tag":"sub_635BF0" },
+      { "tag":"sub_635F80" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6358E8",
+        "label":"sub_6358E8",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 38h" },
+          { "str":"lea     esi, unk_6380A8" },
+          { "str":"xor     ebx, edi" },
+          { "str":"push    esi" },
+          { "str":"push    dword ptr [esi+0C0h]" },
+          { "str":"push    ecx" },
+          { "str":"push    dword ptr [esi+180h]" },
+          { "str":"push    eax" },
+          { "str":"call    sub_63584C" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     esi" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    sub_635BF0" },
+          { "str":"add     esp, 4" },
+          { "str":"push    0" },
+          { "str":"call    sub_635F80" },
+          { "str":"add     esp, 4" },
+          { "str":"add     esp, 38h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"sub_63584C" },
+          { "tag":"sub_635BF0" },
+          { "tag":"sub_635F80" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635930",
+    "label":"sub_635930",
+    "type":"idapro",
+    "callees":[
+      { "tag":"ds_LocalLock_ecx_4_" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635930",
+        "label":"sub_635930",
+        "out_true":"sub_63593C",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:LocalLock[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_LocalLock_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_63593C",
+    "label":"sub_63593C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_635700" },
+      { "tag":"sub_635F80" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_63593C",
+        "label":"sub_63593C",
+        "out_true":"loc_63599D",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 40h" },
+          { "str":"mov     edx, 7575h" },
+          { "str":"lea     ebx, unk_638140" },
+          { "str":"mov     edx, 6B4h" },
+          { "str":"push    edx" },
+          { "str":"mov     ecx, 6B4h" },
+          { "str":"push    ecx" },
+          { "str":"push    40001h" },
+          { "str":"mov     ecx, 863FD5A2h" },
+          { "str":"push    dword ptr [ecx+7A239A86h]" },
+          { "str":"sub     [esp+50h+var_50], 2" },
+          { "str":"mov     ecx, offset LoadLibraryExA" },
+          { "str":"pop     dword ptr [ecx]" },
+          { "str":"call    sub_635700" },
+          { "str":"add     esp, 4" },
+          { "str":"push    eax" },
+          { "str":"pop     dword ptr [ebx-0F8h]" },
+          { "str":"mov     edi, [ebx-0F8h]" },
+          { "str":"lea     eax, [edi]" },
+          { "str":"sub     edi, edi" },
+          { "str":"dec     edi" },
+          { "str":"and     edi, offset dword_635028" },
+          { "str":"mov     esi, 8A632594h" },
+          { "str":"xor     edx, edx" }
+        ],
+        "callees":[
+          { "tag":"sub_635700" }
+        ]
+      },
+{
+        "tag":"loc_63599D",
+        "label":"loc_63599D",
+        "out_true":"loc_6359C1",
+        "out_false":"label_5",
+        "last_inst":"jz",
+        "instructions":[
+          { "str":"cmp     edx, 6B4h" },
+          { "str":"jz      short loc_6359C1" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_5",
+        "label":"label_5",
+        "out_true":"loc_63599D",
+        "out_false":"",
+        "last_inst":"jmp",
+        "instructions":[
+          { "str":"sub     edx, 0FFFFFFFCh" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"push    dword ptr [edi+ecx]" },
+          { "str":"sub     [esp+4Ch+var_4C], esi" },
+          { "str":"pop     dword ptr [eax+ecx*2]" },
+          { "str":"dec     dword ptr [eax]" },
+          { "str":"xor     esi, esi" },
+          { "str":"add     esi, [edi]" },
+          { "str":"add     edi, 4" },
+          { "str":"add     eax, 4" },
+          { "str":"jmp     short loc_63599D" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_6359C1",
+        "label":"loc_6359C1",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_635F80" },
+          { "str":"add     esp, 4" },
+          { "str":"add     esp, 40h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"sub_635F80" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_2",
+    "label":"rtn_2",
+    "type":"ours",
+    "callees":[
+      { "tag":"ds_GetDlgItem_ecx_4_" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"blk_6",
+        "label":"blk_6",
+        "out_true":"sub_6359E0",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:GetDlgItem[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_GetDlgItem_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6359E0",
+    "label":"sub_6359E0",
+    "type":"idapro",
+    "callees":[
+      { "tag":"ds_FindClose_ecx_4_" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6359E0",
+        "label":"sub_6359E0",
+        "out_true":"sub_6359EC",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:FindClose[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_FindClose_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_6359EC",
+    "label":"sub_6359EC",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_635B08" },
+      { "tag":"sub_635B9C" },
+      { "tag":"sub_635FF0" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_6359EC",
+        "label":"sub_6359EC",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 54h" },
+          { "str":"mov     ebx, offset unk_638054" },
+          { "str":"xor     [ebp+var_8], 4Bh" },
+          { "str":"push    ebx" },
+          { "str":"push    ecx" },
+          { "str":"push    edx" },
+          { "str":"push    eax" },
+          { "str":"call    sub_635B9C" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     ebx" },
+          { "str":"call    sub_635FF0" },
+          { "str":"add     esp, 4" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    sub_635B08" },
+          { "str":"add     esp, 4" },
+          { "str":"add     esp, 54h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"sub_635B08" },
+          { "tag":"sub_635B9C" },
+          { "tag":"sub_635FF0" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635A28",
+    "label":"sub_635A28",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_636008" },
+      { "tag":"sub_635AC4" },
+      { "tag":"sub_635B14" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635A28",
+        "label":"sub_635A28",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 38h" },
+          { "str":"lea     edx, [edi-4]" },
+          { "str":"or      [edx-0D4h], ecx" },
+          { "str":"push    edx" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    sub_635B14" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"push    eax" },
+          { "str":"push    dword ptr [edx+0C0h]" },
+          { "str":"push    esi" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_635AC4" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"push    0" },
+          { "str":"call    loc_636008" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edx" },
+          { "str":"add     esp, 38h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_636008" },
+          { "tag":"sub_635AC4" },
+          { "tag":"sub_635B14" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635A70",
+    "label":"sub_635A70",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_635BE4" },
+      { "tag":"sub_635DD8" },
+      { "tag":"sub_635F80" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635A70",
+        "label":"sub_635A70",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 2Ch" },
+          { "str":"lea     ebx, [edx+2Ch]" },
+          { "str":"mov     esi, edi" },
+          { "str":"push    0" },
+          { "str":"call    sub_635BE4" },
+          { "str":"add     esp, 4" },
+          { "str":"push    ebx" },
+          { "str":"push    dword ptr [ebx+0ACh]" },
+          { "str":"push    edx" },
+          { "str":"push    esi" },
+          { "str":"push    esi" },
+          { "str":"call    sub_635DD8" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     ebx" },
+          { "str":"push    0" },
+          { "str":"call    sub_635F80" },
+          { "str":"add     esp, 4" },
+          { "str":"add     esp, 2Ch" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"sub_635BE4" },
+          { "tag":"sub_635DD8" },
+          { "tag":"sub_635F80" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_3",
+    "label":"rtn_3",
+    "type":"ours",
+    "callees":[
+      { "tag":"ds_CascadeWindows_ecx_4_" },
+      { "tag":"ds_byte_6370A0_ecx_4_" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"blk_7",
+        "label":"blk_7",
+        "out_true":"sub_635AC4",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:CascadeWindows[ecx*4]" },
+          { "str":"call    edi" },
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    dword ptr ds:byte_6370A0[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_CascadeWindows_ecx_4_" },
+          { "tag":"ds_byte_6370A0_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635AC4",
+    "label":"sub_635AC4",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_6358A0" },
+      { "tag":"sub_635BF0" },
+      { "tag":"sub_635FF0" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635AC4",
+        "label":"sub_635AC4",
+        "out_true":"loc_635AC7",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_635AC7",
+        "label":"loc_635AC7",
+        "out_true":"loc_635AC7",
+        "out_false":"label_8",
+        "last_inst":"jb",
+        "instructions":[
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 5Ch" },
+          { "str":"lea     edi, [edx-0E0h]" },
+          { "str":"cmp     edi, 7A79h" },
+          { "str":"jbe     short loc_635AC7" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_8",
+        "label":"label_8",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    edi" },
+          { "str":"push    ebx" },
+          { "str":"push    esi" },
+          { "str":"call    sub_6358A0" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     edi" },
+          { "str":"push    edi" },
+          { "str":"call    sub_635FF0" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edi" },
+          { "str":"push    edi" },
+          { "str":"mov     esi, 0" },
+          { "str":"push    esi" },
+          { "str":"call    sub_635BF0" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edi" },
+          { "str":"add     esp, 5Ch" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"sub_6358A0" },
+          { "tag":"sub_635BF0" },
+          { "tag":"sub_635FF0" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635B08",
+    "label":"sub_635B08",
+    "type":"idapro",
+    "callees":[
+      { "tag":"ds_LocalFree_ecx_4_" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635B08",
+        "label":"sub_635B08",
+        "out_true":"sub_635B14",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:LocalFree[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_LocalFree_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635B14",
+    "label":"sub_635B14",
+    "type":"idapro",
+    "callees":[
+      { "tag":"ds_ASN1BERDecEoid_ecx_4_" },
+      { "tag":"ds_DrawEdge_ecx_4_" },
+      { "tag":"ds_GetCalendarInfoA_ecx_4_" },
+      { "tag":"ds_GetIconInfo_ecx_4_" },
+      { "tag":"ds_TlsGetValue_ecx_4_" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635B14",
+        "label":"sub_635B14",
+        "out_true":"start",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:TlsGetValue[ecx*4]" },
+          { "str":"call    edi" },
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:GetIconInfo[ecx*4]" },
+          { "str":"call    edi" },
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:DrawEdge[ecx*4]" },
+          { "str":"call    edi" },
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:ASN1BERDecEoid[ecx*4]" },
+          { "str":"call    edi" },
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:GetCalendarInfoA[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_ASN1BERDecEoid_ecx_4_" },
+          { "tag":"ds_DrawEdge_ecx_4_" },
+          { "tag":"ds_GetCalendarInfoA_ecx_4_" },
+          { "tag":"ds_GetIconInfo_ecx_4_" },
+          { "tag":"ds_TlsGetValue_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"start",
+    "label":"start",
+    "type":"user",
+    "callees":[
+      { "tag":"sub_635700" },
+      { "tag":"sub_635894" },
+      { "tag":"sub_635BFC" }
+    ],
+    "blocks":[
+      {
+        "tag":"start",
+        "label":"start",
+        "out_true":"loc_63570C",
+        "out_false":"label_9",
+        "last_inst":"ja",
+        "instructions":[
+          { "str":"push    edi" },
+          { "str":"xor     edi, edi" },
+          { "str":"push    edi" },
+          { "str":"push    edi" },
+          { "str":"push    edi" },
+          { "str":"push    edi" },
+          { "str":"call    sub_635894" },
+          { "str":"sub     esp, 0FFFFFFF8h" },
+          { "str":"call    sub_635BFC" },
+          { "str":"push    2" },
+          { "str":"xor     eax, eax" },
+          { "str":"adc     eax, offset aQasf_Ll" },
+          { "str":"push    0" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"adc     ecx, 638035h" },
+          { "str":"add     byte ptr [ecx], 39h" },
+          { "str":"push    eax" },
+          { "str":"call    sub_635700" },
+          { "str":"pop     edi" },
+          { "str":"pop     edi" },
+          { "str":"pop     edi" },
+          { "str":"lea     edi, [eax+3Bh]" },
+          { "str":"mov     edi, [edi]" },
+          { "str":"lea     eax, [eax+edi]" },
+          { "str":"mov     eax, [eax+28h]" },
+          { "str":"pusha" },
+          { "str":"mov     ah, 70h" },
+          { "str":"sub     al, ah" },
+          { "str":"ja      loc_63570C" }
+        ],
+        "callees":[
+          { "tag":"sub_635700" },
+          { "tag":"sub_635894" },
+          { "tag":"sub_635BFC" }
+        ]
+      },
+{
+        "tag":"label_9",
+        "label":"label_9",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"popa" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"sub_635B9C",
+    "label":"sub_635B9C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_6359E0" },
+      { "tag":"sub_635BF0" },
+      { "tag":"sub_635CB0" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635B9C",
+        "label":"sub_635B9C",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 48h" },
+          { "str":"lea     edi, [ebx+0C0h]" },
+          { "str":"or      edx, [ebp+var_40]" },
+          { "str":"push    edi" },
+          { "str":"push    edx" },
+          { "str":"push    dword ptr [edi+68h]" },
+          { "str":"call    sub_635CB0" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     edi" },
+          { "str":"push    edi" },
+          { "str":"push    0" },
+          { "str":"call    sub_635BF0" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edi" },
+          { "str":"push    edi" },
+          { "str":"push    0" },
+          { "str":"call    sub_6359E0" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edi" },
+          { "str":"add     esp, 48h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"sub_6359E0" },
+          { "tag":"sub_635BF0" },
+          { "tag":"sub_635CB0" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_4",
+    "label":"rtn_4",
+    "type":"ours",
+    "callees":[
+      { "tag":"ds_GetConsoleAliasA_ecx_4_" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"blk_10",
+        "label":"blk_10",
+        "out_true":"sub_635BE4",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:GetConsoleAliasA[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_GetConsoleAliasA_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635BE4",
+    "label":"sub_635BE4",
+    "type":"idapro",
+    "callees":[
+      { "tag":"ds_Sleep_ecx_4_" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635BE4",
+        "label":"sub_635BE4",
+        "out_true":"sub_635BF0",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:Sleep[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_Sleep_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635BF0",
+    "label":"sub_635BF0",
+    "type":"idapro",
+    "callees":[
+      { "tag":"ds_IsWindow_ecx_4_" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635BF0",
+        "label":"sub_635BF0",
+        "out_true":"sub_635BFC",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:IsWindow[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_IsWindow_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635BFC",
+    "label":"sub_635BFC",
+    "type":"idapro",
+    "callees":[
+      { "tag":"ds_WaitForSingleObjectEx_ecx_4_" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635BFC",
+        "label":"sub_635BFC",
+        "out_true":"sub_635C08",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:WaitForSingleObjectEx[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_WaitForSingleObjectEx_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635C08",
+    "label":"sub_635C08",
+    "type":"idapro",
+    "callees":[
+      { "tag":"ds_GetConsoleCP_ecx_4_" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635C08",
+        "label":"sub_635C08",
+        "out_true":"sub_635C14",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:GetConsoleCP[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_GetConsoleCP_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635C14",
+    "label":"sub_635C14",
+    "type":"idapro",
+    "callees":[
+      { "tag":"ds_FindAtomA_ecx_4_" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635C14",
+        "label":"sub_635C14",
+        "out_true":"sub_635C20",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:FindAtomA[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_FindAtomA_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635C20",
+    "label":"sub_635C20",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_635804" },
+      { "tag":"sub_635B08" },
+      { "tag":"sub_635FF0" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635C20",
+        "label":"sub_635C20",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 38h" },
+          { "str":"mov     ebx, offset unk_6381DC" },
+          { "str":"mov     edx, ebx" },
+          { "str":"push    0" },
+          { "str":"call    sub_635B08" },
+          { "str":"add     esp, 4" },
+          { "str":"push    ebx" },
+          { "str":"push    ecx" },
+          { "str":"push    edi" },
+          { "str":"call    loc_635804" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     ebx" },
+          { "str":"call    sub_635FF0" },
+          { "str":"add     esp, 4" },
+          { "str":"add     esp, 38h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_635804" },
+          { "tag":"sub_635B08" },
+          { "tag":"sub_635FF0" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_5",
+    "label":"rtn_5",
+    "type":"ours",
+    "callees":[
+      { "tag":"ds_DefWindowProcA_ecx_4_" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"blk_11",
+        "label":"blk_11",
+        "out_true":"sub_635C60",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:DefWindowProcA[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_DefWindowProcA_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635C60",
+    "label":"sub_635C60",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_635A70" },
+      { "tag":"sub_635B14" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635C60",
+        "label":"sub_635C60",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 3Ch" },
+          { "str":"mov     edx, offset unk_638198" },
+          { "str":"sbb     [ebp+var_28], 0FFFFFF9Ah" },
+          { "str":"push    edx" },
+          { "str":"push    dword ptr [edx+1E8h]" },
+          { "str":"push    dword ptr [edx+78h]" },
+          { "str":"push    dword ptr [edx+54h]" },
+          { "str":"push    dword ptr [edx+1E0h]" },
+          { "str":"call    sub_635A70" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"mov     ecx, 0" },
+          { "str":"push    ecx" },
+          { "str":"call    sub_635B14" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"push    0" },
+          { "str":"call    sub_635B14" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edx" },
+          { "str":"add     esp, 3Ch" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"sub_635A70" },
+          { "tag":"sub_635B14" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635CB0",
+    "label":"sub_635CB0",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_635BF0" },
+      { "tag":"sub_635E88" },
+      { "tag":"sub_635FF0" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635CB0",
+        "label":"sub_635CB0",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 2Ch" },
+          { "str":"lea     eax, aQasf_Ll+8" },
+          { "str":"mov     dword ptr [eax+40h], 6916h" },
+          { "str":"push    eax" },
+          { "str":"push    0" },
+          { "str":"call    sub_635BF0" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"push    esi" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_635E88" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"call    sub_635FF0" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     eax" },
+          { "str":"add     esp, 2Ch" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"sub_635BF0" },
+          { "tag":"sub_635E88" },
+          { "tag":"sub_635FF0" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635CEC",
+    "label":"sub_635CEC",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_635894" },
+      { "tag":"sub_635C60" },
+      { "tag":"sub_635F80" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635CEC",
+        "label":"sub_635CEC",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 30h" },
+          { "str":"lea     edi, unk_638110" },
+          { "str":"add     [edi+94h], edi" },
+          { "str":"push    edi" },
+          { "str":"push    eax" },
+          { "str":"push    dword ptr [edi+0A8h]" },
+          { "str":"push    dword ptr [edi+0D0h]" },
+          { "str":"call    sub_635C60" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     edi" },
+          { "str":"push    edi" },
+          { "str":"call    sub_635894" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edi" },
+          { "str":"push    edi" },
+          { "str":"mov     eax, 0" },
+          { "str":"push    eax" },
+          { "str":"call    sub_635F80" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edi" },
+          { "str":"add     esp, 30h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"sub_635894" },
+          { "tag":"sub_635C60" },
+          { "tag":"sub_635F80" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635D38",
+    "label":"sub_635D38",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_635BF0" },
+      { "tag":"sub_635C08" },
+      { "tag":"sub_635F1C" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635D38",
+        "label":"sub_635D38",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 4Ch" },
+          { "str":"mov     ebx, offset unk_638060" },
+          { "str":"xor     edi, ebx" },
+          { "str":"push    0" },
+          { "str":"call    sub_635BF0" },
+          { "str":"add     esp, 4" },
+          { "str":"push    ebx" },
+          { "str":"push    ecx" },
+          { "str":"push    dword ptr [ebx+48h]" },
+          { "str":"push    esi" },
+          { "str":"push    dword ptr [ebx+134h]" },
+          { "str":"call    sub_635F1C" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     ebx" },
+          { "str":"call    sub_635C08" },
+          { "str":"add     esp, 4" },
+          { "str":"add     esp, 4Ch" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"sub_635BF0" },
+          { "tag":"sub_635C08" },
+          { "tag":"sub_635F1C" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635D74",
+    "label":"sub_635D74",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_635C08" },
+      { "tag":"sub_635ED8" },
+      { "tag":"sub_635FF0" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635D74",
+        "label":"sub_635D74",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 1Ch" },
+          { "str":"lea     edx, [esi]" },
+          { "str":"sbb     dword ptr [edx-38h], 0FFFFCA50h" },
+          { "str":"push    edx" },
+          { "str":"push    dword ptr [edx+0F8h]" },
+          { "str":"push    dword ptr [edx+0B0h]" },
+          { "str":"call    sub_635ED8" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"call    sub_635FF0" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"call    sub_635C08" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edx" },
+          { "str":"add     esp, 1Ch" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"sub_635C08" },
+          { "tag":"sub_635ED8" },
+          { "tag":"sub_635FF0" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_6",
+    "label":"rtn_6",
+    "type":"ours",
+    "callees":[
+      { "tag":"ds_CreateFileMappingA_ecx_4_" },
+      { "tag":"ds_DispatchMessageA_ecx_4_" },
+      { "tag":"ds_byte_637088_ecx_4_" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"blk_12",
+        "label":"blk_12",
+        "out_true":"sub_635DD8",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    dword ptr ds:byte_637088[ecx*4]" },
+          { "str":"call    edi" },
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:DispatchMessageA[ecx*4]" },
+          { "str":"call    edi" },
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:CreateFileMappingA[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_CreateFileMappingA_ecx_4_" },
+          { "tag":"ds_DispatchMessageA_ecx_4_" },
+          { "tag":"ds_byte_637088_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635DD8",
+    "label":"sub_635DD8",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_6359EC" },
+      { "tag":"sub_635B14" },
+      { "tag":"sub_635FF0" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635DD8",
+        "label":"sub_635DD8",
+        "out_true":"loc_635DDB",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_635DDB",
+        "label":"loc_635DDB",
+        "out_true":"loc_635DDB",
+        "out_false":"label_13",
+        "last_inst":"jb",
+        "instructions":[
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 38h" },
+          { "str":"lea     eax, unk_638188" },
+          { "str":"cmp     eax, 63A5h" },
+          { "str":"jb      short loc_635DDB" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_13",
+        "label":"label_13",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    eax" },
+          { "str":"call    sub_635FF0" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"push    dword ptr [eax+140h]" },
+          { "str":"push    edi" },
+          { "str":"push    dword ptr [eax+0A4h]" },
+          { "str":"call    sub_6359EC" },
+          { "str":"add     esp, 0Ch" },
+          { "str":"pop     eax" },
+          { "str":"push    eax" },
+          { "str":"push    0" },
+          { "str":"call    sub_635B14" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     eax" },
+          { "str":"add     esp, 38h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"sub_6359EC" },
+          { "tag":"sub_635B14" },
+          { "tag":"sub_635FF0" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635E20",
+    "label":"sub_635E20",
+    "type":"idapro",
+    "callees":[
+      { "tag":"ds_DrawTextA_ecx_4_" },
+      { "tag":"ds_SetFocus_ecx_4_" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635E20",
+        "label":"sub_635E20",
+        "out_true":"sub_635E38",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:SetFocus[ecx*4]" },
+          { "str":"call    edi" },
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:DrawTextA[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_DrawTextA_ecx_4_" },
+          { "tag":"ds_SetFocus_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635E38",
+    "label":"sub_635E38",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_635930" },
+      { "tag":"sub_635A28" },
+      { "tag":"sub_635B14" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635E38",
+        "label":"sub_635E38",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 40h" },
+          { "str":"lea     edi, unk_638118" },
+          { "str":"sbb     eax, 3CF4h" },
+          { "str":"push    edi" },
+          { "str":"push    dword ptr [edi+0BCh]" },
+          { "str":"push    dword ptr [edi+1ECh]" },
+          { "str":"call    sub_635A28" },
+          { "str":"add     esp, 8" },
+          { "str":"pop     edi" },
+          { "str":"push    edi" },
+          { "str":"mov     ebx, 0" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_635930" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edi" },
+          { "str":"push    edi" },
+          { "str":"mov     edi, 0" },
+          { "str":"push    edi" },
+          { "str":"call    sub_635B14" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edi" },
+          { "str":"add     esp, 40h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"sub_635930" },
+          { "tag":"sub_635A28" },
+          { "tag":"sub_635B14" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635E88",
+    "label":"sub_635E88",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_635B14" },
+      { "tag":"sub_635C14" },
+      { "tag":"sub_635D38" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635E88",
+        "label":"sub_635E88",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 3Ch" },
+          { "str":"mov     esi, offset unk_638174" },
+          { "str":"and     [ebp+var_30], ecx" },
+          { "str":"mov     ebx, 0FFFFFFF4h" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_635C14" },
+          { "str":"add     esp, 4" },
+          { "str":"push    esi" },
+          { "str":"push    eax" },
+          { "str":"push    edi" },
+          { "str":"push    dword ptr [esi+1B8h]" },
+          { "str":"push    edx" },
+          { "str":"call    sub_635D38" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     esi" },
+          { "str":"mov     edi, 0" },
+          { "str":"push    edi" },
+          { "str":"call    sub_635B14" },
+          { "str":"add     esp, 4" },
+          { "str":"add     esp, 3Ch" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"sub_635B14" },
+          { "tag":"sub_635C14" },
+          { "tag":"sub_635D38" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_7",
+    "label":"rtn_7",
+    "type":"ours",
+    "callees":[
+      { "tag":"ds_HeapCreate_ecx_4_" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"blk_14",
+        "label":"blk_14",
+        "out_true":"sub_635ED8",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:HeapCreate[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_HeapCreate_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635ED8",
+    "label":"sub_635ED8",
+    "type":"idapro",
+    "callees":[
+      { "tag":"sub_635894" },
+      { "tag":"sub_635F98" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635ED8",
+        "label":"sub_635ED8",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 60h" },
+          { "str":"lea     ebx, aHetriytre" },
+          { "str":"sbb     [ebx+0D4h], edx" },
+          { "str":"call    sub_635894" },
+          { "str":"add     esp, 4" },
+          { "str":"push    ebx" },
+          { "str":"push    edx" },
+          { "str":"push    dword ptr [ebx+9Ch]" },
+          { "str":"push    dword ptr [ebx+168h]" },
+          { "str":"push    eax" },
+          { "str":"call    sub_635F98" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     ebx" },
+          { "str":"call    sub_635894" },
+          { "str":"add     esp, 4" },
+          { "str":"add     esp, 60h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"sub_635894" },
+          { "tag":"sub_635F98" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635F1C",
+    "label":"sub_635F1C",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_636008" },
+      { "tag":"sub_6356F4" },
+      { "tag":"sub_635C20" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635F1C",
+        "label":"sub_635F1C",
+        "out_true":"loc_635F4F",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" },
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 34h" },
+          { "str":"lea     edx, unk_6381EC" },
+          { "str":"xor     [ebp+var_28], edx" },
+          { "str":"push    edx" },
+          { "str":"push    eax" },
+          { "str":"push    dword ptr [edx+58h]" },
+          { "str":"push    ebx" },
+          { "str":"push    dword ptr [edx+0ECh]" },
+          { "str":"call    sub_635C20" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" },
+          { "str":"push    0" },
+          { "str":"call    loc_636008" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     edx" },
+          { "str":"push    edx" }
+        ],
+        "callees":[
+          { "tag":"loc_636008" },
+          { "tag":"sub_635C20" }
+        ]
+      },
+{
+        "tag":"loc_635F4F",
+        "label":"loc_635F4F",
+        "out_true":"loc_635F4F",
+        "out_false":"label_15",
+        "last_inst":"jnz",
+        "instructions":[
+          { "str":"lea     edx, [edx-1ECh]" },
+          { "str":"push    edx" },
+          { "str":"call    sub_6356F4" },
+          { "str":"add     esp, 4" },
+          { "str":"test    eax, eax" },
+          { "str":"jnz     short loc_635F4F" }
+        ],
+        "callees":[
+          { "tag":"sub_6356F4" }
+        ]
+      },
+{
+        "tag":"label_15",
+        "label":"label_15",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"pop     edx" },
+          { "str":"add     esp, 34h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[]
+      }
+    ]
+  },{
+    "tag":"rtn_8",
+    "label":"rtn_8",
+    "type":"ours",
+    "callees":[
+      { "tag":"ds_ASN1BEREncLength_ecx_4_" },
+      { "tag":"ds_FreeEnvironmentStringsA_ecx_4_" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"blk_16",
+        "label":"blk_16",
+        "out_true":"sub_635F80",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:ASN1BEREncLength[ecx*4]" },
+          { "str":"call    edi" },
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:FreeEnvironmentStringsA[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_ASN1BEREncLength_ecx_4_" },
+          { "tag":"ds_FreeEnvironmentStringsA_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635F80",
+    "label":"sub_635F80",
+    "type":"idapro",
+    "callees":[
+      { "tag":"ds_ASN1BERDecCheck_ecx_4_" },
+      { "tag":"ds_GetDC_ecx_4_" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635F80",
+        "label":"sub_635F80",
+        "out_true":"sub_635F98",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:GetDC[ecx*4]" },
+          { "str":"call    edi" },
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:ASN1BERDecCheck[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_ASN1BERDecCheck_ecx_4_" },
+          { "tag":"ds_GetDC_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635F98",
+    "label":"sub_635F98",
+    "type":"idapro",
+    "callees":[
+      { "tag":"loc_636008" },
+      { "tag":"sub_6357B4" },
+      { "tag":"sub_6359E0" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635F98",
+        "label":"sub_635F98",
+        "out_true":"loc_635F9B",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"mov     edi, edi" },
+          { "str":"push    ebp" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"loc_635F9B",
+        "label":"loc_635F9B",
+        "out_true":"loc_635F9B",
+        "out_false":"label_17",
+        "last_inst":"jb",
+        "instructions":[
+          { "str":"mov     ebp, esp" },
+          { "str":"sub     esp, 60h" },
+          { "str":"mov     ecx, offset unk_638060" },
+          { "str":"cmp     ecx, 5C0Fh" },
+          { "str":"jbe     short loc_635F9B" }
+        ],
+        "callees":[]
+      },
+{
+        "tag":"label_17",
+        "label":"label_17",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"retn",
+        "instructions":[
+          { "str":"push    ecx" },
+          { "str":"push    dword ptr [ecx+0D8h]" },
+          { "str":"push    dword ptr [ecx+164h]" },
+          { "str":"push    dword ptr [ecx+0F0h]" },
+          { "str":"push    ebx" },
+          { "str":"call    sub_6357B4" },
+          { "str":"add     esp, 10h" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"mov     edx, 0" },
+          { "str":"push    edx" },
+          { "str":"call    sub_6359E0" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     ecx" },
+          { "str":"push    ecx" },
+          { "str":"mov     edi, 0" },
+          { "str":"push    edi" },
+          { "str":"call    loc_636008" },
+          { "str":"add     esp, 4" },
+          { "str":"pop     ecx" },
+          { "str":"add     esp, 60h" },
+          { "str":"pop     ebp" },
+          { "str":"retn" }
+        ],
+        "callees":[
+          { "tag":"loc_636008" },
+          { "tag":"sub_6357B4" },
+          { "tag":"sub_6359E0" }
+        ]
+      }
+    ]
+  },{
+    "tag":"sub_635FF0",
+    "label":"sub_635FF0",
+    "type":"idapro",
+    "callees":[
+      { "tag":"ds_CreateDialogParamA_ecx_4_" },
+      { "tag":"ds_GetLastError_ecx_4_" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"sub_635FF0",
+        "label":"sub_635FF0",
+        "out_true":"loc_636008",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:GetLastError[ecx*4]" },
+          { "str":"call    edi" },
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:CreateDialogParamA[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_CreateDialogParamA_ecx_4_" },
+          { "tag":"ds_GetLastError_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"rtn_9",
+    "label":"rtn_9",
+    "type":"ours",
+    "callees":[
+      { "tag":"ds_ASN1BERDecNull_ecx_4_" },
+      { "tag":"ds_CallWindowProcA_ecx_4_" },
+      { "tag":"ds_GlobalUnlock_ecx_4_" },
+      { "tag":"edi" }
+    ],
+    "blocks":[
+      {
+        "tag":"loc_636008",
+        "label":"loc_636008",
+        "out_true":"",
+        "out_false":"",
+        "last_inst":"",
+        "instructions":[
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:GlobalUnlock[ecx*4]" },
+          { "str":"call    edi" },
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:CallWindowProcA[ecx*4]" },
+          { "str":"call    edi" },
+          { "str":"pop     edi" },
+          { "str":"xor     ecx, ecx" },
+          { "str":"call    ds:ASN1BERDecNull[ecx*4]" },
+          { "str":"call    edi" }
+        ],
+        "callees":[
+          { "tag":"ds_ASN1BERDecNull_ecx_4_" },
+          { "tag":"ds_CallWindowProcA_ecx_4_" },
+          { "tag":"ds_GlobalUnlock_ecx_4_" },
+          { "tag":"edi" }
+        ]
+      }
+    ]
+  },{
+    "tag":"ds_ASN1BERDecCheck_ecx_4_",
+    "label":"ds:ASN1BERDecCheck[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_ASN1BERDecEoid_ecx_4_",
+    "label":"ds:ASN1BERDecEoid[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_ASN1BERDecNull_ecx_4_",
+    "label":"ds:ASN1BERDecNull[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_ASN1BEREncFlush_ecx_4_",
+    "label":"ds:ASN1BEREncFlush[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_ASN1BEREncLength_ecx_4_",
+    "label":"ds:ASN1BEREncLength[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_CallWindowProcA_ecx_4_",
+    "label":"ds:CallWindowProcA[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_CascadeWindows_ecx_4_",
+    "label":"ds:CascadeWindows[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_CloseHandle_ecx_4_",
+    "label":"ds:CloseHandle[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_CreateDialogParamA_ecx_4_",
+    "label":"ds:CreateDialogParamA[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_CreateFileA_ecx_4_",
+    "label":"ds:CreateFileA[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_CreateFileMappingA_ecx_4_",
+    "label":"ds:CreateFileMappingA[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_DefWindowProcA_ecx_4_",
+    "label":"ds:DefWindowProcA[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_DispatchMessageA_ecx_4_",
+    "label":"ds:DispatchMessageA[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_DrawEdge_ecx_4_",
+    "label":"ds:DrawEdge[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_DrawTextA_ecx_4_",
+    "label":"ds:DrawTextA[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_FindAtomA_ecx_4_",
+    "label":"ds:FindAtomA[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_FindClose_ecx_4_",
+    "label":"ds:FindClose[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_FreeEnvironmentStringsA_ecx_4_",
+    "label":"ds:FreeEnvironmentStringsA[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_GetACP_ecx_4_",
+    "label":"ds:GetACP[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_GetCalendarInfoA_ecx_4_",
+    "label":"ds:GetCalendarInfoA[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_GetConsoleAliasA_ecx_4_",
+    "label":"ds:GetConsoleAliasA[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_GetConsoleCP_ecx_4_",
+    "label":"ds:GetConsoleCP[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_GetDC_ecx_4_",
+    "label":"ds:GetDC[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_GetDlgItem_ecx_4_",
+    "label":"ds:GetDlgItem[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_GetIconInfo_ecx_4_",
+    "label":"ds:GetIconInfo[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_GetLastError_ecx_4_",
+    "label":"ds:GetLastError[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_GetMessageA_ecx_4_",
+    "label":"ds:GetMessageA[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_GetModuleHandleA_ecx_4_",
+    "label":"ds:GetModuleHandleA[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_GlobalUnlock_ecx_4_",
+    "label":"ds:GlobalUnlock[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_HeapCreate_ecx_4_",
+    "label":"ds:HeapCreate[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_IsWindow_ecx_4_",
+    "label":"ds:IsWindow[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_LoadLibraryExA_ecx_4_",
+    "label":"ds:LoadLibraryExA[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_LocalFree_ecx_4_",
+    "label":"ds:LocalFree[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_LocalLock_ecx_4_",
+    "label":"ds:LocalLock[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_SetFocus_ecx_4_",
+    "label":"ds:SetFocus[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_Sleep_ecx_4_",
+    "label":"ds:Sleep[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_TlsGetValue_ecx_4_",
+    "label":"ds:TlsGetValue[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_WaitForSingleObjectEx_ecx_4_",
+    "label":"ds:WaitForSingleObjectEx[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_byte_637088_ecx_4_",
+    "label":"ds:byte_637088[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"ds_byte_6370A0_ecx_4_",
+    "label":"ds:byte_6370A0[ecx*4]",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"edi",
+    "label":"edi",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"edx",
+    "label":"edx",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_635804",
+    "label":"loc_635804",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  },{
+    "tag":"loc_636008",
+    "label":"loc_636008",
+    "type":"library",
+    "callees":[],
+    "blocks":[]
+  }
+  ]
+}
