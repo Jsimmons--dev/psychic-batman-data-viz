@@ -16,17 +16,17 @@ $(document).ready(function() {
 	},
 });
 
-	CodeFlower = Backbone.View.extend({
+	CodeFlowerView = Backbone.View.extend({
 		initialize:function(options){
 			this.options = options.options;
-			this.render(options.jsonData);
+			this.render(this.options.jsonData);
 		},
 
 		render: function(jsonData){
-			codeFlower = new CodeFlower($(this.el),800,800);
+			codeFlower = new CodeFlower('#code',800,800);
 			codeFlower.update(jsonData);
 		}
-	});;
+	});
 
 	$('#menuToggle').click(function(e) {
 		var $parent = $(this).parent('nav');
@@ -52,10 +52,10 @@ var sliderldOptions = {
 
 var codeFlowerOptions = {}
 
-$.get("/1/1.json",function(data){
-	codeFlowerOptions.jsonData = data;
-	console.log(data);
-  codeFlower = new CodeFlower({el:"#code",options:codeFlowerOptions});
+$.get("/text.json",function(data){
+  codeFlowerOptions.jsonData = data;
+  console.log(codeFlowerOptions);
+  codeFlower = new CodeFlowerView({el:"#code",options:codeFlowerOptions});
 });
 slidergrav = new Slider({el:"#slider-grav",options:sliderldOptions});
 sliderld = new Slider({el:"#slider-ld",options:sliderldOptions});
