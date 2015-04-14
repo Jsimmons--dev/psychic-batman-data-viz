@@ -3,7 +3,7 @@ var sliderld;
 var slidercharge;
 var slidercd;
 var codeFlower;
-$(document).ready(function() {	
+$(document).ready(function() {
 	Slider = Backbone.View.extend({
 	initialize:function(options){
 		this.options = options.options;
@@ -15,7 +15,7 @@ $(document).ready(function() {
 		$(this.el).slider(this.options);
 	},
 });
-	
+
 	CodeFlower = Backbone.View.extend({
 		initialize:function(options){
 			this.options = options.options;
@@ -23,7 +23,7 @@ $(document).ready(function() {
 		},
 
 		render: function(jsonData){
-			codeFlower = new CodeFlower(this.el,800,800);
+			codeFlower = new CodeFlower($(this.el),800,800);
 			codeFlower.update(jsonData);
 		}
 	});;
@@ -52,10 +52,10 @@ var sliderldOptions = {
 
 var codeFlowerOptions = {}
 
-$.getJSON("./graph-sample/1/1.json",function(data){
+$.get("/1/1.json",function(data){
 	codeFlowerOptions.jsonData = data;
 	console.log(data);
-    codeFlower = new CodeFlower({el:"#code",options:codeFlowerOptions});
+  codeFlower = new CodeFlower({el:"#code",options:codeFlowerOptions});
 });
 slidergrav = new Slider({el:"#slider-grav",options:sliderldOptions});
 sliderld = new Slider({el:"#slider-ld",options:sliderldOptions});
