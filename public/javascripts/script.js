@@ -23,7 +23,7 @@ $(document).ready(function() {
 		},
 
 		render: function(jsonData){
-			codeFlower = new CodeFlower('#code',800,800);
+			codeFlower = new CodeFlower(this.el,400,400);
 			codeFlower.update(jsonData);
 		}
 	});
@@ -56,6 +56,7 @@ $.get("/text.json",function(data){
   codeFlowerOptions.jsonData = data;
   console.log(codeFlowerOptions);
   codeFlower = new CodeFlowerView({el:"#code",options:codeFlowerOptions});
+  codeFlower2 = new CodeFlowerView({el:"#code2",options:codeFlowerOptions});
 });
 slidergrav = new Slider({el:"#slider-grav",options:sliderldOptions});
 sliderld = new Slider({el:"#slider-ld",options:sliderldOptions});
