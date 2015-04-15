@@ -138,9 +138,8 @@ CodeFlower.prototype.tick = function() {
     .attr("x2", function(d) { return d.target.x; })
     .attr("y2", function(d) { return d.target.y; });
 
-  this.node.attr("transform", function(d) {
-    return "translate(" + Math.max(5, Math.min(w - 5, d.x)) + "," + Math.max(5, Math.min(h - 5, d.y)) + ")";
-  });
+  this.node.attr("cx", function(d) { return d.x; })
+      .attr("cy", function(d) { return d.y; });
 };
 
 CodeFlower.prototype.cleanup = function() {

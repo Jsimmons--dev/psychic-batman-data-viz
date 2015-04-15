@@ -47,6 +47,8 @@ var sliderldOptions = {
 	value:11,
 	min:10,
 	max:20,
+	slide: refreshFlowerConstants,
+	change: refreshFlowerConstants,
 	animate:"fast"
 }
 
