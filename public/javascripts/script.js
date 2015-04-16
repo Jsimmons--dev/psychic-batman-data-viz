@@ -26,7 +26,7 @@ $(document).ready(function() {
 		},
 
 		render: function(jsonData){
-			codeFlower = new CodeFlower(this.el,400,400);
+			codeFlower = new CodeFlower(this.el,2000,2000);
 			codeFlower.update(jsonData);
 		}
 	});
@@ -48,17 +48,17 @@ $(document).ready(function() {
 
 var sliderldOptions = { //LINK DISTANCE
 	value:10,
-	min:5,
-	max:15,
+	min:1,
+	max:200,
 	slide: updateld,
 	change: updateld,
 	animate:"fast"
 }
 
 var slidercdOptions = { //CHARGE DISTANCE
-	value:50,
+	value:50000,
 	min:1,
-	max:100,
+	max:1000000,
 	slide: updatecd,
 	change: updatecd,
 	animate:"fast"
@@ -66,8 +66,8 @@ var slidercdOptions = { //CHARGE DISTANCE
 
 var sliderchargeOptions = { //CHARGE
 	value:10,
-	min:5,
-	max:15,
+	min:1,
+	max:200,
 	slide: updatecharge,
 	change: updatecharge,
 	animate:"fast"
@@ -116,10 +116,25 @@ function updategrav(){
 
 var codeFlowerOptions = {}
 
-$.get("/text.json",function(data){
+$.get("/1/3.json",function(data){
   codeFlowerOptions.jsonData = data;
-  console.log(codeFlowerOptions);
-  // codeFlower = new CodeFlowerView({el:"#code",options:codeFlowerOptions});
+	$.each(codeFlowerOptions.jsonData.routines,function(index, routine) {
+			routine.size = 0;
+			var newSize = 0;
+			$.each(routine.blocks, function(index, block) {
+				newSize += block.instructions.length;
+			});
+			routine.size += newSize;
+			if (routine.callees) routine.children = routine.callees;
+			routine.name = routine.tag;
+
+
+			delete routine.tag;
+			delete routine.label;
+			delete routine.type;
+			delete routine.callees;
+		});
+  //codeFlower = new CodeFlowerView({el:"#code",options:codeFlowerOptions});
   codeFlower2 = new CodeFlowerView({el:"#code2",options:codeFlowerOptions});
 });
 sliderld = new Slider({el:"#slider-ld",options:sliderldOptions});

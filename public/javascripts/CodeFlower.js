@@ -27,9 +27,22 @@ CodeFlower.prototype.update = function(json) {
   this.json.fixed = true;
   this.json.x = this.w / 2;
   this.json.y = this.h / 2;
-
-  var nodes = this.flatten(this.json);
-  var links = d3.layout.tree().links(nodes);
+ var nodes = json.routines;
+    links = [];
+    nodes.forEach(function(node) {
+      if (node.children) {
+        node.children.forEach(function(child) {
+          nodes.forEach(function(nodi) {
+            if (nodi.name == child.tag) {
+              links.push({
+                source: node,
+                target: nodi
+              });
+            }
+          });
+        });
+      }
+    });
   var total = nodes.length || 1;
 
   // remove existing text (will readd it afterwards to be sure it's on top)
@@ -71,7 +84,7 @@ CodeFlower.prototype.update = function(json) {
     .classed('directory', function(d) { return (d._children || d.children) ? 1 : 0; })
     .attr("r", function(d) { return d.children ? 3.5 : Math.pow(d.size, 2/5) || 1; })
     .style("fill", function color(d) {
-      return "hsl(" + parseInt(360 / total * d.id, 10) + ",90%,70%)";
+      return "hsl(" + parseInt(360 / total * d.size, 10) + ",90%,70%)";
     })
     .call(this.force.drag)
     .on("click", this.click.bind(this))
