@@ -3,6 +3,7 @@ var sliderld;
 var slidercharge;
 var slidercd;
 var codeFlower;
+var codeFlower2;
 $(document).ready(function() {
 	Slider = Backbone.View.extend({
 	initialize:function(options){
@@ -22,11 +23,11 @@ $(document).ready(function() {
 	CodeFlowerView = Backbone.View.extend({
 		initialize:function(options){
 			this.options = options.options;
-			this.render(this.options.jsonData);
+			this.render(this.options.jsonData, this.el,this.options.x,this.options.y);
 		},
 
-		render: function(jsonData){
-			codeFlower = new CodeFlower(this.el,2000,2000);
+		render: function(jsonData,codeFlower){
+			codeFlower = new CodeFlower(this.el,this.options.x,this.options.y);
 			codeFlower.update(jsonData);
 		}
 	});
@@ -43,8 +44,42 @@ $(document).ready(function() {
 		}, 200);
 		e.preventDefault();
 	});
-	//$("#slider-grav").slider();
-	//$("#slider-ld").slider();
+
+var StagedPanel = Backbone.View.extend({
+	initialize:function(options){
+			this.options = options;
+	},
+	events: {
+		"click #button1":"loadAjax",
+		"click #button2":"loadAjax",
+		"click #button3":"loadAjax"
+	},
+	loadAjax: function(ev){
+		$.get($(ev.currentTarget).data('url'),function(data){
+		  codeFlowerOptions.jsonData = data;
+			$.each(codeFlowerOptions.jsonData.routines,function(index, routine) {
+					routine.size = 0;
+					var newSize = 0;
+					$.each(routine.blocks, function(index, block) {
+						newSize += block.instructions.length;
+					});
+					routine.size += newSize;
+					if (routine.callees) routine.children = routine.callees;
+					routine.name = routine.tag;
+		
+		
+					delete routine.tag;
+					delete routine.label;
+					delete routine.type;
+					delete routine.callees;
+				});
+  			codeFlower2 = new CodeFlowerView({el:'#code2',options:codeFlowerOptions});
+		});
+	},
+	render: function(){
+	}
+});
+
 
 var sliderldOptions = { //LINK DISTANCE
 	value:10,
@@ -56,9 +91,9 @@ var sliderldOptions = { //LINK DISTANCE
 }
 
 var slidercdOptions = { //CHARGE DISTANCE
-	value:50000,
+	value:500,
 	min:1,
-	max:1000000,
+	max:1000,
 	slide: updatecd,
 	change: updatecd,
 	animate:"fast"
@@ -114,7 +149,31 @@ function updategrav(){
 	codeFlower.force.gravity(Math.atan(codeFlower.total / (5 * slidergrav.value)) / Math.PI * 0.4).start();
 }
 
-var codeFlowerOptions = {}
+var codeFlowerOptions = {
+	x: '400',
+	y: '400'
+}
+
+$.get("/1/2.json",function(data){
+  codeFlowerOptions.jsonData = data;
+	$.each(codeFlowerOptions.jsonData.routines,function(index, routine) {
+			routine.size = 0;
+			var newSize = 0;
+			$.each(routine.blocks, function(index, block) {
+				newSize += block.instructions.length;
+			});
+			routine.size += newSize;
+			if (routine.callees) routine.children = routine.callees;
+			routine.name = routine.tag;
+
+
+			delete routine.tag;
+			delete routine.label;
+			delete routine.type;
+			delete routine.callees;
+		});
+  codeFlower = new CodeFlowerView({el:'#code',options:codeFlowerOptions});
+});
 
 $.get("/1/3.json",function(data){
   codeFlowerOptions.jsonData = data;
@@ -134,12 +193,14 @@ $.get("/1/3.json",function(data){
 			delete routine.type;
 			delete routine.callees;
 		});
-  //codeFlower = new CodeFlowerView({el:"#code",options:codeFlowerOptions});
-  codeFlower2 = new CodeFlowerView({el:"#code2",options:codeFlowerOptions});
+  codeFlower2 = new CodeFlowerView({el:'#code2',options:codeFlowerOptions});
 });
 sliderld = new Slider({el:"#slider-ld",options:sliderldOptions});
 slidercharge = new Slider({el:"#slider-c",options:sliderchargeOptions});
 slidercd = new Slider({el:"#slider-cd",options:slidercdOptions});
 slidergrav = new Slider({el:"#slider-grav",options:slidergravOptions});
 
+
+stagedOptions = {};
+var stagedPanel = new StagedPanel({el:'#stagedPanel',options:stagedOptions});
 });
