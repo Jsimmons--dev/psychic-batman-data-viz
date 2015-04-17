@@ -3,11 +3,6 @@ extends layout
 block content
     div#code
     div#code2
-    div#stagedPanel
-        a#button1(data-url="/1/1.json") /1/1.json
-        a#button2(data-url="/1/2.json") /1/2.json
-        a#button3(data-url="/1/3.json") /1/3.json
-        a#button4(data-url="/1/4.json") click here
     nav
         a(href="" id="menuToggle" title="show menu")
             span(class="navClosed")
@@ -21,3 +16,13 @@ block content
             div#slider-cd(class="slider")
             p gravity:
             div#slider-grav(class="slider")
+            div#stagedPanel
+                a#button1(data-url="/1/1.json") /1/1.json
+                a#button2(data-url="/1/2.json") /1/2.json
+                a#button3(data-url="/1/3.json") /1/3.json
+                a#button4(data-url="/1/4.json") click here
+    flower#codeflower1
+        a flower1 clicker    
+    flower#codeflower2
+        a flower2 clicker    
+    number#show update through event in a view
