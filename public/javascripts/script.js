@@ -154,6 +154,40 @@ var LayoutView = Backbone.View.extend({});
             this.$el.slider(this.options);
 		}
 	});
+    var rerenderLinkDis = function(event,ui){
+        currentContext.force.linkDistance(ui.value).start();
+	};
+
+	var SliderLinkDis = Backbone.View.extend({
+	    initialize:function(options){
+//			this.context = displays.display[0];
+            this.options = options;
+			this.options.slide = function(event,ui){
+				rerenderChargeDis(event,ui);
+ 			        };
+			this.render();
+		},
+		render: function(){
+            this.$el.slider(this.options);
+		}
+	});
+    var rerenderGrav = function(event,ui){
+    	currentContext.force.gravity(Math.atan(10 / (5 * ui.value)) / Math.PI * 0.4).start();
+	};
+
+	var SliderGrav = Backbone.View.extend({
+	    initialize:function(options){
+//			this.context = displays.display[0];
+            this.options = options;
+			this.options.slide = function(event,ui){
+				rerenderChargeDis(event,ui);
+ 			        };
+			this.render();
+		},
+		render: function(){
+            this.$el.slider(this.options);
+		}
+	});
    
 
 
@@ -173,8 +207,8 @@ var LayoutView = Backbone.View.extend({});
 	        });
             this.slidercharge = new SliderCharge({el:"#slider-c",options:this.options.sliderchargeOptions});
             this.slidercd = new SliderChargeDis({el:"#slider-cd",options:this.options.slidercdOptions});
-//            this.slidergrav = new Slider({el:"#slider-grav",options:this.options.slidergravOptions});
-//           this.sliderld = new Slider({el:"#slider-ld",options:this.options.sliderldOptions});
+            this.slidergrav = new SliderGrav({el:"#slider-grav",options:this.options.slidergravOptions});
+            this.sliderld = new SliderLinkDis({el:"#slider-ld",options:this.options.sliderldOptions});
 		}
 	});
 
