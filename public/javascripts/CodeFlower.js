@@ -10,7 +10,7 @@ var CodeFlower = function(selector, w, h) {
 
   this.svg.append("svg:rect")
     .style("stroke", "#999")
-    .style("fill", "#fff")
+    .style("fill", "#000")
     .attr('width', w)
     .attr('height', h);
 
@@ -84,7 +84,8 @@ CodeFlower.prototype.update = function(json) {
     .classed('directory', function(d) { return (d._children || d.children) ? 1 : 0; })
     .attr("r", function(d) { return d.children ? 3.5 : Math.pow(d.size, 2/5) || 1; })
     .style("fill", function color(d) {
-      return "hsl(" + parseInt(360 / total * d.size, 10) + ",90%,70%)";
+      //return "hsl(" + parseInt(360 / total * d.size, 10) + ",90%,70%)";
+      return "#00FF00";
     })
     .call(this.force.drag)
     .on("click", this.click.bind(this))

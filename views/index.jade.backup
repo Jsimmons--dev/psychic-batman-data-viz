@@ -19,9 +19,9 @@ block content
                 a#button2(data-url="/1/2.json") /1/2.json
                 a#button3(data-url="/1/3.json") /1/3.json
                 a#button4(data-url="/1/4.json") click here
-            button(class="btn" onclick="w2ui['layout'].toggle('top',window.instant)") Top
+            button(class="btn" onclick"w2ui['layout'].toggle('top',window.instant") Top
             div#instant(type="checkbox" onclick="window.instant = this.checked;")
               label(for="instant") instant
-    display#codeflower1
-    display#codeflower2
+    flower#codeflower1
+    flower#codeflower2
     layout#layout
