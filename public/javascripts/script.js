@@ -9,6 +9,7 @@ var instant = false;
 var Context = {
     listeners:[]
 };
+/** The focused display   */
 var currentContext;
 
 var codeFlower;
@@ -19,7 +20,6 @@ var getDisplay = function(id){
 
 };
 
-$(document).ready(function() {
 
  var pstyle = 'border: 1px solid #dfdfdf; padding: 5px;';
     $('#layout').w2layout({
@@ -49,7 +49,6 @@ var LayoutView = Backbone.View.extend({});
 	   Context.trigger('updateContext',this.id); 
 	});
 	Context.on('updateContext',function(id){
-//		currentContext.svg.style("fill", "#FFF");
 		d3.select('#'+oldID).select("rect").style("fill","#000");
 		oldID = id;
 	    currentContext = getDisplay(id);
@@ -58,35 +57,6 @@ var LayoutView = Backbone.View.extend({});
 		    listener.updateContext(id);
 		});
 	});
-//function updateld(codeFlower){
-//	sliderld.updateValue();
-//	console.log("refreshing Flower Constants:"
-//							+ "\nld: " + sliderld.value);
-//	codeFlower.force.linkDistance(function(d) {
-//		return (d.target._children ? 80 : 25) * (sliderld.value / 10); })
-//		.start();
-//}
-//function updatecd(codeFlower2){
-//	slidercd.updateValue();
-//	console.log("refreshing Flower Constants:"
-//							+ "\ncd: " + slidercd.value);
-//	codeFlower2.force.chargeDistance(slidercd.value).start();
-//}
-//
-//function updatecharge(codeFlower2){
-//	slidercharge.updateValue();
-//	console.log("refreshing Flower Constants:"
-//							+ "\ncharge: " + slidercharge.value);
-//	codeFlower2.force.charge(function(d) {
-//		return (d._children ? -d.size / 100 : -40) * (slidercharge.value / 10); })
-//		.start();
-//}
-//
-//function updategrav(codeFlower2){
-//	slidergrav.updateValue();
-//	console.log("refreshing Flower Constants:"
-//							+ "\ngrav: " + slidergrav.value);
-//	codeFlower2.force.gravity(Math.atan(codeFlower.total / (5 * slidergrav.value)) / Math.PI * 0.4).start();
 
 
 	var Show = Backbone.View.extend({
@@ -98,28 +68,6 @@ var LayoutView = Backbone.View.extend({});
 
 		}
 	});
-
-//	var Slider = Backbone.View.extend({
-//    	initialize:function(options){
-//    		this.options = options;
-//			this.options.change = function(event,ui){
-//			    
-//					console.log("i changed to " + ui.value);
-//
-//			}
-//			Context.listeners.push(this);
-//    		this.render();
-//			this.context;
-//    		this.value = $(this.el).slider("option","value");
-//    	},
-//    	updateContext: function(id){
-//				this.context = displays.display.indexOf(id);
-//
-//    	},
-//    	render: function(){
-//    		this.$el.slider(this.options);
-//    	},
-//    });
     var rerenderCharge = function(event,ui){
  		currentContext.force.charge(function(d) { return (d._children ? -d.size / 100 : -40) * (ui.value / 10); }).start();
 	};
@@ -143,7 +91,6 @@ var LayoutView = Backbone.View.extend({});
 
 	var SliderChargeDis = Backbone.View.extend({
 	    initialize:function(options){
-//			this.context = displays.display[0];
             this.options = options;
 			this.options.slide = function(event,ui){
 				rerenderChargeDis(event,ui);
@@ -154,13 +101,17 @@ var LayoutView = Backbone.View.extend({});
             this.$el.slider(this.options);
 		}
 	});
+
+	/**
+	 *This function rerenders the context with the link distance
+	 * @constructor
+	 */
     var rerenderLinkDis = function(event,ui){
         currentContext.force.linkDistance(ui.value).start();
 	};
 
 	var SliderLinkDis = Backbone.View.extend({
 	    initialize:function(options){
-//			this.context = displays.display[0];
             this.options = options;
 			this.options.slide = function(event,ui){
 				rerenderChargeDis(event,ui);
@@ -177,7 +128,6 @@ var LayoutView = Backbone.View.extend({});
 
 	var SliderGrav = Backbone.View.extend({
 	    initialize:function(options){
-//			this.context = displays.display[0];
             this.options = options;
 			this.options.slide = function(event,ui){
 				rerenderChargeDis(event,ui);
@@ -193,17 +143,16 @@ var LayoutView = Backbone.View.extend({});
 
     var RightSidePanel = Backbone.View.extend({
 	    initialize: function(options){
-				this.options = options.options;
-				
+			this.options = options.options;
 	        $(this.el).click(function(e) {
-	        	var $parent = $(this).parent('nav');
-	        	$parent.toggleClass("open");
-	        	var navState = $parent.hasClass('open') ? "hide" : "show";
-	        	$(this).attr("title", navState + " navigation");
-	        	setTimeout(function() {
-	        		$(this.el + '  > span').toggleClass("navClosed").toggleClass("navOpen");
-	        	}, 200);
-	        	e.preventDefault();
+	    	var $parent = $(this).parent('nav');
+	    	$parent.toggleClass("open");
+	    	var navState = $parent.hasClass('open') ? "hide" : "show";
+	    	$(this).attr("title", navState + " navigation");
+	    	setTimeout(function() {
+	    		$(this.el + '  > span').toggleClass("navClosed").toggleClass("navOpen");
+	    	}, 200);
+	    	e.preventDefault();
 	        });
             this.slidercharge = new SliderCharge({el:"#slider-c",options:this.options.sliderchargeOptions});
             this.slidercd = new SliderChargeDis({el:"#slider-cd",options:this.options.slidercdOptions});
@@ -218,7 +167,6 @@ var LayoutView = Backbone.View.extend({});
 			this.options = options.options;
 			this.render(this.options.jsonData, this.el,this.options.x,this.options.y);
 		},
-
 		render: function(jsonData,codeFlower){
 			codeFlower = new CodeFlower(this.el,this.options.x,this.options.y);
 			codeFlower.update(jsonData);
@@ -229,10 +177,12 @@ var LayoutView = Backbone.View.extend({});
 				displays.display.push(codeFlower);
 			}
         }
-
 	});
 
-
+    /**
+	 * Sets up the panel that can load new views
+	 *
+	 */
     var StagedPanel = Backbone.View.extend({
     	initialize:function(options){
     			this.options = options.options;
@@ -292,4 +242,3 @@ var LayoutView = Backbone.View.extend({});
     var show = new Show({el:'#show'});
     var stagedOptions = {myDiv:'#codeflower'};
     var stagedPanel = new StagedPanel({el:'#stagedPanel',options:stagedOptions});
-});

@@ -1,6 +1,12 @@
 module.exports = function(grunt) {
+	require('load-grunt-tasks')(grunt);
     grunt.initConfig({
 	    pkg: grunt.file.readJSON('package.json'),
+		shell: {
+		    target: {
+			    command:'jsdoc  public/javascripts/* -d doc'
+			}
+		},
 	    execute: {
 	        run: {
 			    src: ['./bin/www']
@@ -23,5 +29,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 
 	grunt.registerTask('run',['execute']);
-	grunt.registerTask('default',['sass']);
+	grunt.registerTask('default',['sass','shell']);
 }
