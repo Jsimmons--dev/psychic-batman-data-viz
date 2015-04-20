@@ -1,4 +1,6 @@
 var sliderPanel;
+var oldID;
+var next = 1;
 var displays = {
     id:[],
 	display:[]
@@ -7,10 +9,15 @@ var instant = false;
 var Context = {
     listeners:[]
 };
-var contextId;
+var currentContext;
 
 var codeFlower;
 var codeFlower2;
+var getDisplay = function(id){
+    var divsel = "#"+id;
+    return displays.display[displays.id.indexOf(divsel)];
+
+};
 
 $(document).ready(function() {
 
@@ -42,6 +49,11 @@ var LayoutView = Backbone.View.extend({});
 	   Context.trigger('updateContext',this.id); 
 	});
 	Context.on('updateContext',function(id){
+//		currentContext.svg.style("fill", "#FFF");
+		d3.select('#'+oldID).select("rect").style("fill","#000");
+		oldID = id;
+	    currentContext = getDisplay(id);
+		d3.select('#'+id).select("rect").style("fill","#222");
 	    $.each(Context.listeners,function(index, listener){
 		    listener.updateContext(id);
 		});
@@ -108,31 +120,41 @@ var LayoutView = Backbone.View.extend({});
 //    		this.$el.slider(this.options);
 //    	},
 //    });
+    var rerenderCharge = function(event,ui){
+ 		currentContext.force.charge(function(d) { return (d._children ? -d.size / 100 : -40) * (ui.value / 10); }).start();
+	};
 
-	var Slider = Backbone.View.extend({
+	var SliderCharge = Backbone.View.extend({
 	    initialize:function(options){
-			this.context = displays.display[0];
+//			this.context = displays.display[0];
             this.options = options;
-			Context.listeners.push(this);
-			var context = this.context
-			this.options.change = function(event,ui){
-					console.log(this);
- 					context.force.charge(function(d) { return (d._children ? -d.size / 100 : -40) * (slidercharge.value / 10); }).start();
+			this.options.slide = function(event,ui){
+				rerenderCharge(event,ui);
  			        };
 			this.render();
 		},
-		updateContext: function(id){
-				var divsel = "#"+id;
-            this.context = displays.display[displays.id.indexOf(divsel)];
-				console.log(this.context);
+		render: function(){
+            this.$el.slider(this.options);
+		}
+	});
+    var rerenderChargeDis = function(event,ui){
+        currentContext.force.chargeDistance(ui.value).start();
+	};
+
+	var SliderChargeDis = Backbone.View.extend({
+	    initialize:function(options){
+//			this.context = displays.display[0];
+            this.options = options;
+			this.options.slide = function(event,ui){
+				rerenderChargeDis(event,ui);
+ 			        };
+			this.render();
 		},
 		render: function(){
             this.$el.slider(this.options);
 		}
 	});
    
-	var SliderGrav = Slider.extend({
-	});
 
 
     var RightSidePanel = Backbone.View.extend({
@@ -149,8 +171,8 @@ var LayoutView = Backbone.View.extend({});
 	        	}, 200);
 	        	e.preventDefault();
 	        });
-            this.slidercharge = new SliderGrav({el:"#slider-c",options:this.options.sliderchargeOptions});
-//            this.slidercd = new Slider({el:"#slider-cd",options:this.options.slidercdOptions});
+            this.slidercharge = new SliderCharge({el:"#slider-c",options:this.options.sliderchargeOptions});
+            this.slidercd = new SliderChargeDis({el:"#slider-cd",options:this.options.slidercdOptions});
 //            this.slidergrav = new Slider({el:"#slider-grav",options:this.options.slidergravOptions});
 //           this.sliderld = new Slider({el:"#slider-ld",options:this.options.sliderldOptions});
 		}
@@ -167,14 +189,11 @@ var LayoutView = Backbone.View.extend({});
 			codeFlower = new CodeFlower(this.el,this.options.x,this.options.y);
 			codeFlower.update(jsonData);
 			var divsel = this.options.myDiv
-			displays.id.push(divsel);
-			displays.display.push(codeFlower);
-		},
-		updateld: function (){
-        	sliderld.updateValue();
-        	codeFlower.force.linkDistance(function(d) {
-        		return (d.target._children ? 80 : 25) * (sliderld.value / 10); })
-        		.start();
+			if(getDisplay(divsel) == null){
+					console.log(divsel);
+				displays.id.push(divsel);
+				displays.display.push(codeFlower);
+			}
         }
 
 	});
@@ -192,6 +211,7 @@ var LayoutView = Backbone.View.extend({});
     	},
     	loadAjax: function(ev){
     		var codeFlowerID = this.options.myDiv;
+			codeFlowerID += next;
     		$.get($(ev.currentTarget).data('url'),function(data){
     		  codeFlowerOptions.jsonData = data;
 			  codeFlowerOptions.myDiv = codeFlowerID;
@@ -211,8 +231,13 @@ var LayoutView = Backbone.View.extend({});
     					delete routine.type;
     					delete routine.callees;
     				});
-      			this.codeFlower = new CodeFlowerView({el:codeFlowerID,options:codeFlowerOptions});
-    		});
+				
+				console.log(this.el);
+				
+      			this.codeFlower = new CodeFlowerView({el:(codeFlowerID),options:codeFlowerOptions});
+				console.log("new display pushed! @: "+codeFlowerID)
+    		next++;
+			});
     	},
     	render: function(){
     	}
@@ -231,6 +256,6 @@ var LayoutView = Backbone.View.extend({});
     
     var rightSidePanel = new RightSidePanel({el:'#menuToggle',options:sliderOptions});
     var show = new Show({el:'#show'});
-    var stagedOptions = {myDiv:'#codeflower1'};
+    var stagedOptions = {myDiv:'#codeflower'};
     var stagedPanel = new StagedPanel({el:'#stagedPanel',options:stagedOptions});
 });
