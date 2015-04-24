@@ -45,6 +45,8 @@ CodeFlower.prototype.update = function(json) {
     });
   var total = nodes.length || 1;
 
+
+
   // remove existing text (will readd it afterwards to be sure it's on top)
   this.svg.selectAll("text").remove();
 
@@ -54,6 +56,8 @@ CodeFlower.prototype.update = function(json) {
     .nodes(nodes)
     .links(links)
     .start();
+
+  // this.drag = this.force.drag().on("dragstart", dragstart);
 
   // Update the links
   this.link = this.svg.selectAll("line.link")
@@ -124,14 +128,14 @@ CodeFlower.prototype.flatten = function(root) {
 
 CodeFlower.prototype.click = function(d) {
   // Toggle children on click.
-  if (d.children) {
-    d._children = d.children;
-    d.children = null;
-  } else {
-    d.children = d._children;
-    d._children = null;
-  }
-  this.update();
+  console.log("CodeFlower.click, sticky " + this.sticky);
+  d3.select(this).classed("fixed", d.fixed = this.sticky);
+  // this.update();
+};
+
+CodeFlower.prototype.stickyToggle = function(bool){
+  this.sticky = bool;
+  console.log("CodeFlower.sticky" + this.sticky);
 };
 
 CodeFlower.prototype.mouseover = function(d) {
@@ -155,6 +159,10 @@ CodeFlower.prototype.tick = function() {
   this.node.attr("cx", function(d) { return d.x; })
       .attr("cy", function(d) { return d.y; });
 };
+
+CodeFlower.prototype.dragstart = function(d){
+  d3.select(this).classed("fixed", d.fixed = false);
+}
 
 CodeFlower.prototype.cleanup = function() {
   this.update([]);

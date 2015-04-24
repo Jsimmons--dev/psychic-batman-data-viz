@@ -19,6 +19,9 @@ block content
                 a#button2(data-url="/1/2.json") /1/2.json
                 a#button3(data-url="/1/3.json") /1/3.json
                 a#button4(data-url="/1/4.json") click here
+                a#list-graphs graphs
+                input(type="file" name="newGraph")
+                button#upload-graph(class="btn") Upload
             button(class="btn" onclick="w2ui['layout'].toggle('top',window.instant)") Top
             div#instant(type="checkbox" onclick="window.instant = this.checked;")
               label(for="instant") instant
