@@ -68,7 +68,6 @@ var LayoutView = Backbone.View.extend({});
 
 		}
 	});
-
 	var SliderCharge = Backbone.View.extend({
 	    initialize:function(options){
 			this.render();
@@ -183,7 +182,7 @@ var LayoutView = Backbone.View.extend({});
 	});
 
 
-	var CodeFlowerView = Backbone.View.extend({
+	 var CodeFlowerView = Backbone.View.extend({
 		initialize:function(options){
 			this.options = options.options;
 			this.render(this.options.jsonData, this.el,this.options.x,this.options.y);
