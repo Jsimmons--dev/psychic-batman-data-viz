@@ -27,6 +27,7 @@ CodeFlower.prototype.update = function(json) {
   this.json.fixed = true;
   this.json.x = this.w / 2;
   this.json.y = this.h / 2;
+  //build nodes and links out of our data
  var nodes = json.routines;
     links = [];
     nodes.forEach(function(node) {
@@ -45,7 +46,7 @@ CodeFlower.prototype.update = function(json) {
     });
   var total = nodes.length || 1;
 
-  // remove existing text (will readd it afterwards to be sure it's on top)
+  // remove existing text (will read it afterwards to be sure it's on top)
   this.svg.selectAll("text").remove();
 
   // Restart the force layout
@@ -67,16 +68,12 @@ CodeFlower.prototype.update = function(json) {
     .attr("x2", function(d) { return d.target.x; })
     .attr("y2", function(d) { return d.target.y; });
 
-  // Exit any old links.
-  this.link.exit().remove();
 
   // Update the nodes
   this.node = this.svg.selectAll("circle.node")
     .data(nodes, function(d) { return d.name; })
     .classed("collapsed", function(d) { return d._children ? 1 : 0; });
 
-  this.node.transition()
-    .attr("r", function(d) { return d.children ? 3.5 : Math.pow(d.size, 2/5) || 1; });
 
   // Enter any new nodes
   this.node.enter().append('svg:circle')
@@ -84,16 +81,12 @@ CodeFlower.prototype.update = function(json) {
     .classed('directory', function(d) { return (d._children || d.children) ? 1 : 0; })
     .attr("r", function(d) { return d.children ? 3.5 : Math.pow(d.size, 2/5) || 1; })
     .style("fill", function color(d) {
-      //return "hsl(" + parseInt(360 / total * d.size, 10) + ",90%,70%)";
       return "#00FF00";
     })
     .call(this.force.drag)
     .on("click", this.click.bind(this))
     .on("mouseover", this.mouseover.bind(this))
     .on("mouseout", this.mouseout.bind(this));
-
-  // Exit any old nodes
-  this.node.exit().remove();
 
   this.text = this.svg.append('svg:text')
     .attr('class', 'nodetext')
@@ -123,21 +116,14 @@ CodeFlower.prototype.flatten = function(root) {
 };
 
 CodeFlower.prototype.click = function(d) {
-  // Toggle children on click.
-  if (d.children) {
-    d._children = d.children;
-    d.children = null;
-  } else {
-    d.children = d._children;
-    d._children = null;
-  }
-  this.update();
 };
 
 CodeFlower.prototype.mouseover = function(d) {
   this.text.attr('transform', 'translate(' + d.x + ',' + (d.y - 5 - (d.children ? 3.5 : Math.sqrt(d.size) / 2)) + ')')
-    .text(d.name + ": " + d.size + " loc")
-    .style('display', null);
+    .text(d.name + ": " + d.size + " #ins")
+    .style('display', null)
+	.style('font-size', "30px")
+	.style('fill',"white");
 };
 
 CodeFlower.prototype.mouseout = function(d) {

@@ -49,10 +49,10 @@ var LayoutView = Backbone.View.extend({});
 	   Context.trigger('updateContext',this.id); 
 	});
 	Context.on('updateContext',function(id){
-		d3.select('#'+oldID).select("rect").style("fill","#000");
+		//d3.select('#'+oldID).select("rect").style("fill","#000");
 		oldID = id;
 	    currentContext = getDisplay(id);
-		d3.select('#'+id).select("rect").style("fill","#222");
+		//d3.select('#'+id).select("rect").style("fill","#222");
 	    $.each(Context.listeners,function(index, listener){
 		    listener.updateContext(id);
 		});
